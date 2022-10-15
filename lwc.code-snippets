@@ -1,0 +1,10 @@
+{
+    "CustomEvent": {
+		"scope": "javascript",
+		"prefix": "customEvent",
+		"body": [
+			"new CustomEvent('${1:eventName}', { detail: ${2:details} });",
+		],
+		"description": "CustomEvent"
+	}
+}
