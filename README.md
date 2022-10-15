@@ -35,4 +35,4 @@ import apexMethodName from '@salesforce/apex/Namespace.ClassName.apexMethodRefer
 
 ```js
 import labelName from '@salesforce/label/labelReference';
-``
+```
