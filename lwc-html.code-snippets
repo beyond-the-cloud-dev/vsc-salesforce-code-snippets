@@ -1,0 +1,35 @@
+{
+    "LWC template for:each": {
+        "body": [
+            "<template for:each={${1:array}} for:item='${2:item}'>",
+            "</template>"
+        ],
+        "description": "Template for:each.",
+        "prefix": [
+            "templateForEach"
+        ],
+        "scope": "html"
+    },
+    "LWC template if:false": {
+        "body": [
+            "<template if:false={${1:property}}>",
+            "</template>"
+        ],
+        "description": "Template if:false.",
+        "prefix": [
+            "templateIfFalse"
+        ],
+        "scope": "html"
+    },
+    "LWC template if:true": {
+        "body": [
+            "<template if:true={${1:property}}>",
+            "</template>"
+        ],
+        "description": "Template if:true.",
+        "prefix": [
+            "templateIfTrue"
+        ],
+        "scope": "html"
+    }
+}

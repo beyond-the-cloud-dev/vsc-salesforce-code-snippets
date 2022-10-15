@@ -1,0 +1,126 @@
+{
+    "LWC constructor": {
+        "body": [
+            "constructor() {",
+            "",
+            "}"
+        ],
+        "description": "constructor.",
+        "prefix": "constructor",
+        "scope": "javascript"
+    },
+    "LWC CustomEvent": {
+        "body": [
+            "new CustomEvent('${1:eventName}', { detail: ${2:details} });"
+        ],
+        "description": "CustomEvent.",
+        "prefix": "customEvent",
+        "scope": "javascript"
+    },
+    "LWC disconnectedCallback": {
+        "body": [
+            "disconnectedCallback() {",
+            "",
+            "}"
+        ],
+        "description": "disconnectedCallback.",
+        "prefix": "disconnectedCallback",
+        "scope": "javascript"
+    },
+    "LWC Import Apex Method": {
+        "body": [
+            "import ${1:apexMethodName} from '@salesforce/apex/${2:Namespace}.${3:ClassName}.${4:apexMethodReference}';"
+        ],
+        "description": "Import apex method.",
+        "prefix": "importApexMethod",
+        "scope": "javascript"
+    },
+    "LWC Import Custom Label": {
+        "body": [
+            "import ${1:labelName} from '@salesforce/label/${2:labelReference}';"
+        ],
+        "description": "Import custom label.",
+        "prefix": "importCustomLabel",
+        "scope": "javascript"
+    },
+    "LWC Import Field": {
+        "body": [
+            "import ${1:fieldName} from '@salesforce/schema/${2:objectApiName}.${3:fieldApiName}';"
+        ],
+        "description": "Import Field.",
+        "prefix": "importField",
+        "scope": "javascript"
+    },
+    "LWC Import NavigationMixin": {
+        "body": [
+            "import { NavigationMixin } from 'lightning/navigation';"
+        ],
+        "description": "Import NavigationMixin.",
+        "prefix": "importNavigationMixin",
+        "scope": "javascript"
+    },
+    "LWC Import Object": {
+        "body": [
+            "import ${1:objectName} from '@salesforce/schema/${2:objectApiName}';"
+        ],
+        "description": "Import Object.",
+        "prefix": "importObject",
+        "scope": "javascript"
+    },
+    "LWC Import UserId": {
+        "body": [
+            "import userId from '@salesforce/user/Id';"
+        ],
+        "description": "Import UserId.",
+        "prefix": "importUserId",
+        "scope": "javascript"
+    },
+    "LWC renderedCallback": {
+        "body": [
+            "initialRender = true;",
+            "renderedCallback() {",
+            "\tif (this.initialRender) {",
+            "\t\tthis.initialRender = false;",
+            "\t}",
+            "}"
+        ],
+        "description": "renderedCallback.",
+        "prefix": "renderedCallback",
+        "scope": "javascript"
+    },
+    "LWC ShowToastEvent": {
+        "body": [
+            "import { ShowToastEvent } from 'lightning/platformShowToastEvent';",
+            "new ShowToastEvent({ '${1:title}', '${2:message}', '${3:variant}' });"
+        ],
+        "description": "ShowToastEvent.",
+        "prefix": "ShowToastEvent",
+        "scope": "javascript"
+    },
+    "LWC Wire Method": {
+        "body": [
+            "import ${1:apexMethodName} from '@salesforce/apex/${2:Namespace}.${3:Classname}.${4:apexMethodReference}';",
+            "@wire(${1:apexMethodName}, { apexMethodParams })",
+            "${5:wiredName}({ error, data }) {",
+            "\tif (data) {",
+            "",
+            "\t} else if (error) {",
+            "\t\tconsole.error(error);",
+            "\t}",
+            "}"
+        ],
+        "description": "wire.",
+        "prefix": "wireMethod",
+        "scope": "javascript"
+    },
+    "LWC Wire Property": {
+        "body": [
+            "import ${1:apexMethodName} from '@salesforce/apex/${2:Namespace}.${3:Classname}.${4:apexMethodReference}';",
+            "@wire(${1:apexMethodName}, { apexMethodParams })",
+            "${5:property};"
+        ],
+        "description": "wire.",
+        "prefix": "wireProperty",
+        "scope": "javascript"
+    }
+}
