@@ -30,3 +30,9 @@ new ShowToastEvent({ 'title', 'message', 'variant' });
 ```js
 import apexMethodName from '@salesforce/apex/Namespace.ClassName.apexMethodReference';
 ```
+
+`importCustomLabel`
+
+```js
+import labelName from '@salesforce/label/labelReference';
+``

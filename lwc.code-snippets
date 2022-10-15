@@ -22,5 +22,13 @@
 			"import ${1:apexMethodName} from '@salesforce/apex/${2:Namespace}.${3:ClassName}.${4:apexMethodReference}';",
 		],
 		"description": "Import apex method."
+	},
+    "Custom Label import": {
+		"scope": "javascript",
+		"prefix": "importCustomLabel",
+		"body": [
+			"import ${1:labelName} from '@salesforce/label/${2:labelReference}';",
+		],
+		"description": "Import custom label."
 	}
 }
