@@ -5,6 +5,22 @@
 		"body": [
 			"new CustomEvent('${1:eventName}', { detail: ${2:details} });",
 		],
-		"description": "CustomEvent"
+		"description": "CustomEvent."
+	},
+    "ShowToastEvent": {
+		"scope": "javascript",
+		"prefix": "ShowToastEvent",
+		"body": [
+			"new ShowToastEvent({ '${1:title}', '${2:message}', '${3:variant}' });",
+		],
+		"description": "ShowToastEvent."
+	},
+    "Apex import": {
+		"scope": "javascript",
+		"prefix": "importApexMethod",
+		"body": [
+			"import ${1:apexMethodName} from '@salesforce/apex/${2:Namespace}.${3:ClassName}.${4:apexMethodReference}';",
+		],
+		"description": "Import apex method."
 	}
 }

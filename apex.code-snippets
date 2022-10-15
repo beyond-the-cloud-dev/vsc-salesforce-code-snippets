@@ -3,7 +3,7 @@
 		"scope": "apex",
 		"prefix": "for",
 		"body": [
-			"for (${1:Type} ${2:variable} : ${3:ListOrSet}) {", "\t$0", "}",
+			"for (${1:Type} ${2:variable} : ${3:listOrSet}) {", "\t$0", "}",
 		],
 		"description": "A for loop."
 	}

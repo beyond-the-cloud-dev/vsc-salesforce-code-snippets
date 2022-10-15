@@ -18,3 +18,15 @@ for (Type variable : ListOrSet) {
 ```js
 new CustomEvent('eventName', { detail: details });
 ```
+
+`ShowToastEvent`
+
+```js
+new ShowToastEvent({ 'title', 'message', 'variant' });
+```
+
+`importApexMethod`
+
+```js
+import apexMethodName from '@salesforce/apex/Namespace.ClassName.apexMethodReference';
+```
