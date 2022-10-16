@@ -1,4 +1,16 @@
 {
+    "LWC Async/Await": {
+        "body": [
+            "try {",
+            "\tconst result = await ${1:apexMethodName}({ apexMethodParams });",
+            "} catch (error) {",
+            "\tconsole.error(error)",
+            "}"
+        ],
+        "description": "Then/Catch",
+        "prefix": "asyncAwait",
+        "scope": "javascript"
+    },
     "LWC constructor": {
         "body": [
             "constructor() {",
@@ -11,9 +23,13 @@
     },
     "LWC CustomEvent": {
         "body": [
-            "new CustomEvent('${1:eventName}', { detail: ${2:details} });"
+            "new CustomEvent('${1:eventName}', {",
+            "\tdetail: ${2:details},",
+            "\tbubbles: false,",
+            "\tcomposed: false",
+            "});"
         ],
-        "description": "CustomEvent.",
+        "description": "CustomEvent",
         "prefix": "customEvent",
         "scope": "javascript"
     },
@@ -25,6 +41,60 @@
         ],
         "description": "disconnectedCallback.",
         "prefix": "disconnectedCallback",
+        "scope": "javascript"
+    },
+    "LWC dispatchEvent": {
+        "body": [
+            "this.dispatchEvent(${1:customEvent});"
+        ],
+        "description": "dispatchEvent",
+        "prefix": "dispatchEvent",
+        "scope": "javascript"
+    },
+    "LWC getObjectInfo": {
+        "body": [
+            "import { getObjectInfo } from 'lightning/uiObjectInfoApi';",
+            "import ${1:objectName} from '@salesforce/schema/${2:objectApiName}';",
+            "",
+            "@wire(getObjectInfo, { objectApiName: ${1:objectName} })",
+            "${3:propertyOrFunction};"
+        ],
+        "description": "getObjectInfo",
+        "prefix": "getObjectInfo",
+        "scope": "javascript"
+    },
+    "LWC getPicklistValues": {
+        "body": [
+            "import { getPicklistValues } from 'lightning/uiObjectInfoApi';",
+            "import ${1:fieldName} from '@salesforce/schema/${2:objectApiName}.${3:fieldApiName}';",
+            "",
+            "@wire(getPicklistValues, { recordTypeId: '012000000000000AAA', fieldApiName: ${1:fieldName} })",
+            "${4:propertyOrFunction};"
+        ],
+        "description": "getPicklistValues",
+        "prefix": "getPicklistValues",
+        "scope": "javascript"
+    },
+    "LWC getRecord": {
+        "body": [
+            "import { getRecord } from 'lightning/uiRecordApi';",
+            "",
+            "@wire(getRecord, { recordId: '${1:recordId}', fields: ${2:fields} })",
+            "${3:propertyOrFunction};"
+        ],
+        "description": "getRecord",
+        "prefix": "getRecord",
+        "scope": "javascript"
+    },
+    "LWC getRecords": {
+        "body": [
+            "import { getRecords } from 'lightning/uiRecordApi';",
+            "",
+            "@wire(getRecords, { records: [ { recordIds: '${1:recordIds}', fields: ${2:fields} } ] })",
+            "${3:propertyOrFunction};"
+        ],
+        "description": "getRecords",
+        "prefix": "getRecords",
         "scope": "javascript"
     },
     "LWC Import Apex Method": {
@@ -75,6 +145,22 @@
         "prefix": "importUserId",
         "scope": "javascript"
     },
+    "LWC querySelector": {
+        "body": [
+            "this.template.querySelector('${1:element}');"
+        ],
+        "description": "querySelector",
+        "prefix": "querySelector",
+        "scope": "javascript"
+    },
+    "LWC querySelectorAll": {
+        "body": [
+            "this.template.querySelectorAll('${1:element}');"
+        ],
+        "description": "querySelectorAll",
+        "prefix": "querySelectorAll",
+        "scope": "javascript"
+    },
     "LWC renderedCallback": {
         "body": [
             "initialRender = true;",
@@ -97,8 +183,23 @@
         "prefix": "ShowToastEvent",
         "scope": "javascript"
     },
+    "LWC Then/Catch": {
+        "body": [
+            "${1:apexMethodName}({ apexMethodParams })",
+            ".then(result => {",
+            "\t",
+            "})",
+            ".catch(error => {",
+            "\tconsole.error(error)",
+            "});"
+        ],
+        "description": "Then/Catch",
+        "prefix": "thenCatch",
+        "scope": "javascript"
+    },
     "LWC Wire Method": {
         "body": [
+            "import ${1:apexMethodName} from '@salesforce/apex/${2:Namespace}.${3:Classname}.${4:apexMethodReference}';",
             "@wire(${1:apexMethodName}, { apexMethodParams })",
             "${5:wiredName}({ error, data }) {",
             "\tif (data) {",
@@ -108,16 +209,17 @@
             "\t}",
             "}"
         ],
-        "description": "wire.",
+        "description": "wireMethod.",
         "prefix": "wireMethod",
         "scope": "javascript"
     },
     "LWC Wire Property": {
         "body": [
+            "import ${1:apexMethodName} from '@salesforce/apex/${2:Namespace}.${3:Classname}.${4:apexMethodReference}';",
             "@wire(${1:apexMethodName}, { apexMethodParams })",
             "${5:property};"
         ],
-        "description": "wire.",
+        "description": "wireProperty.",
         "prefix": "wireProperty",
         "scope": "javascript"
     }
