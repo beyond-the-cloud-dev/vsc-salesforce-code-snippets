@@ -103,6 +103,17 @@
         ],
         "scope": "html"
     },
+    "LWC slot": {
+        "body": [
+            "<slot name='${1:name}'>",
+            "</slot>"
+        ],
+        "description": "slot",
+        "prefix": [
+            "slot"
+        ],
+        "scope": "html"
+    },
     "LWC template for:each": {
         "body": [
             "<template for:each={${1:array}} for:item='${2:item}'>",
