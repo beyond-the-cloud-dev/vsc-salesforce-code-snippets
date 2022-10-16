@@ -99,7 +99,6 @@
     },
     "LWC Wire Method": {
         "body": [
-            "import ${1:apexMethodName} from '@salesforce/apex/${2:Namespace}.${3:Classname}.${4:apexMethodReference}';",
             "@wire(${1:apexMethodName}, { apexMethodParams })",
             "${5:wiredName}({ error, data }) {",
             "\tif (data) {",
@@ -115,7 +114,6 @@
     },
     "LWC Wire Property": {
         "body": [
-            "import ${1:apexMethodName} from '@salesforce/apex/${2:Namespace}.${3:Classname}.${4:apexMethodReference}';",
             "@wire(${1:apexMethodName}, { apexMethodParams })",
             "${5:property};"
         ],

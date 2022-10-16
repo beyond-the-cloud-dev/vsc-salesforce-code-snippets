@@ -1,4 +1,108 @@
 {
+    "LWC lightning-button": {
+        "body": [
+            "<lightning-button variant='${1:variant}' label='${2:label}' title='${3:title}' onclick=${4:handleOnClick} class='${cssClass}'>",
+            "</lightning-button>"
+        ],
+        "description": "lightning-button",
+        "prefix": [
+            "lightning-button"
+        ],
+        "scope": "html"
+    },
+    "LWC lightning-combobox": {
+        "body": [
+            "<lightning-combobox",
+            "\tname='${1:name}'",
+            "\tlabel='${2:label}'",
+            "\tvalue={${3:value}}",
+            "\tplaceholder='${4:placeholder}'",
+            "\toptions={${5:options}}",
+            "\tonchange={${6:handleChange}}",
+            "></lightning-combobox>"
+        ],
+        "description": "lightning-combobox",
+        "prefix": [
+            "lightning-combobox"
+        ],
+        "scope": "html"
+    },
+    "LWC lightning-datatable": {
+        "body": [
+            "<lightning-datatable",
+            "\tkey-field='Id'",
+            "\tdata={${1:data}}",
+            "\tcolumns={${2:columns}}",
+            "\thide-checkbox-column",
+            "></lightning-datatable>"
+        ],
+        "description": "lightning-datatable",
+        "prefix": [
+            "lightning-datatable"
+        ],
+        "scope": "html"
+    },
+    "LWC lightning-icon": {
+        "body": [
+            "<lightning-icon icon-name='${1:iconName}' alternative-text='${2:alternativeText}' title='${3:title}'>",
+            "</lightning-icon>"
+        ],
+        "description": "lightning-icon",
+        "prefix": [
+            "lightning-icon"
+        ],
+        "scope": "html"
+    },
+    "LWC lightning-input": {
+        "body": [
+            "<lightning-input type='${1:type}' label='${2:label}' onchange='${3:handleOnChange}'>",
+            "</lightning-input>"
+        ],
+        "description": "lightning-input",
+        "prefix": [
+            "lightning-input"
+        ],
+        "scope": "html"
+    },
+    "LWC lightning-layout": {
+        "body": [
+            "<lightning-layout horizontal-align='${1:horiznotalAlign}' vertical-align='${2:verticalAlign}' multiple-rows='${3:multipleRows}'>",
+            "\t<lightning-layout-item padding='around-small'>",
+            "\t</lightning-layout-item>",
+            "\t<lightning-layout-item padding='around-small'>",
+            "\t</lightning-layout-item>",
+            "\t<lightning-layout-item padding='around-small'>",
+            "\t</lightning-layout-item>",
+            "</lightning-layout>"
+        ],
+        "description": "lightning-layout",
+        "prefix": [
+            "lightning-layout"
+        ],
+        "scope": "html"
+    },
+    "LWC lightning-layout-item": {
+        "body": [
+            "<lightning-layout-item size='${1:size}' small-device-size='${2:smallDeviceSize}' medium-device-size='${3:mediumDeviceSize}' large-device-size='${4:largeDeviceSize}' padding='around-small'>",
+            "</lightning-layout-item>"
+        ],
+        "description": "lightning-layout-item",
+        "prefix": [
+            "lightning-layout-item"
+        ],
+        "scope": "html"
+    },
+    "LWC lightning-spinner": {
+        "body": [
+            "<lightning-spinner alternative-text='${1:alternativeText}' size='${2:size}'>",
+            "</lightning-spinner>"
+        ],
+        "description": "lightning-spinner",
+        "prefix": [
+            "lightning-spinner"
+        ],
+        "scope": "html"
+    },
     "LWC template for:each": {
         "body": [
             "<template for:each={${1:array}} for:item='${2:item}'>",
