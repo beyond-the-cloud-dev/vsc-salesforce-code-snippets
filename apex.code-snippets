@@ -1,10 +1,85 @@
 {
-	"Loop through objects": {
-		"scope": "apex",
-		"prefix": "for",
-		"body": [
-			"for (${1:Type} ${2:variable} : ${3:listOrSet}) {", "\t$0", "}",
-		],
-		"description": "A for loop."
-	}
+    "Loop through objects": {
+        "scope": "apex,apex-anon",
+        "prefix": "for",
+        "body": [
+            "for (${1:Type} ${2:variable} : ${3:listOrSet}) {", "\t$0", "}",
+        ],
+        "description": "A for loop."
+    },
+
+    "Loop through queried SObjects": {
+        "scope": "apex,apex-anon",
+        "prefix": "foro",
+        "body": [
+            "for (${1:Type} ${2:variable} : [SELECT ${3:fieldsList} FROM ${1:Type} $4) {", "\t$0", "}",
+        ]
+    },
+
+    "System Debug": {
+        "prefix": "sd",
+        "scope": "apex,apex-anon",
+        "body": ["System.debug(LoggingLevel.DEBUG, '$1: ' + $0);"],
+        "description": "System.debug(JSON.SerializePretty())"
+    },
+
+    "System Debug Serialize Pretty": {
+        "prefix": "sdp",
+        "scope": "apex,apex-anon",
+        "body": [
+            "System.debug(LoggingLevel.DEBUG, '$1: ' + JSON.SerializePretty($0));"],
+        "description": "System.debug(JSON.SerializePretty())"
+    },
+
+    "System Run As": {
+        "prefix": "sra",
+        "scope": "apex,apex-anon",
+        "body": [
+            "System.runAs(${1:user}) {", "\t$0", "}",
+        ],
+        "description": "System Run As User statement."
+    },
+    "System Assert": {
+        "prefix": "sa",
+        "scope": "apex,apex-anon",
+        "body": [
+            "System.assert($0);"
+        ]
+    },
+    "System Assert Equals": {
+        "prefix": "sae",
+        "scope": "apex,apex-anon",
+        "body": [
+            "System.assertEquals(${1:expected}, ${2:actual});"
+        ]
+    },
+    "System Assert Equals Null": {
+        "prefix": "san",
+        "scope": "apex,apex-anon",
+        "body": [
+            "System.assertEquals(null, $0);"
+        ]
+    },
+    "System Assert Equals": {
+        "prefix": "sane",
+        "scope": "apex,apex-anon",
+        "body": [
+            "System.assertNotEquals(${1:expected}, ${2:actual});"
+        ]
+    },
+    "System Assert Not Equals Null": {
+        "prefix": "sann",
+        "scope": "apex,apex-anon",
+        "body": [
+            "System.assertNotEquals(null, $0);"
+        ]
+    },
+     
+    "System Assert Fail": {
+        "prefix": "saf",
+        "scope": "apex,apex-anon",
+        "body": [
+            "System.assert(false, $0);"
+        ]
+    }
 }
