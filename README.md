@@ -6,6 +6,11 @@ To import snippets from this repo, open the linked file for Apex, Html and JavaS
 
 # [Apex](./apex.code-snippets)
 
+| Short version | Regular version |          Description          | Example                                                                                                   |
+| :-----------: | :-------------: | :---------------------------: | :-------------------------------------------------------------------------------------------------------- |
+|      for      |       for       |         for statement         | for (_Type_ _variable_ : _listOrSet_) { <br>&nbsp;&nbsp;&nbsp;&nbsp;**cursor**<br>},                      |
+|     foro      |      foro       | Loop through queried SObjects | for (_Type_ _variable_ : [SELECT _fieldsList_ FROM _Type_) { <br>&nbsp;&nbsp;&nbsp;&nbsp;**cursor**<br>}, |
+
 `for`
 
 ```java
@@ -21,22 +26,19 @@ for (Type variable : ListOrSet) {
 `templateForEach`
 
 ```js
-<template for:each={array} for:item='item'>
-</template>
+<template for:each={array} for:item="item"></template>
 ```
 
 `templateIfFalse`
 
 ```js
-<template if:false={property}>
-</template>
+<template if:false={property}></template>
 ```
 
 `templateIfTrue`
 
 ```js
-<template if:true={property}>
-</template>
+<template if:true={property}></template>
 ```
 
 ## [JS](./lwc-js.code-snippets)
@@ -52,7 +54,7 @@ constructor() {
 `customEvent`
 
 ```js
-new CustomEvent('eventName', { detail: details });
+new CustomEvent("eventName", { detail: details });
 ```
 
 `disconnectedCallback`
@@ -66,37 +68,37 @@ disconnectedCallback() {
 `importApexMethod`
 
 ```js
-import apexMethodName from '@salesforce/apex/Namespace.ClassName.apexMethodReference';
+import apexMethodName from "@salesforce/apex/Namespace.ClassName.apexMethodReference";
 ```
 
 `importCustomLabel`
 
 ```js
-import labelName from '@salesforce/label/labelReference';
+import labelName from "@salesforce/label/labelReference";
 ```
 
 `importField`
 
 ```js
-import fieldName from '@salesforce/schema/objectApiName.fieldApiName';
+import fieldName from "@salesforce/schema/objectApiName.fieldApiName";
 ```
 
 `importNavigationMixin`
 
 ```js
-import { NavigationMixin } from 'lightning/navigation';
+import { NavigationMixin } from "lightning/navigation";
 ```
 
 `importObject`
 
 ```js
-import objectName from '@salesforce/schema/objectApiName';
+import objectName from "@salesforce/schema/objectApiName";
 ```
 
 `importUserId`
 
 ```js
-import userId from '@salesforce/user/Id';
+import userId from "@salesforce/user/Id";
 ```
 
 `renderedCallback`
