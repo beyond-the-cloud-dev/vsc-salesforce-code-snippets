@@ -4,6 +4,7 @@
   "description": "Snippets for Salesforce Apex na LWC",
   "version": "0.0.1",
   "publisher": "BeyondTheCloud",
+  "repository": "https://github.com/beyond-the-cloud-dev/vsc-salesforce-code-snippets",
   "engines": {
     "vscode": "^1.72.0"
   },

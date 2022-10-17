@@ -1,4 +1,4 @@
-# salesforce-snippets README
+# Salesforce Snippets
 
 ## Features
 
