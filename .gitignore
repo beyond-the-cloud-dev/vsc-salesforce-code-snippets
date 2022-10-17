@@ -8,6 +8,7 @@
 .nx-cache
 .vscode/
 
+
 # Salesforce cache
 .sf/
 .sfdx/
@@ -33,6 +34,7 @@ yarn-error.log*
 
 # Dependency directories
 node_modules/
+package-lock.json
 
 # Eslint cache
 .eslintcache
