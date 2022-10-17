@@ -1,7 +1,7 @@
 {
     "LWC lightning-button": {
         "body": [
-            "<lightning-button variant='${1:variant}' label='${2:label}' title='${3:title}' onclick=${4:handleOnClick} class='${cssClass}'>",
+            "<lightning-button variant='${1:variant}' label='${2:label}' title='${3:title}' onclick=${4:handleOnClick} class='${5:cssClass}'>",
             "</lightning-button>"
         ],
         "description": "lightning-button",
