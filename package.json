@@ -1,0 +1,29 @@
+{
+  "name": "salesforce-snippets",
+  "displayName": "Salesforce Snippets",
+  "description": "Snippets for Salesforce Apex na LWC",
+  "version": "0.0.1",
+  "publisher": "BeyondTheCloud",
+  "engines": {
+    "vscode": "^1.72.0"
+  },
+  "categories": [
+    "Snippets"
+  ],
+  "contributes": {
+    "snippets": [
+      {
+        "language": "apex",
+        "path": "./snippets/apex.json"
+      },
+      {
+        "language": "html",
+        "path": "./snippets/lwc-html.json"
+      },
+      {
+        "language": "javascript",
+        "path": "./snippets/lwc-js.json"
+      }
+    ]
+  }
+}

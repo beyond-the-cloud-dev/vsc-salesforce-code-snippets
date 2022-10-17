@@ -1,8 +1,6 @@
-You can easily define your own snippets without any extension. To create or edit your own snippets, select `User Snippets` under `File` > `Preferences` (`Code` > `Preferences` on macOS), and then select the language (by language identifier) for which the snippets should appear, or the New Global Snippets file option if they should appear for all languages. VS Code manages the creation and refreshing of the underlying snippets file(s) for you.
+# salesforce-snippets README
 
-[Create your own snippets](https://code.visualstudio.com/docs/editor/userdefinedsnippets)
-
-To import snippets from this repo, open the linked file for Apex, Html and JavaScript files, and copy their content to your snippet files.
+## Features
 
 # [Apex](./apex.code-snippets)
 
@@ -138,3 +136,8 @@ import apexMethodName from '@salesforce/apex/Namespace.Classname.apexMethodRefer
 @wire(apexMethodName, { apexMethodParams })
 property;
 ```
+
+## Release Notes
+
+### 0.0.1
+Initial release of Salesforce Snippets.

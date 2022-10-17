@@ -1,7 +1,7 @@
 {
     "LWC lightning-button": {
         "body": [
-            "<lightning-button variant='${1:variant}' label='${2:label}' title='${3:title}' onclick=${4:handleOnClick} class='${cssClass}'>",
+            "<lightning-button variant=\"${1:variant}\" label=\"${2:label}\" title=\"${3:title}\" onclick=${4:handleOnClick} class=\"${5:cssClass}\">",
             "</lightning-button>"
         ],
         "description": "lightning-button",
@@ -13,10 +13,10 @@
     "LWC lightning-combobox": {
         "body": [
             "<lightning-combobox",
-            "\tname='${1:name}'",
-            "\tlabel='${2:label}'",
+            "\tname=\"${1:name}\"",
+            "\tlabel=\"${2:label}\"",
             "\tvalue={${3:value}}",
-            "\tplaceholder='${4:placeholder}'",
+            "\tplaceholder=\"${4:placeholder}\"",
             "\toptions={${5:options}}",
             "\tonchange={${6:handleChange}}",
             "></lightning-combobox>"
@@ -30,7 +30,7 @@
     "LWC lightning-datatable": {
         "body": [
             "<lightning-datatable",
-            "\tkey-field='Id'",
+            "\tkey-field=\"Id\"",
             "\tdata={${1:data}}",
             "\tcolumns={${2:columns}}",
             "\thide-checkbox-column",
@@ -44,7 +44,7 @@
     },
     "LWC lightning-icon": {
         "body": [
-            "<lightning-icon icon-name='${1:iconName}' alternative-text='${2:alternativeText}' title='${3:title}'>",
+            "<lightning-icon icon-name=\"${1:iconName}\" alternative-text=\"${2:alternativeText}\" title=\"${3:title}\">",
             "</lightning-icon>"
         ],
         "description": "lightning-icon",
@@ -55,7 +55,7 @@
     },
     "LWC lightning-input": {
         "body": [
-            "<lightning-input type='${1:type}' label='${2:label}' onchange='${3:handleOnChange}'>",
+            "<lightning-input type=\"${1:type}\" label=\"${2:label}\" onchange=\"${3:handleOnChange}\">",
             "</lightning-input>"
         ],
         "description": "lightning-input",
@@ -66,12 +66,12 @@
     },
     "LWC lightning-layout": {
         "body": [
-            "<lightning-layout horizontal-align='${1:horiznotalAlign}' vertical-align='${2:verticalAlign}' multiple-rows='${3:multipleRows}'>",
-            "\t<lightning-layout-item padding='around-small'>",
+            "<lightning-layout horizontal-align=\"${1:horiznotalAlign}\" vertical-align=\"${2:verticalAlign}\" multiple-rows=\"${3:multipleRows}\">",
+            "\t<lightning-layout-item padding=\"around-small\">",
             "\t</lightning-layout-item>",
-            "\t<lightning-layout-item padding='around-small'>",
+            "\t<lightning-layout-item padding=\"around-small\">",
             "\t</lightning-layout-item>",
-            "\t<lightning-layout-item padding='around-small'>",
+            "\t<lightning-layout-item padding=\"around-small\">",
             "\t</lightning-layout-item>",
             "</lightning-layout>"
         ],
@@ -83,7 +83,7 @@
     },
     "LWC lightning-layout-item": {
         "body": [
-            "<lightning-layout-item size='${1:size}' small-device-size='${2:smallDeviceSize}' medium-device-size='${3:mediumDeviceSize}' large-device-size='${4:largeDeviceSize}' padding='around-small'>",
+            "<lightning-layout-item size=\"${1:size}\" small-device-size=\"${2:smallDeviceSize}\" medium-device-size=\"${3:mediumDeviceSize}\" large-device-size=\"${4:largeDeviceSize}\" padding=\"around-small\">",
             "</lightning-layout-item>"
         ],
         "description": "lightning-layout-item",
@@ -94,7 +94,7 @@
     },
     "LWC lightning-spinner": {
         "body": [
-            "<lightning-spinner alternative-text='${1:alternativeText}' size='${2:size}'>",
+            "<lightning-spinner alternative-text=\"${1:alternativeText}\" size=\"${2:size}\">",
             "</lightning-spinner>"
         ],
         "description": "lightning-spinner",
@@ -105,7 +105,7 @@
     },
     "LWC slot": {
         "body": [
-            "<slot name='${1:name}'>",
+            "<slot name=\"${1:name}\">",
             "</slot>"
         ],
         "description": "slot",
@@ -116,7 +116,7 @@
     },
     "LWC template for:each": {
         "body": [
-            "<template for:each={${1:array}} for:item='${2:item}'>",
+            "<template for:each={${1:array}} for:item=\"${2:item}\">",
             "</template>"
         ],
         "description": "Template for:each.",
