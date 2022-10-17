@@ -3,13 +3,14 @@
   "displayName": "Salesforce Snippets",
   "description": "Snippets for Salesforce Apex and LWC",
   "icon": "images/logo.png",
-  "version": "0.0.6",
+  "version": "0.0.8",
   "publisher": "BeyondTheCloud",
   "repository": "https://github.com/beyond-the-cloud-dev/vsc-salesforce-code-snippets",
   "engines": {
     "vscode": "^1.0.0"
   },
   "scripts": {
+    "deploy": "vsce publish",
     "deploy-patch": "vsce publish patch",
     "deploy-minor": "vsce publish minor",
     "deploy-major": "vsce publish major"
