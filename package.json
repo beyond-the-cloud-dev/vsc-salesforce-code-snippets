@@ -10,7 +10,9 @@
     "vscode": "^1.0.0"
   },
   "scripts": {
-    "deploy": "vsce publish --yarn"
+    "deploy-patch": "vsce publish patch",
+    "deploy-minor": "vsce publish minor",
+    "deploy-major": "vsce publish major"
   },
   "categories": [
     "Snippets"

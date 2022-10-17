@@ -33,6 +33,6 @@ jobs:
 
       - name: Publish
         if: success()
-        run: npm run deploy
+        run: npm run deploy-patch
         env:
           VSCE_PAT: ${{ secrets.VSCE_PAT }}
