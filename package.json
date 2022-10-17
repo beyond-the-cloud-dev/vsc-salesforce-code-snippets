@@ -2,7 +2,7 @@
   "name": "salesforce-snippets-beyondthecloud",
   "displayName": "Salesforce Snippets",
   "description": "Snippets for Salesforce Apex and LWC",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "publisher": "BeyondTheCloud",
   "repository": "https://github.com/beyond-the-cloud-dev/vsc-salesforce-code-snippets",
   "engines": {
