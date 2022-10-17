@@ -23,15 +23,23 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - name: Checkout
         uses: actions/checkout@v3
+
       - name: Install Node.js
         uses: actions/setup-node@v3
         with:
           node-version: 16.x
+
       - name: NPM CI
         run: npm ci
 
       - name: Git Debug
         run: git status
+
+      - name: Set Git Config
+        run: |
+          git config --global user.email "contact@beyondthecloud.dev"
+          git config --global user.name "Beyond The Cloud"
+
       - name: Publish
         if: success()
         run: npm run deploy-patch
