@@ -30,7 +30,8 @@ jobs:
       - name: Install NPM
         run: npm install
 
-
+      - name: Git Debug
+        run: git status
       - name: Publish
         if: success()
         run: npm run deploy-patch
