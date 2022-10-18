@@ -13,115 +13,274 @@
 
 ## [HTML](./lwc-html.code-snippets)
 
-| Short version | Regular version | Description | Example |
-| :-----------: | :-------------: | :---------: | :------ |
+<table>
+<tr>
+<td> Prefix </td>
+<td> Example </td>
+</tr>
+<tr>
+<td> lightning-button </td>
+<td>
 
-`templateForEach`
-
-```js
-<template for:each={array} for:item='item'>
-</template>
+```html
+<lightning-button variant='base' label='label' title='title' onclick={handleOnClick} class='cssClass'>
+</lightning-button>
 ```
-
-`templateIfFalse`
-
-```js
-<template if:false={property}>
-</template>
-```
-
-`templateIfTrue`
-
-```js
-<template if:true={property}>
-</template>
-```
+</td>
+</tr>
+</table>
 
 ## [JS](./lwc-js.code-snippets)
+<table>
+<tr>
+<td> Prefix </td>
+<td> Example </td>
+</tr>
+<tr>
+<td> asyncAwait </td>
+<td>
 
-| Short version | Regular version | Description | Example |
-| :-----------: | :-------------: | :---------: | :------ |
-
-`constructor`
+```js
+try {
+    const result = await apexMethodName({ apexMethodParams });
+} catch (error) {
+    console.error(error)
+}
+```
+</td>
+</tr>
+<tr>
+<td> constructor </td>
+<td>
 
 ```js
 constructor() {
 
 }
 ```
-
-`customEvent`
+</td>
+</tr>
+</tr>
+<tr>
+<td> customEvent </td>
+<td>
 
 ```js
-new CustomEvent('eventName', { detail: details });
+new CustomEvent('eventName', {
+    detail: details,
+    bubbles: false,
+    composed: false
+});
 ```
-
-`disconnectedCallback`
+</td>
+</tr>
+<tr>
+<td> disconnectedCallback </td>
+<td>
 
 ```js
 disconnectedCallback() {
 
 }
 ```
+</td>
+</tr>
+<tr>
+<td> dispatchEvent </td>
+<td>
 
-`importApexMethod`
+```js
+this.dispatchEvent(customEvent);
+```
+</td>
+</tr>
+<tr>
+<td> errorCallback </td>
+<td>
+
+```js
+errorCallback(error, stack) {
+
+}
+```
+</td>
+</tr>
+<tr>
+<td> getObjectInfo </td>
+<td>
+
+```js
+import { getObjectInfo } from 'lightning/uiObjectInfoApi';
+import objectName from '@salesforce/schema/objectApiName';
+
+@wire(getObjectInfo, { objectApiName: objectName })
+propertyOrFunction;
+```
+</td>
+</tr>
+<tr>
+<td> getPicklistValues </td>
+<td>
+
+```js
+import { getPicklistValues } from 'lightning/uiObjectInfoApi';
+import fieldName from '@salesforce/schema/objectApiName.fieldApiName';
+
+@wire(getPicklistValues, { recordTypeId: '012000000000000AAA', fieldApiName: fieldName })
+propertyOrFunction;
+```
+</td>
+</tr>
+<tr>
+<td> getRecord </td>
+<td>
+
+```js
+import { getRecord } from 'lightning/uiRecordApi';
+
+@wire(getRecord, { recordId: 'recordId', fields: fields })
+propertyOrFunction;
+```
+</td>
+</tr>
+<tr>
+<td> getRecords </td>
+<td>
+
+```js
+import { getRecords } from 'lightning/uiRecordApi';
+
+@wire(getRecords, { records: [ { recordIds: 'recordIds', fields: fields } ] })
+propertyOrFunction;
+```
+</td>
+</tr>
+<tr>
+<td> importApexMethod </td>
+<td>
 
 ```js
 import apexMethodName from '@salesforce/apex/Namespace.ClassName.apexMethodReference';
 ```
-
-`importCustomLabel`
-
-```js
-import labelName from '@salesforce/label/labelReference';
-```
-
-`importField`
+</td>
+</tr>
+<tr>
+<td> importField </td>
+<td>
 
 ```js
 import fieldName from '@salesforce/schema/objectApiName.fieldApiName';
 ```
+</td>
+</tr>
+<tr>
+<td> importHasPermission </td>
+<td>
 
-`importNavigationMixin`
+```js
+import hasPermissionName from '@salesforce/userPermission/PermissionName';
+```
+</td>
+</tr>
+<tr>
+<td> importNavigationMixin </td>
+<td>
 
 ```js
 import { NavigationMixin } from 'lightning/navigation';
 ```
-
-`importObject`
+</td>
+</tr>
+<tr>
+<td> importObject </td>
+<td>
 
 ```js
 import objectName from '@salesforce/schema/objectApiName';
 ```
-
-`importUserId`
+</td>
+</tr>
+<tr>
+<td> importUserId </td>
+<td>
 
 ```js
 import userId from '@salesforce/user/Id';
 ```
+</td>
+</tr>
+<tr>
+<td> querySelector </td>
+<td>
 
-`renderedCallback`
+```js
+this.template.querySelector('element');
+```
+</td>
+</tr>
+<tr>
+<td> querySelectorAll </td>
+<td>
+
+```js
+this.template.querySelectorAll('element');
+```
+</td>
+</tr>
+<tr>
+<td> renderedCallback </td>
+<td>
 
 ```js
 initialRender = true;
 renderedCallback() {
     if (this.initialRender) {
+        // Your code here.
         this.initialRender = false;
     }
 }
 ```
-
-`ShowToastEvent`
+</td>
+</tr>
+<tr>
+<td> ShowToastEvent </td>
+<td>
 
 ```js
 import { ShowToastEvent } from 'lightning/platformShowToastEvent';
 new ShowToastEvent({ 'title', 'message', 'variant' });
 ```
-
-`wireMethod`
+</td>
+</tr>
+<tr>
+<td> importStaticResource </td>
+<td>
 
 ```js
-import apexMethodName from '@salesforce/apex/Namespace.Classname.apexMethodReference';
+import resourceName from '@salesforce/resourceUrl/resourceName';
+```
+</td>
+</tr>
+<tr>
+<td> thenCatch </td>
+<td>
+
+```js
+apexMethodName({ apexMethodParams })
+.then(result => {
+
+})
+.catch(error => {
+    console.error(error)
+});
+```
+</td>
+</tr>
+<tr>
+<td> wireMethod </td>
+<td>
+
+```js
 @wire(apexMethodName, { apexMethodParams })
 wiredName({ error, data }) {
     if (data) {
@@ -131,14 +290,19 @@ wiredName({ error, data }) {
     }
 }
 ```
-
-`wireProperty`
+</td>
+</tr>
+<tr>
+<td> wireProperty </td>
+<td>
 
 ```js
-import apexMethodName from '@salesforce/apex/Namespace.Classname.apexMethodReference';
 @wire(apexMethodName, { apexMethodParams })
 property;
 ```
+</td>
+</tr>
+</table>
 
 ## Release Notes
 
