@@ -179,14 +179,25 @@
         "prefix": "querySelectorAll",
         "scope": "javascript"
     },
+    "LWC render": {
+        "body": [
+            "render() {",
+            "\t",
+            "}"
+        ],
+        "description": "render.",
+        "prefix": "render",
+        "scope": "javascript"
+    },
     "LWC renderedCallback": {
         "body": [
             "initialRender = true;",
             "renderedCallback() {",
-            "\tif (this.initialRender) {",
-            "\t\t// Your code here.",
-            "\t\tthis.initialRender = false;",
+            "\tif (!this.initialRender) {",
+            "\t\treturn;",
             "\t}",
+            "\t// Your code here.",
+            "\tthis.initialRender = false;",
             "}"
         ],
         "description": "renderedCallback.",
