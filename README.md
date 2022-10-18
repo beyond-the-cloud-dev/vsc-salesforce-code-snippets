@@ -6,28 +6,17 @@ To import snippets from this repo, open the linked file for Apex, Html and JavaS
 
 # [Apex](./apex.code-snippets)
 
-| Short version | Regular version |          Description          | Example                                                                                                   |
-| :-----------: | :-------------: | :---------------------------: | :-------------------------------------------------------------------------------------------------------- |
-|      for      |       for       |         for statement         | for (_Type_ _variable_ : _listOrSet_) { <br>&nbsp;&nbsp;&nbsp;&nbsp;**cursor**<br>},                      |
-|     foro      |      foro       | Loop through queried SObjects | for (_Type_ _variable_ : [SELECT _fieldsList_ FROM _Type_) { <br>&nbsp;&nbsp;&nbsp;&nbsp;**cursor**<br>}, |
-
-`for`
-
-```java
-for (Type variable : ListOrSet) {
-
-}
-```
+| Short version | Regular version |          Description          | Example                                                                                                  |
+| :-----------: | :-------------: | :---------------------------: | :------------------------------------------------------------------------------------------------------- |
+|      for      |       for       |         for statement         | for (_Type_ _variable_ : _listOrSet_) { <br>&nbsp;&nbsp;&nbsp;&nbsp;**cursor**<br>},                     |
+|     foro      |      foro       | Loop through queried SObjects | for (_Type_ _variable_ : [SELECT _fieldsList_ FROM _Type_) { <br>&nbsp;&nbsp;&nbsp;&nbsp;**cursor**<br>} |
 
 # LWC
 
 ## [HTML](./lwc-html.code-snippets)
 
-`templateForEach`
-
-```js
-<template for:each={array} for:item="item"></template>
-```
+| Short version | Regular version | Description | Example |
+| :-----------: | :-------------: | :---------: | :------ |
 
 `templateIfFalse`
 
@@ -42,6 +31,9 @@ for (Type variable : ListOrSet) {
 ```
 
 ## [JS](./lwc-js.code-snippets)
+
+| Short version | Regular version | Description | Example |
+| :-----------: | :-------------: | :---------: | :------ |
 
 `constructor`
 
