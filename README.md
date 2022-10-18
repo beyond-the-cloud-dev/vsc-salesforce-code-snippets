@@ -1,6 +1,6 @@
 # Salesforce Snippets
 ## List of Snippets
-[![Apex](https://img.shields.io/badge/Apex-5-green?style=flat-square)](#apex) 
+[![Apex](https://img.shields.io/badge/Apex-11-green?style=flat-square)](#apex) 
 [![LWC-HTML](https://img.shields.io/badge/LWC_HTML-13-yellow?style=flat-square)](#html) 
 [![LWC-JS](https://img.shields.io/badge/LWC_JavaScript-24-blue?style=flat-square)](#js) 
 ## Features
@@ -49,12 +49,14 @@ System.assert();
 </td>
 </tr>
 
+</tr>
+
 <tr>
-<td>sae</td>
+<td>saf</td>
 <td>
 
 ```java
-System.assertEquals(expected, actual);
+System.assert(false, );
 ```
 
 </td>
@@ -70,6 +72,75 @@ System.assertEquals(expected, actual);
 
 </td>
 </tr>
+
+<tr>
+<td>san</td>
+<td>
+
+```java
+System.assertEquals(null, );
+```
+
+</td>
+</tr>
+
+<tr>
+<td>sane</td>
+<td>
+
+```java
+System.assertNotEquals(expected, actual);
+```
+
+</td>
+</tr>
+
+<tr>
+<td>sann</td>
+<td>
+
+```java
+System.assertNotEquals(null, );
+```
+
+</td>
+</tr>
+
+<tr>
+<td>sd</td>
+<td>
+
+```java
+System.debug(LoggingLevel.DEBUG, 'your message here: ' + variableHere);
+```
+
+</td>
+</tr>
+
+<tr>
+<td>sdp</td>
+<td>
+
+```java
+System.debug(LoggingLevel.DEBUG, 'your message here: ' + JSON.SerializePretty(objectVariable));
+```
+
+</td>
+</tr>
+
+<tr>
+<td>sra</td>
+<td>
+
+```java
+System.runAs(user) {
+    //your code here
+}
+```
+
+</td>
+</tr>
+
 </table>
 
 
