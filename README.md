@@ -28,6 +28,147 @@
 ```
 </td>
 </tr>
+<tr>
+<td> lightning-combobox </td>
+<td>
+
+```html
+<lightning-combobox
+    name='name'
+    label='label'
+    value={value}
+    placeholder='placeholder'
+    options={options}
+    onchange={handleChange}
+></lightning-combobox>
+```
+</td>
+</tr>
+<tr>
+<td> lightning-datatable </td>
+<td>
+
+```html
+<lightning-datatable
+    key-field='Id'
+    data={data}
+    columns={columns}
+    hide-checkbox-column
+></lightning-datatable>
+```
+</td>
+</tr>
+<tr>
+<td> lightning-icon </td>
+<td>
+
+```html
+<lightning-icon icon-name='iconName' alternative-text='alternativeText' title='title'>
+</lightning-icon>
+```
+</td>
+</tr>
+<tr>
+<td> lightning-input </td>
+<td>
+
+```html
+<lightning-input type='type' label='label' onchange='handleOnChange'>
+</lightning-input>
+```
+</td>
+</tr>
+<tr>
+<td> lightning-layout </td>
+<td>
+
+```html
+<lightning-layout horizontal-align='horiznotalAlign' vertical-align='verticalAlign' multiple-rows='multipleRows'>
+    <lightning-layout-item padding='around-small'>
+    </lightning-layout-item>
+    <lightning-layout-item padding='around-small'>
+    </lightning-layout-item>
+    <lightning-layout-item padding='around-small'>
+    </lightning-layout-item>
+</lightning-layout>
+```
+</td>
+</tr>
+<tr>
+<td> lightning-layout-item </td>
+<td>
+
+```html
+<lightning-layout-item size='size' small-device-size='smallDeviceSize' medium-device-size='mediumDeviceSize' large-device-size='largeDeviceSize' padding='around-small'>
+</lightning-layout-item>
+```
+</td>
+</tr>
+<tr>
+<td> lightning-spinner </td>
+<td>
+
+```html
+<lightning-spinner alternative-text='alternativeText' size='size'>
+</lightning-spinner>
+```
+</td>
+</tr>
+<tr>
+<td> slot </td>
+<td>
+
+```html
+<slot name='name'>
+</slot>
+```
+</td>
+</tr>
+<tr>
+<td> templateForEach </td>
+<td>
+
+```html
+<template for:each={array} for:item='item'>
+</template>
+```
+</td>
+</tr>
+<tr>
+<td> templateIfFalse </td>
+<td>
+
+```html
+<template if:false={property}>
+</template>
+```
+</td>
+</tr>
+<tr>
+<td> templateIfTrue </td>
+<td>
+
+```html
+<template if:true={property}>
+</template>
+```
+</td>
+</tr>
+<tr>
+<td> templateIteratorIt </td>
+<td>
+
+```html
+<template iterator:it={array}>
+    <div key={it.value.Id}>
+    <div if:true={it.first}></div>
+    {it.value.Name}
+    <div if:true={it.last}></div>
+    </div>
+</template>
+```
+</td>
+</tr>
 </table>
 
 ## [JS](./lwc-js.code-snippets)
