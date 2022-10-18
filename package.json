@@ -1,0 +1,40 @@
+{
+  "name": "salesforce-snippets-beyondthecloud",
+  "displayName": "Salesforce Snippets",
+  "description": "Snippets for Salesforce Apex and LWC",
+  "icon": "images/logo.png",
+  "version": "0.0.9",
+  "publisher": "BeyondTheCloud",
+  "repository": "https://github.com/beyond-the-cloud-dev/vsc-salesforce-code-snippets",
+  "engines": {
+    "vscode": "^1.0.0"
+  },
+  "scripts": {
+    "deploy": "vsce publish",
+    "deploy-patch": "vsce publish patch",
+    "deploy-minor": "vsce publish minor",
+    "deploy-major": "vsce publish major"
+  },
+  "categories": [
+    "Snippets"
+  ],
+  "contributes": {
+    "snippets": [
+      {
+        "language": "apex",
+        "path": "./snippets/apex.json"
+      },
+      {
+        "language": "html",
+        "path": "./snippets/lwc-html.json"
+      },
+      {
+        "language": "javascript",
+        "path": "./snippets/lwc-js.json"
+      }
+    ]
+  },
+  "devDependencies": {
+    "vsce": "^2.11.0"
+  }
+}

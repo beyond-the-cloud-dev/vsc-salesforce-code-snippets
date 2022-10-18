@@ -1,7 +1,7 @@
 {
     "LWC lightning-button": {
         "body": [
-            "<lightning-button variant='${1:variant}' label='${2:label}' title='${3:title}' onclick=${4:handleOnClick} class='${cssClass}'>",
+            "<lightning-button variant='${1:variant}' label='${2:label}' title='${3:title}' onclick=${4:handleOnClick} class='${5:cssClass}'>",
             "</lightning-button>"
         ],
         "description": "lightning-button",
@@ -144,6 +144,22 @@
         "description": "Template if:true.",
         "prefix": [
             "templateIfTrue"
+        ],
+        "scope": "html"
+    },
+    "LWC template iterator:it": {
+        "body": [
+            "<template iterator:it={${1:array}}>",
+            "\t<div key={it.value.Id}>",
+            "\t<div if:true={it.first}></div>",
+            "\t{it.value.Name}",
+            "\t<div if:true={it.last}></div>",
+            "\t</div>",
+            "</template>"
+        ],
+        "description": "Template iterator:it.",
+        "prefix": [
+            "templateIteratorIt"
         ],
         "scope": "html"
     }
