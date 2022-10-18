@@ -146,5 +146,21 @@
             "templateIfTrue"
         ],
         "scope": "html"
+    },
+    "LWC template iterator:it": {
+        "body": [
+            "<template iterator:it={${1:array}}>",
+            "\t<div key={it.value.Id}>",
+            "\t<div if:true={it.first}></div>",
+            "\t{it.value.Name}",
+            "\t<div if:true={it.last}></div>",
+            "\t</div>",
+            "</template>"
+        ],
+        "description": "Template iterator:it.",
+        "prefix": [
+            "templateIteratorIt"
+        ],
+        "scope": "html"
     }
 }

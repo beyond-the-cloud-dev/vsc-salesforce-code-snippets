@@ -51,6 +51,16 @@
         "prefix": "dispatchEvent",
         "scope": "javascript"
     },
+    "LWC ErrorCallback": {
+        "body": [
+            "errorCallback(error, stack) {",
+            "\t",
+            "}"
+        ],
+        "description": "errorCallback.",
+        "prefix": "errorCallback",
+        "scope": "javascript"
+    },
     "LWC getObjectInfo": {
         "body": [
             "import { getObjectInfo } from 'lightning/uiObjectInfoApi';",
@@ -110,7 +120,7 @@
             "import ${1:labelName} from '@salesforce/label/${2:labelReference}';"
         ],
         "description": "Import custom label.",
-        "prefix": "importCustomLabel",
+        "prefix": "importLabel",
         "scope": "javascript"
     },
     "LWC Import Field": {
@@ -119,6 +129,14 @@
         ],
         "description": "Import Field.",
         "prefix": "importField",
+        "scope": "javascript"
+    },
+    "LWC Import Has Permission": {
+        "body": [
+            "import has${1:PermissionName} from '@salesforce/userPermission/${1:PermissionName}';"
+        ],
+        "description": "Import hasPermission.",
+        "prefix": "importHasPermission",
         "scope": "javascript"
     },
     "LWC Import NavigationMixin": {
@@ -166,6 +184,7 @@
             "initialRender = true;",
             "renderedCallback() {",
             "\tif (this.initialRender) {",
+            "\t\t// Your code here.",
             "\t\tthis.initialRender = false;",
             "\t}",
             "}"
@@ -181,6 +200,14 @@
         ],
         "description": "ShowToastEvent.",
         "prefix": "ShowToastEvent",
+        "scope": "javascript"
+    },
+    "LWC Static Resource": {
+        "body": [
+            "import ${1:resourceName} from '@salesforce/resourceUrl/${2:resourceName}';"
+        ],
+        "description": "Import static resource.",
+        "prefix": "importStaticResource",
         "scope": "javascript"
     },
     "LWC Then/Catch": {
@@ -199,7 +226,6 @@
     },
     "LWC Wire Method": {
         "body": [
-            "import ${1:apexMethodName} from '@salesforce/apex/${2:Namespace}.${3:Classname}.${4:apexMethodReference}';",
             "@wire(${1:apexMethodName}, { apexMethodParams })",
             "${5:wiredName}({ error, data }) {",
             "\tif (data) {",
@@ -215,7 +241,6 @@
     },
     "LWC Wire Property": {
         "body": [
-            "import ${1:apexMethodName} from '@salesforce/apex/${2:Namespace}.${3:Classname}.${4:apexMethodReference}';",
             "@wire(${1:apexMethodName}, { apexMethodParams })",
             "${5:property};"
         ],
