@@ -1,17 +1,81 @@
 # Salesforce Snippets
-
+## List of Snippets
+[![Apex](https://img.shields.io/badge/Apex-5-green?style=flat-square)](#apex) 
+[![LWC-HTML](https://img.shields.io/badge/LWC_HTML-13-yellow?style=flat-square)](#html) 
+[![LWC-JS](https://img.shields.io/badge/LWC_JavaScript-24-blue?style=flat-square)](#js) 
 ## Features
 
-# [Apex](./apex.code-snippets)
+# [Apex](./snippets/apex.json)
 
-| Short version | Regular version |          Description          | Example                                                                                                  |
-| :-----------: | :-------------: | :---------------------------: | :------------------------------------------------------------------------------------------------------- |
-|      for      |       for       |         for statement         | for (_Type_ _variable_ : _listOrSet_) { <br>&nbsp;&nbsp;&nbsp;&nbsp;**cursor**<br>},                     |
-|     foro      |      foro       | Loop through queried SObjects | for (_Type_ _variable_ : [SELECT _fieldsList_ FROM _Type_) { <br>&nbsp;&nbsp;&nbsp;&nbsp;**cursor**<br>} |
+<table>
+<tr>
+<td> Prefix </td>
+<td> Example </td>
+</tr>
+<tr>
+<td>foro</td>
+<td>
+
+```java
+for (Type variable : [SELECT fieldsList FROM Type) {
+    //Your code here
+} 
+```
+
+</td>
+</tr>
+
+<tr>
+<td>inst</td>
+<td>
+
+```java
+if (objects[0] instanceof Account) {
+    Account acc = (Account) objects[0];
+}
+```
+
+</td>
+</tr>
+
+<tr>
+<td>sa</td>
+<td>
+
+```java
+System.assert();
+```
+
+</td>
+</tr>
+
+<tr>
+<td>sae</td>
+<td>
+
+```java
+System.assertEquals(expected, actual);
+```
+
+</td>
+</tr>
+
+<tr>
+<td>sae</td>
+<td>
+
+```java
+System.assertEquals(expected, actual);
+```
+
+</td>
+</tr>
+</table>
+
 
 # LWC
 
-## [HTML](./lwc-html.code-snippets)
+## [HTML](./snippets/lwc-html.json)
 
 <table>
 <tr>
@@ -171,7 +235,7 @@
 </tr>
 </table>
 
-## [JS](./lwc-js.code-snippets)
+## [JS](./snippets/lwc-js.json)
 <table>
 <tr>
 <td> Prefix </td>
