@@ -1,8 +1,8 @@
 # Salesforce Snippets
 ## List of Snippets
-[![Apex](https://img.shields.io/badge/Apex-11-green?style=flat-square)](#apex) 
-[![LWC-HTML](https://img.shields.io/badge/LWC_HTML-13-yellow?style=flat-square)](#html) 
-[![LWC-JS](https://img.shields.io/badge/LWC_JavaScript-24-blue?style=flat-square)](#js) 
+[![Apex](https://img.shields.io/badge/Apex-11-green?style=flat-square)](#apex)
+[![LWC-HTML](https://img.shields.io/badge/LWC_HTML-13-yellow?style=flat-square)](#html)
+[![LWC-JS](https://img.shields.io/badge/LWC_JavaScript-25-blue?style=flat-square)](#js)
 ## Features
 
 # [Apex](./snippets/apex.json)
@@ -19,7 +19,7 @@
 ```java
 for (Type variable : [SELECT fieldsList FROM Type) {
     //Your code here
-} 
+}
 ```
 
 </td>
@@ -504,16 +504,28 @@ this.template.querySelectorAll('element');
 </td>
 </tr>
 <tr>
+<td> render </td>
+<td>
+
+```js
+render() {
+
+}
+```
+</td>
+</tr>
+<tr>
 <td> renderedCallback </td>
 <td>
 
 ```js
 initialRender = true;
 renderedCallback() {
-    if (this.initialRender) {
-        // Your code here.
-        this.initialRender = false;
+    if (!this.initialRender) {
+        return;
     }
+    // Your code here.
+    this.initialRender = false;
 }
 ```
 </td>
