@@ -64,6 +64,17 @@
         ],
         "scope": "html"
     },
+    "LWC lightning-input-field": {
+        "body": [
+            "<lightning-input-field field-name='${1:fieldName}' disabled read-only required>",
+            "</lightning-input-field>"
+        ],
+        "description": "lightning-input-field ",
+        "prefix": [
+            "lightning-input-field "
+        ],
+        "scope": "html"
+    },
     "LWC lightning-layout": {
         "body": [
             "<lightning-layout horizontal-align='${1:horiznotalAlign}' vertical-align='${2:verticalAlign}' multiple-rows='${3:multipleRows}'>",
@@ -100,6 +111,26 @@
         "description": "lightning-spinner",
         "prefix": [
             "lightning-spinner"
+        ],
+        "scope": "html"
+    },
+    "LWC lightning-tabset": {
+        "body": [
+            "<lightning-tabset variant='${1:variant}' active-tab-value='two'>",
+            "\t<lightning-tab label='Item One' value='one'>",
+            "\t\t One Content !",
+            "\t</lightning-tab>",
+            "\t<lightning-tab label='Item Two' value='two'>",
+            "\t\t Two Content !",
+            "\t</lightning-tab>",
+            "\t<lightning-tab label='Item Three' value='three'>",
+            "\t\t Three Content !",
+            "\t</lightning-tab>",
+            "</lightning-tabset>"
+        ],
+        "description": "lightning-tabset",
+        "prefix": [
+            "lightning-tabset"
         ],
         "scope": "html"
     },
