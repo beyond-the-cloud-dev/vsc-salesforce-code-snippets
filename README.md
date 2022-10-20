@@ -2,7 +2,7 @@
 ## List of Snippets
 [![Apex](https://img.shields.io/badge/Apex-14-green?style=flat-square)](#apex)
 [![LWC-HTML](https://img.shields.io/badge/LWC_HTML-13-yellow?style=flat-square)](#html)
-[![LWC-JS](https://img.shields.io/badge/LWC_JavaScript-27-blue?style=flat-square)](#js)
+[![LWC-JS](https://img.shields.io/badge/LWC_JavaScript-29-blue?style=flat-square)](#js)
 ## Features
 
 # [Apex](./snippets/apex.json)
@@ -412,6 +412,17 @@ errorCallback(error, stack) {
 </td>
 </tr>
 <tr>
+<td> forEach </td>
+<td>
+
+```js
+array.forEach((item, index) => {
+
+});
+```
+</td>
+</tr>
+<tr>
 <td> getObjectInfo </td>
 <td>
 
@@ -512,6 +523,19 @@ import objectName from '@salesforce/schema/objectApiName';
 
 ```js
 import userId from '@salesforce/user/Id';
+```
+</td>
+</tr>
+<tr>
+<td> map </td>
+<td>
+
+```js
+array.map((item, index) => {
+    return {
+
+    }
+});
 ```
 </td>
 </tr>
