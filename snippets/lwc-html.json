@@ -105,7 +105,7 @@
     },
     "LWC lightning-spinner": {
         "body": [
-            "<lightning-spinner alternative-text='${1:alternativeText}' size='${2:size}'>",
+            "<lightning-spinner alternative-text='${1:alternativeText}' size='${2|small,medium,large|}'>",
             "</lightning-spinner>"
         ],
         "description": "lightning-spinner",
