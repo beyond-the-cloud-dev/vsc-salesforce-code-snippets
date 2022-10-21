@@ -1,94 +1,150 @@
 {
-    "Loop through queried SObjects": {
-        "scope": "apex,apex-anon",
-        "prefix": "foro",
-        "body": [
-            "for (${1:Type} ${2:variable} : [SELECT ${3:fieldsList} FROM ${1:Type}) {", "\t$0", "}",
-        ]
-    },
-
     "Instance Of": {
-        "prefix": "inst",
-        "scope": "apex,apex-anon",
         "body": [
-            "if (${1:Variable} instanceof ${2:Type}) {", 
-            "    ${2:Type} ${3:castVariable} = (${2:Type}) ${1:Variable};" ,
+            "if (${1:Variable} instanceof ${2:Type}) {",
+            "    ${2:Type} ${3:castVariable} = (${2:Type}) ${1:Variable};",
             "    $0",
             "}"
         ],
-        "description": "Check instance of and downcast"
+        "description": "Check instance of and downcast",
+        "prefix": "inst",
+        "scope": "apex,apex-anon"
     },
-
+    "Future Method": {
+        "body": [
+            "@future",
+            "public static void ${1:methodName}() {",
+            "\t$0",
+            "}"
+        ],
+        "description": "Future method.",
+        "prefix": "@future",
+        "scope": "apex,apex-anon"
+    },
+    "TestSetup": {
+        "body": [
+            "@TestSetup",
+            "static void setup() {",
+            "\t$0",
+            "}"
+        ],
+        "description": "Test setup for creating data before test methods run.",
+        "prefix": "@TestSetup",
+        "scope": "apex,apex-anon"
+    },
+    "Invocable Method": {
+        "body": [
+            "@InvocableMethod(label='${1:Label}' description='${2:Description}' category='${3:Category}')",
+            "public static List<${4:Type}> ${5:methodName}() {",
+            "\t$0",
+            "}"
+        ],
+        "description": "Invocable method.",
+        "prefix": "@InvocableMethod",
+        "scope": "apex,apex-anon"
+    },
+    "Loop through queried SObjects": {
+        "body": [
+            "for (${1:Type} ${2:variable} : [SELECT ${3:fieldsList} FROM ${1:Type}) {",
+            "\t$0",
+            "}"
+        ],
+        "prefix": "foro",
+        "scope": "apex,apex-anon"
+    },
     "System Assert": {
-        "prefix": "sa",
-        "scope": "apex,apex-anon",
         "body": [
             "System.assert($0);"
-        ]
+        ],
+        "prefix": [
+            "sa",
+            "System.assert"
+        ],
+        "scope": "apex,apex-anon"
     },
-
     "System Assert Equals": {
-        "prefix": "sae",
-        "scope": "apex,apex-anon",
         "body": [
             "System.assertEquals(${1:expected}, ${2:actual});"
-        ]
+        ],
+        "prefix": [
+            "sae",
+            "System.assertEquals"
+        ],
+        "scope": "apex,apex-anon"
     },
-
-    "System Assert Fail": {
-        "prefix": "saf",
-        "scope": "apex,apex-anon",
-        "body": [
-            "System.assert(false, $0);"
-        ]
-    },
-
     "System Assert Equals Null": {
-        "prefix": "san",
-        "scope": "apex,apex-anon",
         "body": [
             "System.assertEquals(null, $0);"
-        ]
+        ],
+        "prefix": [
+            "san",
+            "System.assertEquals"
+        ],
+        "scope": "apex,apex-anon"
     },
-
+    "System Assert Fail": {
+        "body": [
+            "System.assert(false, $0);"
+        ],
+        "prefix": [
+            "saf",
+            "System.assert"
+        ],
+        "scope": "apex,apex-anon"
+    },
     "System Assert Not Equals": {
-        "prefix": "sane",
-        "scope": "apex,apex-anon",
         "body": [
             "System.assertNotEquals(${1:expected}, ${2:actual});"
-        ]
+        ],
+        "prefix": [
+            "sane",
+            "System.assertNotEquals"
+        ],
+        "scope": "apex,apex-anon"
     },
-
     "System Assert Not Equals Null": {
-        "prefix": "sann",
-        "scope": "apex,apex-anon",
         "body": [
             "System.assertNotEquals(null, $0);"
-        ]
-    },
-
-    "System Debug": {
-        "prefix": "sd",
-        "scope": "apex,apex-anon",
-        "body": ["System.debug(LoggingLevel.DEBUG, '$1: ' + $0);"],
-        "description": "Debug "
-    },
-
-    "System Debug Serialize Pretty": {
-        "prefix": "sdp",
-        "scope": "apex,apex-anon",
-        "body": [
-            "System.debug(LoggingLevel.DEBUG, '$1: ' + JSON.SerializePretty($0));"],
-        "description": "System.debug(JSON.SerializePretty())"
-    },
-
-    "System Run As": {
-        "prefix": "sra",
-        "scope": "apex,apex-anon",
-        "body": [
-            "System.runAs(${1:user}) {", "\t$0", "}",
         ],
-        "description": "System Run As User statement."
+        "prefix": [
+            "sann",
+            "System.assertNotEquals"
+        ],
+        "scope": "apex,apex-anon"
+    },
+    "System Debug": {
+        "body": [
+            "System.debug(LoggingLevel.DEBUG, '$1: ' + $0);"
+        ],
+        "description": "Debug ",
+        "prefix": [
+            "sd",
+            "System.debug"
+        ],
+        "scope": "apex,apex-anon"
+    },
+    "System Debug Serialize Pretty": {
+        "body": [
+            "System.debug(LoggingLevel.DEBUG, '$1: ' + JSON.SerializePretty($0));"
+        ],
+        "description": "System.debug(JSON.SerializePretty())",
+        "prefix": [
+            "sdp",
+            "System.debug"
+        ],
+        "scope": "apex,apex-anon"
+    },
+    "System Run As": {
+        "body": [
+            "System.runAs(${1:user}) {",
+            "\t$0",
+            "}"
+        ],
+        "description": "System Run As User statement.",
+        "prefix": [
+            "sra",
+            "System.runAs"
+        ],
+        "scope": "apex,apex-anon"
     }
-
 }

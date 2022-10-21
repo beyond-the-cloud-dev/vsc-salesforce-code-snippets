@@ -1,8 +1,8 @@
 # Salesforce Snippets
 ## List of Snippets
-[![Apex](https://img.shields.io/badge/Apex-11-green?style=flat-square)](#apex)
+[![Apex](https://img.shields.io/badge/Apex-14-green?style=flat-square)](#apex)
 [![LWC-HTML](https://img.shields.io/badge/LWC_HTML-13-yellow?style=flat-square)](#html)
-[![LWC-JS](https://img.shields.io/badge/LWC_JavaScript-25-blue?style=flat-square)](#js)
+[![LWC-JS](https://img.shields.io/badge/LWC_JavaScript-29-blue?style=flat-square)](#js)
 ## Features
 
 # [Apex](./snippets/apex.json)
@@ -214,6 +214,16 @@ System.runAs(user) {
 </td>
 </tr>
 <tr>
+<td> lightning-input-field </td>
+<td>
+
+```html
+<lightning-input-field field-name='fieldName' disabled read-only required>
+</lightning-input-field>
+```
+</td>
+</tr>
+<tr>
 <td> lightning-layout </td>
 <td>
 
@@ -240,7 +250,27 @@ System.runAs(user) {
 </td>
 </tr>
 <tr>
-<td> lightning-spinner </td>
+<td> lightning-tabset </td>
+<td>
+
+```html
+<lightning-tabset variant='variant' active-tab-value='two'>
+    <lightning-tab label='Item One' value='one'>
+        One Content !
+    </lightning-tab>
+    <lightning-tab label='Item Two' value='two'>
+        Two Content !
+    </lightning-tab>
+    <lightning-tab label='Item Three' value='three'>
+        Three Content !
+    </lightning-tab>
+</lightning-tabset>
+```
+</td>
+</tr>
+<tr>
+<tr>
+<td> lightning-tabset </td>
 <td>
 
 ```html
@@ -382,6 +412,17 @@ errorCallback(error, stack) {
 </td>
 </tr>
 <tr>
+<td> forEach </td>
+<td>
+
+```js
+array.forEach((item, index) => {
+
+});
+```
+</td>
+</tr>
+<tr>
 <td> getObjectInfo </td>
 <td>
 
@@ -482,6 +523,19 @@ import objectName from '@salesforce/schema/objectApiName';
 
 ```js
 import userId from '@salesforce/user/Id';
+```
+</td>
+</tr>
+<tr>
+<td> map </td>
+<td>
+
+```js
+array.map((item, index) => {
+    return {
+
+    }
+});
 ```
 </td>
 </tr>

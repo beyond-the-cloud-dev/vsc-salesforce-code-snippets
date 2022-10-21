@@ -14,7 +14,7 @@
     "LWC constructor": {
         "body": [
             "constructor() {",
-            "",
+            "\t$0",
             "}"
         ],
         "description": "constructor.",
@@ -59,6 +59,16 @@
         ],
         "description": "errorCallback.",
         "prefix": "errorCallback",
+        "scope": "javascript"
+    },
+    "LWC ForEach": {
+        "body": [
+            "${1:array}.forEach((item, index) => {",
+            "\t$0",
+            "});"
+        ],
+        "description": "The forEach() method executes a provided function once for each array element.",
+        "prefix": "forEach",
         "scope": "javascript"
     },
     "LWC getObjectInfo": {
@@ -163,6 +173,18 @@
         "prefix": "importUserId",
         "scope": "javascript"
     },
+    "LWC Map": {
+        "body": [
+            "${1:array}.map((item, index) => {",
+            "\treturn {",
+            "\t\t$0",
+            "\t}",
+            "});"
+        ],
+        "description": "The map() method creates a new array populated with the results of calling a provided function on every element in the calling array.",
+        "prefix": "map",
+        "scope": "javascript"
+    },
     "LWC querySelector": {
         "body": [
             "this.template.querySelector('${1:element}');"
@@ -182,7 +204,7 @@
     "LWC render": {
         "body": [
             "render() {",
-            "\t",
+            "\t$0",
             "}"
         ],
         "description": "render.",
@@ -196,7 +218,7 @@
             "\tif (!this.initialRender) {",
             "\t\treturn;",
             "\t}",
-            "\t// Your code here.",
+            "\t$0 // Your code here.",
             "\tthis.initialRender = false;",
             "}"
         ],
@@ -240,7 +262,7 @@
             "@wire(${1:apexMethodName}, { apexMethodParams })",
             "${5:wiredName}({ error, data }) {",
             "\tif (data) {",
-            "",
+            "\t\t$0",
             "\t} else if (error) {",
             "\t\tconsole.error(error);",
             "\t}",
