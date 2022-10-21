@@ -1,7 +1,7 @@
 {
     "LWC lightning-button": {
         "body": [
-            "<lightning-button variant='${1:variant}' label='${2:label}' title='${3:title}' onclick={${4:handleOnClick}} class='${5:cssClass}'>",
+            "<lightning-button variant='${1|base,neutral,brand,brand-outline,destructive,destructive-text,inverse,success|}' label='${2:label}' title='${3:title}' onclick={${4:handleOnClick}} class='${5:cssClass}'>",
             "</lightning-button>"
         ],
         "description": "lightning-button",
@@ -55,7 +55,7 @@
     },
     "LWC lightning-input": {
         "body": [
-            "<lightning-input type='${1:type}' label='${2:label}' onchange='${3:handleOnChange}'>",
+            "<lightning-input type='${1|checkbox,checkbox-button,date,datetime,time,email,file,password,search,tel,url,number,text,toggle|}' label='${2:label}' onchange={${3:handleOnChange}}>",
             "</lightning-input>"
         ],
         "description": "lightning-input",
@@ -77,7 +77,7 @@
     },
     "LWC lightning-layout": {
         "body": [
-            "<lightning-layout horizontal-align='${1:horiznotalAlign}' vertical-align='${2:verticalAlign}' multiple-rows='${3:multipleRows}'>",
+            "<lightning-layout horizontal-align='${1|center,space,spread,end|}' vertical-align='${2|start,center,end,stretch|}' multiple-rows>",
             "\t<lightning-layout-item padding='around-small'>",
             "\t</lightning-layout-item>",
             "\t<lightning-layout-item padding='around-small'>",
@@ -116,7 +116,7 @@
     },
     "LWC lightning-tabset": {
         "body": [
-            "<lightning-tabset variant='${1:variant}' active-tab-value='two'>",
+            "<lightning-tabset variant='${1|default,scoped,vertical|}' active-tab-value='two'>",
             "\t<lightning-tab label='Item One' value='one'>",
             "\t\t One Content !",
             "\t</lightning-tab>",
