@@ -655,15 +655,6 @@ property;
 <td> Example </td>
 </tr>
 <tr>
-<td> apiVersion </td>
-<td>
-
-```xml
-<apiVersion>55.0</apiVersion>
-```
-</td>
-</tr>
-<tr>
 <td> capability </td>
 <td>
 
@@ -680,13 +671,14 @@ property;
 <isExposed>true</isExposed>
 ```
 </td>
-</tr><tr>
+</tr>
+<tr>
 <td> targets </td>
 <td>
 
 ```xml
 <targets>
-
+    <target>lightning__AppPage</target>
 </targets>
 ```
 </tr><tr>
@@ -695,7 +687,13 @@ property;
 
 ```xml
 <targetConfig targets="lightningCommunity__Page">
-
+    <propertyType
+        name="country"
+        label="User Country"
+        type="String"
+        default="United States"
+        description="Country of selected User"
+    />
 </targetConfig>
 ```
 </tr>

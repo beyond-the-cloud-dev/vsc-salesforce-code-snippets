@@ -1,15 +1,5 @@
 {
-    "Api Version": {
-        "body": [
-            "<apiVersion>$0</apiVersion>"
-        ],
-        "description": "Api Version",
-        "prefix": [
-            "apiVersion"
-        ],
-        "scope": "xml"
-    },
-    "Capability": {
+    "LWC Capability": {
         "body": [
             "<capability>${1|lightningCommunity__RelaxedCSP,lightning__ServiceCloudVoiceToolkitApi|}</capability>"
         ],
@@ -19,7 +9,7 @@
         ],
         "scope": "xml"
     },
-    "Is Exposed": {
+    "LWC Is Exposed": {
         "body": [
             "<isExposed>${1|true,false|}</isExposed>"
         ],
@@ -29,10 +19,10 @@
         ],
         "scope": "xml"
     },
-    "Targets": {
+    "LWC Targets": {
         "body": [
             "<targets>",
-            "\t$0",
+            "\t<target>${1|lightning__AppPage,lightning__FlowScreen,lightning__HomePage,lightning__Inbox,lightning__RecordAction,lightning__RecordPage,lightning__Tab,lightning__UtilityBar,lightningCommunity__Default,lightningCommunity__Page,lightningCommunity__Page_Layout,lightningCommunity__Theme_Layout,lightningSnapin__ChatHeader,lightningSnapin__ChatMessage,lightningSnapin__Minimized,lightningSnapin__PreChat,lightningStatic__Email,analytics__Dashboard|}</target>",
             "</targets>"
         ],
         "description": "Targets",
@@ -41,10 +31,16 @@
         ],
         "scope": "xml"
     },
-    "Target Config": {
+    "LWC Target Config": {
         "body": [
-            "<targetConfig targets=\"${1|lightningCommunity__Default,lightningCommunity__Page,lightningCommunity__Page_Layout,lightningCommunity__Theme_Layout,lightningSnapin__ChatHeader,lightningSnapin__ChatMessage,lightningSnapin__Minimized,lightningSnapin__PreChat,lightningStatic__Email,lightning__AppPage,lightning__FlowScreen,lightning__HomePage,lightning__Inbox,lightning__RecordAction,lightning__RecordPage,lightning__Tab,lightning__UtilityBar,analytics__Dashboard|}\">",
-            "\t$0",
+            "<targetConfig targets=\"${1|lightning__AppPage,lightning__FlowScreen,lightning__HomePage,lightning__Inbox,lightning__RecordAction,lightning__RecordPage,lightning__Tab,lightning__UtilityBar,lightningCommunity__Default,lightningCommunity__Page,lightningCommunity__Page_Layout,lightningCommunity__Theme_Layout,lightningSnapin__ChatHeader,lightningSnapin__ChatMessage,lightningSnapin__Minimized,lightningSnapin__PreChat,lightningStatic__Email,analytics__Dashboard|}\">",
+            "\t<propertyType",
+            "\t\tname=\"$2\"",
+            "\t\tlabel=\"$3\"",
+            "\t\t${4|type,extends|}=\"$5\"",
+            "\t\tdefault=\"$6\"",
+            "\t\tdescription=\"$7\"",
+            "\t/>$0",
             "</targetConfig>"
         ],
         "description": "Target Config",
@@ -53,7 +49,7 @@
         ],
         "scope": "xml"
     },
-    "Property Type": {
+    "LWC Property Type": {
         "body": [
             "<propertyType",
             "\tname=\"${1:$CLIPBOARD}\"",
