@@ -1,4 +1,10 @@
 # Salesforce Snippets
+
+A [VS Code Extension](https://marketplace.visualstudio.com/items?itemName=BeyondTheCloud.salesforce-snippets-beyondthecloud) with Apex and LWC Snippets.
+
+[![Installs](https://vsmarketplacebadge.apphb.com/installs/BeyondTheCloud.salesforce-snippets-beyondthecloud.svg)](https://marketplace.visualstudio.com/items?itemName=BeyondTheCloud.salesforce-snippets-beyondthecloud)
+[![Ratings](https://vsmarketplacebadge.apphb.com/rating-short/BeyondTheCloud.salesforce-snippets-beyondthecloud.svg)](https://marketplace.visualstudio.com/items?itemName=BeyondTheCloud.salesforce-snippets-beyondthecloud)
+
 ## List of Snippets
 [![Apex](https://img.shields.io/badge/Apex-14-green?style=flat-square)](#apex)
 [![LWC-HTML](https://img.shields.io/badge/LWC_HTML-13-yellow?style=flat-square)](#html)
