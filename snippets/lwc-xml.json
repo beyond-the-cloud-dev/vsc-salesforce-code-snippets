@@ -1,0 +1,72 @@
+{
+    "Api Version": {
+        "body": [
+            "<apiVersion>$0</apiVersion>"
+        ],
+        "description": "Api Version",
+        "prefix": [
+            "apiVersion"
+        ],
+        "scope": "xml"
+    },
+    "Capability": {
+        "body": [
+            "<capability>${1|lightningCommunity__RelaxedCSP,lightning__ServiceCloudVoiceToolkitApi|}</capability>"
+        ],
+        "description": "Capability",
+        "prefix": [
+            "capability"
+        ],
+        "scope": "xml"
+    },
+    "Is Exposed": {
+        "body": [
+            "<isExposed>${1|true,false|}</isExposed>"
+        ],
+        "description": "Is Exposed",
+        "prefix": [
+            "isExposed"
+        ],
+        "scope": "xml"
+    },
+    "Targets": {
+        "body": [
+            "<targets>",
+            "\t$0",
+            "</targets>"
+        ],
+        "description": "Targets",
+        "prefix": [
+            "targets"
+        ],
+        "scope": "xml"
+    },
+    "Target Config": {
+        "body": [
+            "<targetConfig targets=\"${1|lightningCommunity__Default,lightningCommunity__Page,lightningCommunity__Page_Layout,lightningCommunity__Theme_Layout,lightningSnapin__ChatHeader,lightningSnapin__ChatMessage,lightningSnapin__Minimized,lightningSnapin__PreChat,lightningStatic__Email,lightning__AppPage,lightning__FlowScreen,lightning__HomePage,lightning__Inbox,lightning__RecordAction,lightning__RecordPage,lightning__Tab,lightning__UtilityBar,analytics__Dashboard|}\">",
+            "\t$0",
+            "</targetConfig>"
+        ],
+        "description": "Target Config",
+        "prefix": [
+            "targetConfig"
+        ],
+        "scope": "xml"
+    },
+    "Property Type": {
+        "body": [
+            "<propertyType",
+            "\tname=\"${1:$CLIPBOARD}\"",
+            "\tlabel=\"$2\"",
+            "\t${3|type,extends|}=\"$4\"",
+            "\tdefault=\"$5\"",
+            "\tdescription=\"$6\"",
+            "/>$0"
+        ],
+        "description": "Property Type",
+        "prefix": [
+            "propertyType"
+        ],
+        "scope": "xml"
+    }
+}
