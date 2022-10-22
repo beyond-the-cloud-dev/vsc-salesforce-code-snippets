@@ -3,6 +3,7 @@
 [![Apex](https://img.shields.io/badge/Apex-14-green?style=flat-square)](#apex)
 [![LWC-HTML](https://img.shields.io/badge/LWC_HTML-13-yellow?style=flat-square)](#html)
 [![LWC-JS](https://img.shields.io/badge/LWC_JavaScript-29-blue?style=flat-square)](#js)
+[![LWC-XML](https://img.shields.io/badge/LWC_XML-5-red?style=flat-square))](#xml)
 
 <img src="assets/lwc-js-snippets.gif" width="500"/>
 <img src="assets/lwc-html-snippets.gif" width="500"/>
@@ -716,5 +717,5 @@ property;
 
 ## Release Notes
 
-### 0.0.1
-Initial release of Salesforce Snippets.
+### 1.1.0
+LWC-XML Snippets
