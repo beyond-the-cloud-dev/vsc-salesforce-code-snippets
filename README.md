@@ -648,6 +648,72 @@ property;
 </tr>
 </table>
 
+## [XML](./snippets/lwc-xml.json)
+<table>
+<tr>
+<td> Prefix </td>
+<td> Example </td>
+</tr>
+<tr>
+<td> capability </td>
+<td>
+
+```xml
+<capability>lightningCommunity__RelaxedCSP</capability>
+```
+</td>
+</tr>
+<tr>
+<td> isExposed </td>
+<td>
+
+```xml
+<isExposed>true</isExposed>
+```
+</td>
+</tr>
+<tr>
+<td> targets </td>
+<td>
+
+```xml
+<targets>
+    <target>lightning__AppPage</target>
+</targets>
+```
+</tr><tr>
+<td> targetConfig </td>
+<td>
+
+```xml
+<targetConfig targets="lightningCommunity__Page">
+    <propertyType
+        name="country"
+        label="User Country"
+        type="String"
+        default="United States"
+        description="Country of selected User"
+    />
+</targetConfig>
+```
+</tr>
+<tr>
+<td> propertyType </td>
+<td>
+
+```xml
+<propertyType
+    name="country"
+    label="User Country"
+    type="String"
+    default="United States"
+    description="Country of selected User"
+/>
+```
+</td>
+</tr>
+</table>
+
 ## Release Notes
 
 ### 0.0.1

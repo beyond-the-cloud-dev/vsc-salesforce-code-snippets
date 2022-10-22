@@ -31,6 +31,10 @@
       {
         "language": "javascript",
         "path": "./snippets/lwc-js.json"
+      },
+      {
+        "language": "xml",
+        "path": "./snippets/lwc-xml.json"
       }
     ]
   },
