@@ -19,15 +19,19 @@
         ],
         "scope": "xml"
     },
-    "LWC Targets": {
+    "LWC Property Type": {
         "body": [
-            "<targets>",
-            "\t<target>${1|lightning__AppPage,lightning__FlowScreen,lightning__HomePage,lightning__Inbox,lightning__RecordAction,lightning__RecordPage,lightning__Tab,lightning__UtilityBar,lightningCommunity__Default,lightningCommunity__Page,lightningCommunity__Page_Layout,lightningCommunity__Theme_Layout,lightningSnapin__ChatHeader,lightningSnapin__ChatMessage,lightningSnapin__Minimized,lightningSnapin__PreChat,lightningStatic__Email,analytics__Dashboard|}</target>",
-            "</targets>"
+            "<propertyType",
+            "\tname=\"${1:$CLIPBOARD}\"",
+            "\tlabel=\"$2\"",
+            "\t${3|type,extends|}=\"$4\"",
+            "\tdefault=\"$5\"",
+            "\tdescription=\"$6\"",
+            "/>$0"
         ],
-        "description": "Targets",
+        "description": "Property Type",
         "prefix": [
-            "targets"
+            "propertyType"
         ],
         "scope": "xml"
     },
@@ -49,19 +53,15 @@
         ],
         "scope": "xml"
     },
-    "LWC Property Type": {
+    "LWC Targets": {
         "body": [
-            "<propertyType",
-            "\tname=\"${1:$CLIPBOARD}\"",
-            "\tlabel=\"$2\"",
-            "\t${3|type,extends|}=\"$4\"",
-            "\tdefault=\"$5\"",
-            "\tdescription=\"$6\"",
-            "/>$0"
+            "<targets>",
+            "\t<target>${1|lightning__AppPage,lightning__FlowScreen,lightning__HomePage,lightning__Inbox,lightning__RecordAction,lightning__RecordPage,lightning__Tab,lightning__UtilityBar,lightningCommunity__Default,lightningCommunity__Page,lightningCommunity__Page_Layout,lightningCommunity__Theme_Layout,lightningSnapin__ChatHeader,lightningSnapin__ChatMessage,lightningSnapin__Minimized,lightningSnapin__PreChat,lightningStatic__Email,analytics__Dashboard|}</target>",
+            "</targets>"
         ],
-        "description": "Property Type",
+        "description": "Targets",
         "prefix": [
-            "propertyType"
+            "targets"
         ],
         "scope": "xml"
     }
