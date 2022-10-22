@@ -10,6 +10,14 @@
         "prefix": "inst",
         "scope": "apex,apex-anon"
     },
+    "Is Assignable": {
+        "body": [
+            "isAssignableFrom(${2:SourceType});"
+        ],
+        "description": "Check if Child Type is assignable from Source Type",
+        "prefix": "isAssignableFrom",
+        "scope": "apex,apex-anon"
+    },
     "Future Method": {
         "body": [
             "@future",
@@ -114,7 +122,7 @@
     },
     "System Debug": {
         "body": [
-            "System.debug(LoggingLevel.DEBUG, '$1: ' + $0);"
+            "System.debug(LoggingLevel.${1|DEBUG,ERROR,WARN,INFO,FINE,FINER,FINEST,NONE|}, '$2: ' + $0);"
         ],
         "description": "Debug ",
         "prefix": [
@@ -125,7 +133,7 @@
     },
     "System Debug Serialize Pretty": {
         "body": [
-            "System.debug(LoggingLevel.DEBUG, '$1: ' + JSON.SerializePretty($0));"
+            "System.debug(LoggingLevel.${1|DEBUG,ERROR,WARN,INFO,FINE,FINER,FINEST,NONE|}, '$2: ' + JSON.SerializePretty($0));"
         ],
         "description": "System.debug(JSON.SerializePretty())",
         "prefix": [
