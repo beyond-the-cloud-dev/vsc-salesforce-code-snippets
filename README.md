@@ -672,6 +672,7 @@ property;
 
 ```xml
 <capability>lightningCommunity__RelaxedCSP</capability>
+<capability>lightning__ServiceCloudVoiceToolkitApi</capability>
 ```
 </td>
 </tr>
@@ -700,11 +701,11 @@ property;
 ```xml
 <targetConfig targets="lightningCommunity__Page">
     <propertyType
-        name="country"
-        label="User Country"
-        type="String"
-        default="United States"
-        description="Country of selected User"
+    name="copied from clipboard"
+    label="label"
+    type|extension="type"
+    default="default"
+    description="description"
     />
 </targetConfig>
 ```
@@ -715,11 +716,11 @@ property;
 
 ```xml
 <propertyType
-    name="country"
-    label="User Country"
-    type="String"
-    default="United States"
-    description="Country of selected User"
+    name="copied from clipboard"
+    label="label"
+    type|extension="type"
+    default="default"
+    description="description"
 />
 ```
 </td>
@@ -728,5 +729,5 @@ property;
 
 ## Release Notes
 
-### 1.1.0
+### 1.1.1
 LWC-XML Snippets
