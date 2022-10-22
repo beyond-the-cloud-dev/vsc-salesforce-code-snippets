@@ -43,6 +43,17 @@ if (objects[0] instanceof Account) {
 </tr>
 
 <tr>
+<td>isAssignableFrom</td>
+<td>
+
+```java
+ChildType.class.isAssignableFrom(SourceType.class);
+```
+
+</td>
+</tr>
+
+<tr>
 <td>sa</td>
 <td>
 
