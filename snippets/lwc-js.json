@@ -21,6 +21,16 @@
         "prefix": "constructor",
         "scope": "javascript"
     },
+    "LWC CurrentPageReference": {
+        "body": [
+            "import { CurrentPageReference } from 'lightning/navigation';",
+            "@wire(CurrentPageReference)",
+            "pageRef;"
+        ],
+        "description": "CurrentPageReference.",
+        "prefix": "CurrentPageReference",
+        "scope": "javascript"
+    },
     "LWC CustomEvent": {
         "body": [
             "new CustomEvent('${1:eventName}', {",
@@ -183,6 +193,31 @@
         ],
         "description": "The map() method creates a new array populated with the results of calling a provided function on every element in the calling array.",
         "prefix": "map",
+        "scope": "javascript"
+    },
+    "LWC Message Channel": {
+        "body": [
+            "import ${1:channelName} from '@salesforce/messageChannel/${2:channelReference}';"
+        ],
+        "description": "Import message channel.",
+        "prefix": "importMessageChannel",
+        "scope": "javascript"
+    },
+    "LWC Navigate": {
+        "body": [
+            "this[NavigationMixin.Navigate]({",
+            "\ttype: '${1|standard__app,comm__externalRecordPage,comm__externalRecordRelationshipPage,standard__component,standard__knowledgeArticlePage,comm__loginPage,standard__managedContentPage,comm__namedPage,standard__navItemPage,standard__objectPage,standard__recordPage,standard__recordRelationshipPage,standard__webPage|}',",
+            "\tattributes: {",
+            "\t\t$0 // Different per page type. ",
+            "\t\t// Check documentation: https://developer.salesforce.com/docs/component-library/documentation/en/lwc/lwc.reference_page_reference_type",
+            "\t},",
+            "\tstate: {",
+            "\t\t$0 // Different per page type.",
+            "\t}",
+            "});"
+        ],
+        "description": "NavigationMixin.Navigate.",
+        "prefix": "Navigate",
         "scope": "javascript"
     },
     "LWC querySelector": {

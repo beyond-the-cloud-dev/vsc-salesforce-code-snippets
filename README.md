@@ -2,7 +2,7 @@
 ## List of Snippets
 [![Apex](https://img.shields.io/badge/Apex-14-green?style=flat-square)](#apex)
 [![LWC-HTML](https://img.shields.io/badge/LWC_HTML-13-yellow?style=flat-square)](#html)
-[![LWC-JS](https://img.shields.io/badge/LWC_JavaScript-29-blue?style=flat-square)](#js)
+[![LWC-JS](https://img.shields.io/badge/LWC_JavaScript-32-blue?style=flat-square)](#js)
 [![LWC-XML](https://img.shields.io/badge/LWC_XML-5-red?style=flat-square)](#xml)
 
 <img src="assets/lwc-js-snippets.gif" width="500"/>
@@ -380,6 +380,17 @@ constructor() {
 ```
 </td>
 </tr>
+<tr>
+<td> CurrentPageReference </td>
+<td>
+
+```js
+import { CurrentPageReference } from 'lightning/navigation';
+@wire(CurrentPageReference)
+pageRef;
+```
+</td>
+</tr>
 </tr>
 <tr>
 <td> customEvent </td>
@@ -548,6 +559,33 @@ import userId from '@salesforce/user/Id';
 array.map((item, index) => {
     return {
 
+    }
+});
+```
+</td>
+</tr>
+<tr>
+<td> importMessageChannel </td>
+<td>
+
+```js
+import channelName from '@salesforce/messageChannel/channelReference';
+```
+</td>
+</tr>
+<tr>
+<td> Navigate </td>
+<td>
+
+```js
+this[NavigationMixin.Navigate]({
+    type: 'standard__app',
+    attributes: {
+         // Different per page type.
+        // Check documentation: https://developer.salesforce.com/docs/component-library/documentation/en/lwc/lwc.reference_page_reference_type
+    },
+    state: {
+         // Different per page type.
     }
 });
 ```
