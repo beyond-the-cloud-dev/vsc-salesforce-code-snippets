@@ -397,7 +397,6 @@ pageRef;
 ```
 </td>
 </tr>
-</tr>
 <tr>
 <td> customEvent </td>
 <td>
