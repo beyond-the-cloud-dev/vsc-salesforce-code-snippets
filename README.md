@@ -6,12 +6,20 @@ A [VS Code Extension](https://marketplace.visualstudio.com/items?itemName=Beyond
 [![Ratings](https://vsmarketplacebadge.apphb.com/rating-short/BeyondTheCloud.salesforce-snippets-beyondthecloud.svg)](https://marketplace.visualstudio.com/items?itemName=BeyondTheCloud.salesforce-snippets-beyondthecloud)
 
 ## List of Snippets
-[![Apex](https://img.shields.io/badge/Apex-14-green?style=flat-square)](#apex)
+[![Apex](https://img.shields.io/badge/Apex-42-green?style=flat-square)](#apex)
 [![LWC-HTML](https://img.shields.io/badge/LWC_HTML-13-yellow?style=flat-square)](#html)
 [![LWC-JS](https://img.shields.io/badge/LWC_JavaScript-32-blue?style=flat-square)](#js)
 [![LWC-XML](https://img.shields.io/badge/LWC_XML-5-red?style=flat-square)](#xml)
 
+### Apex example
+<img src="assets/apex-snippets.gif" width="500"/>
+<br><br><br>
+
+### LWC JS example
 <img src="assets/lwc-js-snippets.gif" width="500"/>
+<br><br><br>
+
+### LWC HTML example
 <img src="assets/lwc-html-snippets.gif" width="500"/>
 
 ## Features
@@ -35,7 +43,75 @@ for (Type variable : [SELECT fieldsList FROM Type) {
 
 </td>
 </tr>
+<tr>
+<td>itar</td>
+<td>
 
+```java
+for (Integer i = 0; i < listName.size(); i++) {
+    Account acc = listName[i];
+    // Your code here
+}
+```
+
+</td>
+</tr>
+<tr>
+<td>itme</td>
+<td>
+
+```java
+for (Id accountId : mapName.keySet()) {
+    Account acc = mapName.get(accountId);
+    //Your code here
+}
+```
+
+</td>
+</tr>
+<tr>
+<td>ritar</td>
+<td>
+
+```java
+for (Integer i = listName.size()-1; i >= 0; i--) {
+    Account acc = listName[i];
+    //Your code here
+}
+```
+
+</td>
+</tr>
+<tr>
+<td>@future</td>
+<td>
+
+```java
+
+```
+
+</td>
+</tr>
+<tr>
+<td>if</td>
+<td>
+
+```java
+
+```
+
+</td>
+</tr>
+<tr>
+<td>ife</td>
+<td>
+
+```java
+
+```
+
+</td>
+</tr>
 <tr>
 <td>inst</td>
 <td>
