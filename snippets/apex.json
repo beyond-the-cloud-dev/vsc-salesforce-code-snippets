@@ -5,7 +5,10 @@
             "$0"
         ],
         "description": "Assert equals condition in a test",
-        "prefix": "aae",
+        "prefix": [
+            "assertAreEqual",
+            "aae"
+        ],
         "scope": "apex,apex-anon"
     },
     "Assert Are Not Equals": {
@@ -14,7 +17,10 @@
             "$0"
         ],
         "description": "Assert not equals condition in a test",
-        "prefix": "aane",
+        "prefix": [
+            "assertAreNotEqual",
+            "aane"
+        ],
         "scope": "apex,apex-anon"
     },
     "Assert Fail": {
@@ -23,7 +29,10 @@
             "$0"
         ],
         "description": "Immediately return an error",
-        "prefix": "af",
+        "prefix": [
+            "assertFail",
+            "af"
+        ],
         "scope": "apex,apex-anon"
     },
     "Assert Is False": {
@@ -32,7 +41,10 @@
             "$0"
         ],
         "description": "Asserts that the specified condition is false",
-        "prefix": "aif",
+        "prefix": [
+            "assertIsFalse",
+            "aif"
+        ],
         "scope": "apex,apex-anon"
     },
     "Assert Is Instance of type": {
@@ -41,7 +53,10 @@
             "$0"
         ],
         "description": "Asserts that the instance is of the specified type",
-        "prefix": "aii",
+        "prefix": [
+            "assertIsInstanceOfType",
+            "aii"
+        ],
         "scope": "apex,apex-anon"
     },
     "Assert Is Not Instance of type": {
@@ -50,7 +65,10 @@
             "$0"
         ],
         "description": "Asserts that the instance isn’t of the specified type",
-        "prefix": "aini",
+        "prefix": [
+            "assertIsNotInstanceOfType",
+            "aini"
+        ],
         "scope": "apex,apex-anon"
     },
     "Assert Is Not Null": {
@@ -59,7 +77,10 @@
             "$0"
         ],
         "description": "Asserts that the value isn’t null.",
-        "prefix": "ainn",
+        "prefix": [
+            "assertIsNotNull",
+            "ainn"
+        ],
         "scope": "apex,apex-anon"
     },
     "Assert Is Null": {
@@ -68,7 +89,10 @@
             "$0"
         ],
         "description": "Asserts that the value is null.",
-        "prefix": "ain",
+        "prefix": [
+            "assertIsNull",
+            "ain"
+        ],
         "scope": "apex,apex-anon"
     },
     "Assert Is True": {
@@ -77,7 +101,10 @@
             "$0"
         ],
         "description": "Asserts that the specified condition is true",
-        "prefix": "ait",
+        "prefix": [
+            "assertIsTrue",
+            "ait"
+        ],
         "scope": "apex,apex-anon"
     },
     "Database Execute Batch": {
@@ -85,17 +112,10 @@
             "Id ${1:jobIdVariable} = Database.executeBatch(${2:batchInstance}, ${3:batchSize});$0"
         ],
         "description": "Execute a batch",
-        "prefix": "deb",
-        "scope": "apex,apex-anon"
-    },
-    "For Loop for queried SObjects": {
-        "body": [
-            "for (${1:Type} ${2:variable} : [SELECT ${3:fieldsList} FROM ${1:Type}) {",
-            "\t$0",
-            "}"
+        "prefix": [
+            "databaseExecuteBatch",
+            "deb"
         ],
-        "description": "Create for loop for results of SOQL query",
-        "prefix": "foro",
         "scope": "apex,apex-anon"
     },
     "For loop for elements of an array": {
@@ -106,18 +126,10 @@
             "}"
         ],
         "description": "Create for loop for elements of an array",
-        "prefix": "itar",
-        "scope": "apex,apex-anon"
-    },
-    "For loop for entries of a Map": {
-        "body": [
-            "for (${1:SelectedMapKeyType} ${2:keyVariableName} : ${3:selectedMap}.keySet()) {",
-            "\t${4:SelectedMapValueType} ${5:valueVariableName} = ${3:selectedMap}.get(${2:keyVariableName});",
-            "\t$0",
-            "}"
+        "prefix": [
+            "fori",
+            "itar"
         ],
-        "description": "Create for loop for entries of a Map",
-        "prefix": "itme",
         "scope": "apex,apex-anon"
     },
     "For loop for elements of an array in reversed order": {
@@ -128,7 +140,37 @@
             "}"
         ],
         "description": "Create for loop for elements of an array in reversed order",
-        "prefix": "ritar",
+        "prefix": [
+            "forReversedOrder",
+            "ritar"
+        ],
+        "scope": "apex,apex-anon"
+    },
+    "For loop for entries of a Map": {
+        "body": [
+            "for (${1:SelectedMapKeyType} ${2:keyVariableName} : ${3:selectedMap}.keySet()) {",
+            "\t${4:SelectedMapValueType} ${5:valueVariableName} = ${3:selectedMap}.get(${2:keyVariableName});",
+            "\t$0",
+            "}"
+        ],
+        "description": "Create for loop for entries of a Map",
+        "prefix": [
+            "forMap",
+            "itme"
+        ],
+        "scope": "apex,apex-anon"
+    },
+    "For Loop for queried SObjects": {
+        "body": [
+            "for (${1:Type} ${2:variable} : [SELECT ${3:fieldsList} FROM ${1:Type}) {",
+            "\t$0",
+            "}"
+        ],
+        "description": "Create for loop for results of SOQL query",
+        "prefix": [
+            "forSoql",
+            "foro"
+        ],
         "scope": "apex,apex-anon"
     },
     "Future Method": {
@@ -161,7 +203,10 @@
             "}"
         ],
         "description": "If statement",
-        "prefix": "ife",
+        "prefix": [
+            "ifElse",
+            "ife"
+        ],
         "scope": "apex,apex-anon"
     },
     "Instance Of": {
@@ -172,7 +217,10 @@
             "}"
         ],
         "description": "Check instance of and downcast",
-        "prefix": "inst",
+        "prefix": [
+            "instanceOf",
+            "inst"
+        ],
         "scope": "apex,apex-anon"
     },
     "Invocable Method": {
@@ -199,7 +247,10 @@
             "${1:selectedList}[${1:selectedList}.size() - 1]$0"
         ],
         "description": "Get last element of list",
-        "prefix": "lst",
+        "prefix": [
+            "lastListElement",
+            "lst"
+        ],
         "scope": "apex,apex-anon"
     },
     "Lazy instantiation": {
@@ -217,7 +268,10 @@
             "List<${1:ElementType}> ${2:newListName} = new List<${1:ElementType}>();$0"
         ],
         "description": "Construct a new list and assign to a local variable",
-        "prefix": "nl",
+        "prefix": [
+            "list",
+            "nl"
+        ],
         "scope": "apex,apex-anon"
     },
     "New Map": {
@@ -225,23 +279,10 @@
             "Map<${1:KeyType}, ${2:ValueType}> ${3:newMapName} = new Map<${1:KeyType}, ${2:ValueType}>();$0"
         ],
         "description": "Construct a new map and assign to a local variable",
-        "prefix": "nm",
-        "scope": "apex,apex-anon"
-    },
-    "New Set": {
-        "body": [
-            "Set<${1:ElementType}> ${2:newSetName} = new Set<${1:ElementType}>();$0"
+        "prefix": [
+            "map",
+            "nm"
         ],
-        "description": "Construct a new map and assign to a local variable",
-        "prefix": "ns",
-        "scope": "apex,apex-anon"
-    },
-    "New Set of Ids from list of records": {
-        "body": [
-            "Set<Id> ${1:setName} = new Map<Id, ${2:SObjectType}>(${3:recordList}).keySet();"
-        ],
-        "description": "Create set of Ids from list of records",
-        "prefix": "nsfl",
         "scope": "apex,apex-anon"
     },
     "New Map from list of records": {
@@ -249,7 +290,32 @@
             "Map<Id, ${1:SObject}> ${2:mapName} = new Map<Id, ${1}>(${3:recordList});"
         ],
         "description": "Create map from list of records",
-        "prefix": "nmfl",
+        "prefix": [
+            "mapFromList",
+            "nmfl"
+        ],
+        "scope": "apex,apex-anon"
+    },
+    "New Set": {
+        "body": [
+            "Set<${1:ElementType}> ${2:newSetName} = new Set<${1:ElementType}>();$0"
+        ],
+        "description": "Construct a new map and assign to a local variable",
+        "prefix": [
+            "set",
+            "ns"
+        ],
+        "scope": "apex,apex-anon"
+    },
+    "New Set of Ids from list of records": {
+        "body": [
+            "Set<Id> ${1:setName} = new Map<Id, ${2:SObjectType}>(${3:recordList}).keySet();"
+        ],
+        "description": "Create set of Ids from list of records",
+        "prefix": [
+            "setOfIds",
+            "nsfl"
+        ],
         "scope": "apex,apex-anon"
     },
     "Property Read Only": {
@@ -273,23 +339,32 @@
             "public static final"
         ],
         "description": "Begin declaration of a public static final field",
-        "prefix": "psf",
+        "prefix": [
+            "final",
+            "psf"
+        ],
         "scope": "apex,apex-anon"
     },
     "Public Static Final Integer": {
         "body": [
-            "public static final Integer"
+            "public static final Integer ${1:VARIABLE_NAME} = ${2:value};"
         ],
         "description": "Begin declaration of a public static final Integer field",
-        "prefix": "psfi",
+        "prefix": [
+            "finalInteger",
+            "psfi"
+        ],
         "scope": "apex,apex-anon"
     },
     "Public Static Final String": {
         "body": [
-            "public static final String"
+            "public static final String ${1:VARIABLE_NAME} = ${2:value};"
         ],
         "description": "Begin declaration of a public static final String field",
-        "prefix": "psfs",
+        "prefix": [
+            "finalString",
+            "psfs"
+        ],
         "scope": "apex,apex-anon"
     },
     "Select": {
@@ -297,7 +372,10 @@
             "SELECT ${2:FieldsList} FROM ${1:SObject}$0"
         ],
         "description": "Create a SOQL query",
-        "prefix": "SEL",
+        "prefix": [
+            "select",
+            "SEL"
+        ],
         "scope": "apex,apex-anon"
     },
     "Select All Fields": {
@@ -305,15 +383,10 @@
             "SELECT FIELDS(ALL) FROM ${1:SObject}$0 LIMIT 200"
         ],
         "description": "Create a SOQL query with all fields",
-        "prefix": "SELALL",
-        "scope": "apex,apex-anon"
-    },
-    "Select to map": {
-        "body": [
-            "Map<Id, ${1:SObjectType}> ${2:variableName} = new Map<Id, ${1:SObjectType}>([SELECT ${3:fieldsList} FROM ${1:SObjectType} $0]);"
+        "prefix": [
+            "selectAll",
+            "SELALL"
         ],
-        "description": "Create a SOQL query and assign result to map",
-        "prefix": "sqm",
         "scope": "apex,apex-anon"
     },
     "Select to list": {
@@ -321,7 +394,10 @@
             "List<${1:SObjectType}> ${2:variableName} = [SELECT ${3:fieldsList} FROM ${1:SObjectType}$0];"
         ],
         "description": "Create a SOQL query and assign result to list",
-        "prefix": "sql",
+        "prefix": [
+            "SelectToList",
+            "sql"
+        ],
         "scope": "apex,apex-anon"
     },
     "Select to list single record": {
@@ -330,7 +406,21 @@
             "${1:SObjectType} ${5:singleVariableName} = ${2:variableName}.size() == 1 ? ${2:variableName}.get(0) : null;$0"
         ],
         "description": "Create a SOQL query and assign result safely to list",
-        "prefix": "sql1",
+        "prefix": [
+            "SelectToObject",
+            "sql1"
+        ],
+        "scope": "apex,apex-anon"
+    },
+    "Select to map": {
+        "body": [
+            "Map<Id, ${1:SObjectType}> ${2:variableName} = new Map<Id, ${1:SObjectType}>([SELECT ${3:fieldsList} FROM ${1:SObjectType} $0]);"
+        ],
+        "description": "Create a SOQL query and assign result to map",
+        "prefix": [
+            "selectToMap",
+            "sqm"
+        ],
         "scope": "apex,apex-anon"
     },
     "System Assert": {
@@ -339,8 +429,8 @@
         ],
         "description": "Assert a condition in a unit test",
         "prefix": [
-            "sa",
-            "System.assert"
+            "systemAssert",
+            "sa"
         ],
         "scope": "apex,apex-anon"
     },
@@ -350,8 +440,8 @@
         ],
         "description": "Assert that a value is an expected value in a unit test",
         "prefix": [
-            "sae",
-            "System.assertEquals"
+            "systemAssertEquals",
+            "sae"
         ],
         "scope": "apex,apex-anon"
     },
@@ -361,8 +451,8 @@
         ],
         "description": "Assert that a value is null in a unit test",
         "prefix": [
-            "san",
-            "System.assertEquals"
+            "systemAssertEquals",
+            "san"
         ],
         "scope": "apex,apex-anon"
     },
@@ -372,8 +462,8 @@
         ],
         "description": "Fail unit test when this assert is reached",
         "prefix": [
-            "saf",
-            "System.assertFail"
+            "systemAssertFail",
+            "saf"
         ],
         "scope": "apex,apex-anon"
     },
@@ -383,8 +473,8 @@
         ],
         "description": "Assert that a value is not an expected value in a unit test",
         "prefix": [
-            "sane",
-            "System.assertNotEquals"
+            "SystemAssertNotEquals",
+            "sane"
         ],
         "scope": "apex,apex-anon"
     },
@@ -394,8 +484,8 @@
         ],
         "description": "Assert that a value is not null in a unit test ",
         "prefix": [
-            "sann",
-            "System.assertNotEquals"
+            "systemAssertNotEqualsMessage",
+            "sann"
         ],
         "scope": "apex,apex-anon"
     },
@@ -405,8 +495,8 @@
         ],
         "description": "Debug",
         "prefix": [
-            "sd",
-            "System.debug"
+            "systemDebug",
+            "sd"
         ],
         "scope": "apex,apex-anon"
     },
@@ -416,8 +506,8 @@
         ],
         "description": "Debug objects or collections",
         "prefix": [
-            "sdp",
-            "System.debug"
+            "systemDebugPretty",
+            "sdp"
         ],
         "scope": "apex,apex-anon"
     },
@@ -429,8 +519,8 @@
         ],
         "description": "System Run As User statement.",
         "prefix": [
-            "sra",
-            "System.runAs"
+            "systemRunAs",
+            "sra"
         ],
         "scope": "apex,apex-anon"
     },
@@ -446,8 +536,8 @@
         ],
         "description": "Test setup for creating data before test methods run.",
         "prefix": [
-            "tstm",
-            "@TestMethod"
+            "@TestMethod",
+            "tstm"
         ],
         "scope": "apex,apex-anon"
     },
@@ -460,22 +550,23 @@
         ],
         "description": "Test setup for creating data before test methods run.",
         "prefix": [
-            "tsts",
-            "@TestSetup"
+            "@TestSetup",
+            "tsts"
         ],
         "scope": "apex,apex-anon"
     },
     "Throw exception": {
-        "prefix": "thr",
-        "scope": "apex,apex-anon",
         "body": [
             "throw new ${1:exceptionType}($0);"
         ],
-        "description": "Throw an exception"
+        "description": "Throw an exception",
+        "prefix": [
+            "throw",
+            "thr"
+        ],
+        "scope": "apex,apex-anon"
     },
     "Try Catch": {
-        "prefix": "tc",
-        "scope": "apex,apex-anon",
         "body": [
             "try {",
             "\t$0",
@@ -483,11 +574,14 @@
             "\t",
             "}"
         ],
-        "description": "Try Catch statement."
+        "description": "Try Catch statement.",
+        "prefix": [
+            "tryCatch",
+            "tc"
+        ],
+        "scope": "apex,apex-anon"
     },
     "Try Catch Finally": {
-        "prefix": "tcf",
-        "scope": "apex,apex-anon",
         "body": [
             "try {",
             "\t$0",
@@ -497,16 +591,24 @@
             "\t",
             "}"
         ],
-        "description": "Try Catch statement."
+        "description": "Try Catch statement.",
+        "prefix": [
+            "tryCatchFinlly",
+            "tcf"
+        ],
+        "scope": "apex,apex-anon"
     },
     "While": {
-        "prefix": "wh",
-        "scope": "apex,apex-anon",
         "body": [
             "while (${1:condition}) {",
             "\t$0",
             "}"
         ],
-        "description": "While statement."
+        "description": "While statement.",
+        "prefix": [
+            "while",
+            "wh"
+        ],
+        "scope": "apex,apex-anon"
     }
 }
