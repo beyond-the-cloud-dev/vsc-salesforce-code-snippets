@@ -291,7 +291,7 @@
         ],
         "description": "Create map from list of records",
         "prefix": [
-            "MapFromList",
+            "mapFromList",
             "nmfl"
         ],
         "scope": "apex,apex-anon"

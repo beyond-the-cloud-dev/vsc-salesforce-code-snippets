@@ -351,7 +351,7 @@ Set<Id> accountIds = new Map<Id, Account>([SELECT Id FROM Account LIMIT 10]).key
 </tr>
 
 <tr>
-<td>MapFromList, nmfl</td>
+<td>mapFromList, nmfl</td>
 <td>
 
 ```java
