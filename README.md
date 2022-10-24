@@ -1320,6 +1320,6 @@ property;
 
 ## Release Notes
 
-### 1.1.1
+### 1.2.3
 
-LWC-XML Snippets
+Apex Snippets and documentation update.
