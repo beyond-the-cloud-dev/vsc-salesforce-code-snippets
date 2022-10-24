@@ -593,7 +593,7 @@
         ],
         "description": "Try Catch statement.",
         "prefix": [
-            "tryCatchFinlly",
+            "tryCatchFinally",
             "tcf"
         ],
         "scope": "apex,apex-anon"
