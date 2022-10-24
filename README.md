@@ -676,7 +676,7 @@ while (condition) {
 <td>
 
 ```html
-<lightning-button variant="base" label="label" title="title" onclick="{handleOnClick}" class="cssClass">
+<lightning-button variant='base' label='label' title='title' onclick={handleOnClick} class='cssClass'>
 </lightning-button>
 ```
 
@@ -688,12 +688,12 @@ while (condition) {
 
 ```html
 <lightning-combobox
-  name="name"
-  label="label"
-  value="{value}"
-  placeholder="placeholder"
-  options="{options}"
-  onchange="{handleChange}"
+    name='name'
+    label='label'
+    value={value}
+    placeholder='placeholder'
+    options={options}
+    onchange={handleChange}
 ></lightning-combobox>
 ```
 
@@ -704,7 +704,12 @@ while (condition) {
 <td>
 
 ```html
-<lightning-datatable key-field="Id" data="{data}" columns="{columns}" hide-checkbox-column></lightning-datatable>
+<lightning-datatable
+    key-field='Id'
+    data={data}
+    columns={columns}
+    hide-checkbox-column
+></lightning-datatable>
 ```
 
 </td>
@@ -714,7 +719,8 @@ while (condition) {
 <td>
 
 ```html
-<lightning-icon icon-name="iconName" alternative-text="alternativeText" title="title"> </lightning-icon>
+<lightning-icon icon-name='iconName' alternative-text='alternativeText' title='title'>
+</lightning-icon>
 ```
 
 </td>
@@ -724,7 +730,8 @@ while (condition) {
 <td>
 
 ```html
-<lightning-input type="type" label="label" onchange="handleOnChange"> </lightning-input>
+<lightning-input type='type' label='label' onchange='handleOnChange'>
+</lightning-input>
 ```
 
 </td>
@@ -734,7 +741,8 @@ while (condition) {
 <td>
 
 ```html
-<lightning-input-field field-name="fieldName" disabled read-only required> </lightning-input-field>
+<lightning-input-field field-name='fieldName' disabled read-only required>
+</lightning-input-field>
 ```
 
 </td>
@@ -744,10 +752,13 @@ while (condition) {
 <td>
 
 ```html
-<lightning-layout horizontal-align="horiznotalAlign" vertical-align="verticalAlign" multiple-rows="multipleRows">
-  <lightning-layout-item padding="around-small"> </lightning-layout-item>
-  <lightning-layout-item padding="around-small"> </lightning-layout-item>
-  <lightning-layout-item padding="around-small"> </lightning-layout-item>
+<lightning-layout horizontal-align='horiznotalAlign' vertical-align='verticalAlign' multiple-rows='multipleRows'>
+    <lightning-layout-item padding='around-small'>
+    </lightning-layout-item>
+    <lightning-layout-item padding='around-small'>
+    </lightning-layout-item>
+    <lightning-layout-item padding='around-small'>
+    </lightning-layout-item>
 </lightning-layout>
 ```
 
@@ -758,13 +769,7 @@ while (condition) {
 <td>
 
 ```html
-<lightning-layout-item
-  size="size"
-  small-device-size="smallDeviceSize"
-  medium-device-size="mediumDeviceSize"
-  large-device-size="largeDeviceSize"
-  padding="around-small"
->
+<lightning-layout-item size='size' small-device-size='smallDeviceSize' medium-device-size='mediumDeviceSize' large-device-size='largeDeviceSize' padding='around-small'>
 </lightning-layout-item>
 ```
 
@@ -775,10 +780,16 @@ while (condition) {
 <td>
 
 ```html
-<lightning-tabset variant="variant" active-tab-value="two">
-  <lightning-tab label="Item One" value="one"> One Content ! </lightning-tab>
-  <lightning-tab label="Item Two" value="two"> Two Content ! </lightning-tab>
-  <lightning-tab label="Item Three" value="three"> Three Content ! </lightning-tab>
+<lightning-tabset variant='variant' active-tab-value='two'>
+    <lightning-tab label='Item One' value='one'>
+        One Content !
+    </lightning-tab>
+    <lightning-tab label='Item Two' value='two'>
+        Two Content !
+    </lightning-tab>
+    <lightning-tab label='Item Three' value='three'>
+        Three Content !
+    </lightning-tab>
 </lightning-tabset>
 ```
 
@@ -790,7 +801,8 @@ while (condition) {
 <td>
 
 ```html
-<lightning-spinner alternative-text="alternativeText" size="size"> </lightning-spinner>
+<lightning-spinner alternative-text='alternativeText' size='size'>
+</lightning-spinner>
 ```
 
 </td>
@@ -800,7 +812,8 @@ while (condition) {
 <td>
 
 ```html
-<slot name="name"> </slot>
+<slot name='name'>
+</slot>
 ```
 
 </td>
@@ -810,7 +823,8 @@ while (condition) {
 <td>
 
 ```html
-<template for:each="{array}" for:item="item"> </template>
+<template for:each={array} for:item='item'>
+</template>
 ```
 
 </td>
@@ -820,7 +834,8 @@ while (condition) {
 <td>
 
 ```html
-<template if:false="{property}"> </template>
+<template if:false={property}>
+</template>
 ```
 
 </td>
@@ -830,7 +845,8 @@ while (condition) {
 <td>
 
 ```html
-<template if:true="{property}"> </template>
+<template if:true={property}>
+</template>
 ```
 
 </td>
@@ -840,12 +856,12 @@ while (condition) {
 <td>
 
 ```html
-<template iterator:it="{array}">
-  <div key="{it.value.Id}">
-    <div if:true="{it.first}"></div>
+<template iterator:it={array}>
+    <div key={it.value.Id}>
+    <div if:true={it.first}></div>
     {it.value.Name}
-    <div if:true="{it.last}"></div>
-  </div>
+    <div if:true={it.last}></div>
+    </div>
 </template>
 ```
 
@@ -866,9 +882,9 @@ while (condition) {
 
 ```js
 try {
-  const result = await apexMethodName({ apexMethodParams });
+    const result = await apexMethodName({ apexMethodParams });
 } catch (error) {
-  console.error(error);
+    console.error(error)
 }
 ```
 
@@ -903,10 +919,10 @@ pageRef;
 <td>
 
 ```js
-new CustomEvent("eventName", {
-  detail: details,
-  bubbles: false,
-  composed: false,
+new CustomEvent('eventName', {
+    detail: details,
+    bubbles: false,
+    composed: false
 });
 ```
 
@@ -951,9 +967,10 @@ errorCallback(error, stack) {
 <td>
 
 ```js
-array.forEach((item, index) => {});
-```
+array.forEach((item, index) => {
 
+});
+```
 </td>
 </tr>
 <tr>
@@ -1015,7 +1032,7 @@ propertyOrFunction;
 <td>
 
 ```js
-import apexMethodName from "@salesforce/apex/Namespace.ClassName.apexMethodReference";
+import apexMethodName from '@salesforce/apex/Namespace.ClassName.apexMethodReference';
 ```
 
 </td>
@@ -1025,7 +1042,7 @@ import apexMethodName from "@salesforce/apex/Namespace.ClassName.apexMethodRefer
 <td>
 
 ```js
-import fieldName from "@salesforce/schema/objectApiName.fieldApiName";
+import fieldName from '@salesforce/schema/objectApiName.fieldApiName';
 ```
 
 </td>
@@ -1035,7 +1052,7 @@ import fieldName from "@salesforce/schema/objectApiName.fieldApiName";
 <td>
 
 ```js
-import hasPermissionName from "@salesforce/userPermission/PermissionName";
+import hasPermissionName from '@salesforce/userPermission/PermissionName';
 ```
 
 </td>
@@ -1045,7 +1062,7 @@ import hasPermissionName from "@salesforce/userPermission/PermissionName";
 <td>
 
 ```js
-import { NavigationMixin } from "lightning/navigation";
+import { NavigationMixin } from 'lightning/navigation';
 ```
 
 </td>
@@ -1055,7 +1072,7 @@ import { NavigationMixin } from "lightning/navigation";
 <td>
 
 ```js
-import objectName from "@salesforce/schema/objectApiName";
+import objectName from '@salesforce/schema/objectApiName';
 ```
 
 </td>
@@ -1065,7 +1082,7 @@ import objectName from "@salesforce/schema/objectApiName";
 <td>
 
 ```js
-import userId from "@salesforce/user/Id";
+import userId from '@salesforce/user/Id';
 ```
 
 </td>
@@ -1076,7 +1093,9 @@ import userId from "@salesforce/user/Id";
 
 ```js
 array.map((item, index) => {
-  return {};
+    return {
+
+    }
 });
 ```
 
@@ -1087,7 +1106,7 @@ array.map((item, index) => {
 <td>
 
 ```js
-import channelName from "@salesforce/messageChannel/channelReference";
+import channelName from '@salesforce/messageChannel/channelReference';
 ```
 
 </td>
@@ -1098,14 +1117,14 @@ import channelName from "@salesforce/messageChannel/channelReference";
 
 ```js
 this[NavigationMixin.Navigate]({
-  type: "standard__app",
-  attributes: {
-    // Different per page type.
-    // Check documentation: https://developer.salesforce.com/docs/component-library/documentation/en/lwc/lwc.reference_page_reference_type
-  },
-  state: {
-    // Different per page type.
-  },
+    type: 'standard__app',
+    attributes: {
+         // Different per page type.
+        // Check documentation: https://developer.salesforce.com/docs/component-library/documentation/en/lwc/lwc.reference_page_reference_type
+    },
+    state: {
+         // Different per page type.
+    }
 });
 ```
 
@@ -1116,7 +1135,7 @@ this[NavigationMixin.Navigate]({
 <td>
 
 ```js
-this.template.querySelector("element");
+this.template.querySelector('element');
 ```
 
 </td>
@@ -1126,7 +1145,7 @@ this.template.querySelector("element");
 <td>
 
 ```js
-this.template.querySelectorAll("element");
+this.template.querySelectorAll('element');
 ```
 
 </td>
@@ -1176,9 +1195,8 @@ new ShowToastEvent({ 'title', 'message', 'variant' });
 <td>
 
 ```js
-import resourceName from "@salesforce/resourceUrl/resourceName";
+import resourceName from '@salesforce/resourceUrl/resourceName';
 ```
-
 </td>
 </tr>
 <tr>
@@ -1187,10 +1205,12 @@ import resourceName from "@salesforce/resourceUrl/resourceName";
 
 ```js
 apexMethodName({ apexMethodParams })
-  .then((result) => {})
-  .catch((error) => {
-    console.error(error);
-  });
+.then(result => {
+
+})
+.catch(error => {
+    console.error(error)
+});
 ```
 
 </td>
