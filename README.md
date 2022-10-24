@@ -6,12 +6,24 @@ A [VS Code Extension](https://marketplace.visualstudio.com/items?itemName=Beyond
 [![Ratings](https://vsmarketplacebadge.apphb.com/rating-short/BeyondTheCloud.salesforce-snippets-beyondthecloud.svg)](https://marketplace.visualstudio.com/items?itemName=BeyondTheCloud.salesforce-snippets-beyondthecloud)
 
 ## List of Snippets
-[![Apex](https://img.shields.io/badge/Apex-14-green?style=flat-square)](#apex)
+
+[![Apex](https://img.shields.io/badge/Apex-52-green?style=flat-square)](#apex)
 [![LWC-HTML](https://img.shields.io/badge/LWC_HTML-13-yellow?style=flat-square)](#html)
 [![LWC-JS](https://img.shields.io/badge/LWC_JavaScript-32-blue?style=flat-square)](#js)
 [![LWC-XML](https://img.shields.io/badge/LWC_XML-5-red?style=flat-square)](#xml)
 
+### Apex example
+
+<img src="assets/apex-snippets.gif" width="500"/>
+<br><br><br>
+
+### LWC JS example
+
 <img src="assets/lwc-js-snippets.gif" width="500"/>
+<br><br><br>
+
+### LWC HTML example
+
 <img src="assets/lwc-html-snippets.gif" width="500"/>
 
 ## Features
@@ -23,6 +35,118 @@ A [VS Code Extension](https://marketplace.visualstudio.com/items?itemName=Beyond
 <td> Prefix </td>
 <td> Example </td>
 </tr>
+
+<tr>
+<td>aae</td>
+<td>
+
+```java
+Assert.areEqual(1, 2, 'NOT EQUAL');
+```
+
+</td>
+</tr>
+
+<tr>
+<td>aane</td>
+
+<td>
+
+```java
+Assert.areNotEqual(1, 1, 'Your custom message here');
+```
+
+</td>
+</tr>
+
+<tr>
+<td>af</td>
+<td>
+
+```java
+Assert.fail('Your custom message here');
+```
+
+</td>
+</tr>
+
+<tr>
+<td>aif</td>
+<td>
+
+```java
+Assert.isFalse(true, 'Your custom message here');
+```
+
+</td>
+</tr>
+
+<tr>
+<td>aii</td>
+<td>
+
+```java
+Assert.isInstanceOfType(new Account(), Contact.class, 'Your custom message here');
+```
+
+</td>
+</tr>
+
+<tr>
+<td>aini</td>
+<td>
+
+```java
+Assert.isNotInstanceOfType(new Account(), Account.class, 'Your custom message here');
+```
+
+</td>
+</tr>
+
+<tr>
+<td>ainn</td>
+<td>
+
+```java
+Assert.isNotNull(null, 'Your message here');
+```
+
+</td>
+</tr>
+
+<tr>
+<td>ain</td>
+<td>
+
+```java
+Assert.isNull(null, 'Your message here');
+```
+
+</td>
+</tr>
+
+<tr>
+<td>ait</td>
+<td>
+
+```java
+Assert.isTrue(null, 'Your message here');
+```
+
+</td>
+</tr>
+
+<tr>
+<td>deb</td>
+<td>
+
+```java
+Id jobId = Database.executeBatch(new BatchLeadConvert(), 200);
+```
+
+</td>
+</tr>
+
 <tr>
 <td>foro</td>
 <td>
@@ -30,6 +154,90 @@ A [VS Code Extension](https://marketplace.visualstudio.com/items?itemName=Beyond
 ```java
 for (Type variable : [SELECT fieldsList FROM Type) {
     //Your code here
+}
+```
+
+</td>
+</tr>
+
+<tr>
+<td>itar</td>
+<td>
+
+```java
+for (Integer i = 0; i < listName.size(); i++) {
+    Account acc = listName[i];
+    // Your code here
+}
+```
+
+</td>
+</tr>
+
+<tr>
+<td>itme</td>
+<td>
+
+```java
+for (Id accountId : mapName.keySet()) {
+    Account acc = mapName.get(accountId);
+    //Your code here
+}
+```
+
+</td>
+</tr>
+
+<tr>
+<td>ritar</td>
+<td>
+
+```java
+for (Integer i = listName.size()-1; i >= 0; i--) {
+    Account acc = listName[i];
+    //Your code here
+}
+```
+
+</td>
+</tr>
+
+<tr>
+<td>@future</td>
+<td>
+
+```java
+@future
+public static void methodName() {
+    //Your code here
+}
+```
+
+</td>
+</tr>
+
+<tr>
+<td>if</td>
+<td>
+
+```java
+if (true) {
+    //Your code here
+}
+```
+
+</td>
+</tr>
+
+<tr>
+<td>ife</td>
+<td>
+
+```java
+if(true) {
+    //Your code here
+} else {
+    
 }
 ```
 
@@ -50,6 +258,20 @@ if (objects[0] instanceof Account) {
 </tr>
 
 <tr>
+<td>@InvocableMethod</td>
+<td>
+
+```java
+@InvocableMethod(label='YourLabeL' description='Description' category='Category')
+public static List<Account> exampleMethod() {
+    //Your code here
+}
+```
+
+</td>
+</tr>
+
+<tr>
 <td>isAssignableFrom</td>
 <td>
 
@@ -61,22 +283,201 @@ ChildType.class.isAssignableFrom(SourceType.class);
 </tr>
 
 <tr>
-<td>sa</td>
+<td>lst</td>
 <td>
 
 ```java
-System.assert();
+myList[myList.size() - 1]
 ```
 
 </td>
 </tr>
 
 <tr>
-<td>saf</td>
+<td>lazy</td>
 <td>
 
 ```java
-System.assert(false, );
+if (myAccount == null) {
+    myAccount = new Account();
+}
+```
+
+</td>
+</tr>
+
+<tr>
+<td>nl</td>
+<td>
+
+```java
+List<Account> testAccounts = new List<Account>();
+```
+
+</td>
+</tr>
+
+<tr>
+<td>nm</td>
+<td>
+
+```java
+Map<Id, Account> testAccounts = new Map<Id, Account>();
+```
+
+</td>
+</tr>
+
+<tr>
+<td>ns</td>
+<td>
+
+```java
+Set<Id> accountIds = new Set<Id>();
+```
+
+</td>
+</tr>
+
+<tr>
+<td>nsfl</td>
+<td>
+
+```java
+Set<Id> accountIds = new Map<Id, Account>([SELECT Id FROM Account LIMIT 10]).keySet();
+```
+
+</td>
+</tr>
+
+<tr>
+<td>nmfl</td>
+<td>
+
+```java
+Map<Id, Account> myAccounts = new Map<Id, Account>(accountsList);
+```
+
+</td>
+</tr>
+
+<tr>
+<td>pro</td>
+<td>
+
+```java
+{get; private set;}
+```
+
+</td>
+</tr>
+
+<tr>
+<td>prw</td>
+<td>
+
+```java
+{get; set;}
+```
+
+</td>
+</tr>
+
+<tr>
+<td>psf</td>
+<td>
+
+```java
+public static final
+```
+
+</td>
+</tr>
+
+<tr>
+<td>psfi</td>
+<td>
+
+```java
+public static final Integer
+```
+
+</td>
+</tr>
+
+<tr>
+<td>psfs</td>
+<td>
+
+```java
+public static final String
+```
+
+</td>
+</tr>
+
+<tr>
+<td>SEL</td>
+<td>
+
+```java
+SELECT Id FROM Account
+```
+
+</td>
+</tr>
+
+<tr>
+<td>SELALL</td>
+<td>
+
+```java
+SELECT FIELDS(ALL) FROM Account LIMIT 200
+```
+
+</td>
+</tr>
+
+<tr>
+<td>sqm</td>
+<td>
+
+```java
+Map<Id, Account> myAccounts = new Map<Id, Account>([SELECT Id FROM Account LIMIT 10]);
+```
+
+</td>
+</tr>
+
+<tr>
+<td>sql</td>
+<td>
+
+```java
+List<Account> myAccounts = [SELECT Id, Name FROM Account];
+```
+
+</td>
+</tr>
+
+<tr>
+<td>sql1</td>
+<td>
+
+```java
+List<Account> myAccounts = [SELECT Id FROM Account LIMIT 1];
+Account myAcc = myAccounts.size() == 1 ? myAccounts.get(0) : null;
+```
+
+</td>
+</tr>
+
+<tr>
+<td>sa</td>
+<td>
+
+```java
+System.assert(condition, 'Your message here');
 ```
 
 </td>
@@ -87,7 +488,7 @@ System.assert(false, );
 <td>
 
 ```java
-System.assertEquals(expected, actual);
+System.assertEquals(expected, actual, 'Your message here');
 ```
 
 </td>
@@ -98,7 +499,18 @@ System.assertEquals(expected, actual);
 <td>
 
 ```java
-System.assertEquals(null, );
+System.assertEquals(null, actual, 'Your message here');
+```
+
+</td>
+</tr>
+
+<tr>
+<td>saf</td>
+<td>
+
+```java
+System.assert(false, 'Your message here');
 ```
 
 </td>
@@ -109,7 +521,7 @@ System.assertEquals(null, );
 <td>
 
 ```java
-System.assertNotEquals(expected, actual);
+System.assertNotEquals(expected, actual, 'Your message here');
 ```
 
 </td>
@@ -120,7 +532,7 @@ System.assertNotEquals(expected, actual);
 <td>
 
 ```java
-System.assertNotEquals(null, );
+System.assertNotEquals(null, 'Your message here');
 ```
 
 </td>
@@ -161,8 +573,94 @@ System.runAs(user) {
 </td>
 </tr>
 
-</table>
+<tr>
+<td>tstm | @TestMethod</td>
+<td>
 
+```java
+@IsTest
+static void exampleName() {
+    //Your code here
+    Test.startTest();
+    
+    Test.stopTest();
+}
+```
+
+</td>
+</tr>
+
+<tr>
+<td>tsts | @TestSetup</td>
+<td>
+
+```java
+@TestSetup
+static void setup() {
+    //Your code here
+}
+```
+
+</td>
+</tr>
+
+<tr>
+<td>thr</td>
+<td>
+
+```java
+throw new CustomException();
+```
+
+</td>
+</tr>
+
+<tr>
+<td>tc</td>
+<td>
+
+```java
+try {
+    //Your code here
+} catch (CustomException ex) {
+    
+}
+```
+
+</td>
+</tr>
+
+<tr>
+<td>tcf</td>
+<td>
+
+```java
+try {
+    //Your code here
+} catch (CustomException ex) {
+    
+} finally {
+    
+}
+```
+
+</td>
+</tr>
+
+<tr>
+<td>wh</td>
+<td>
+
+```java
+while (condition) {
+    //Your code here
+}
+```
+
+</td>
+</tr>
+
+</table>
 
 # LWC
 
@@ -181,6 +679,7 @@ System.runAs(user) {
 <lightning-button variant='base' label='label' title='title' onclick={handleOnClick} class='cssClass'>
 </lightning-button>
 ```
+
 </td>
 </tr>
 <tr>
@@ -197,6 +696,7 @@ System.runAs(user) {
     onchange={handleChange}
 ></lightning-combobox>
 ```
+
 </td>
 </tr>
 <tr>
@@ -211,6 +711,7 @@ System.runAs(user) {
     hide-checkbox-column
 ></lightning-datatable>
 ```
+
 </td>
 </tr>
 <tr>
@@ -221,6 +722,7 @@ System.runAs(user) {
 <lightning-icon icon-name='iconName' alternative-text='alternativeText' title='title'>
 </lightning-icon>
 ```
+
 </td>
 </tr>
 <tr>
@@ -231,6 +733,7 @@ System.runAs(user) {
 <lightning-input type='type' label='label' onchange='handleOnChange'>
 </lightning-input>
 ```
+
 </td>
 </tr>
 <tr>
@@ -241,6 +744,7 @@ System.runAs(user) {
 <lightning-input-field field-name='fieldName' disabled read-only required>
 </lightning-input-field>
 ```
+
 </td>
 </tr>
 <tr>
@@ -257,6 +761,7 @@ System.runAs(user) {
     </lightning-layout-item>
 </lightning-layout>
 ```
+
 </td>
 </tr>
 <tr>
@@ -267,6 +772,7 @@ System.runAs(user) {
 <lightning-layout-item size='size' small-device-size='smallDeviceSize' medium-device-size='mediumDeviceSize' large-device-size='largeDeviceSize' padding='around-small'>
 </lightning-layout-item>
 ```
+
 </td>
 </tr>
 <tr>
@@ -286,6 +792,7 @@ System.runAs(user) {
     </lightning-tab>
 </lightning-tabset>
 ```
+
 </td>
 </tr>
 <tr>
@@ -297,6 +804,7 @@ System.runAs(user) {
 <lightning-spinner alternative-text='alternativeText' size='size'>
 </lightning-spinner>
 ```
+
 </td>
 </tr>
 <tr>
@@ -307,6 +815,7 @@ System.runAs(user) {
 <slot name='name'>
 </slot>
 ```
+
 </td>
 </tr>
 <tr>
@@ -317,6 +826,7 @@ System.runAs(user) {
 <template for:each={array} for:item='item'>
 </template>
 ```
+
 </td>
 </tr>
 <tr>
@@ -327,6 +837,7 @@ System.runAs(user) {
 <template if:false={property}>
 </template>
 ```
+
 </td>
 </tr>
 <tr>
@@ -337,6 +848,7 @@ System.runAs(user) {
 <template if:true={property}>
 </template>
 ```
+
 </td>
 </tr>
 <tr>
@@ -352,11 +864,13 @@ System.runAs(user) {
     </div>
 </template>
 ```
+
 </td>
 </tr>
 </table>
 
 ## [JS](./snippets/lwc-js.json)
+
 <table>
 <tr>
 <td> Prefix </td>
@@ -373,6 +887,7 @@ try {
     console.error(error)
 }
 ```
+
 </td>
 </tr>
 <tr>
@@ -384,6 +899,7 @@ constructor() {
 
 }
 ```
+
 </td>
 </tr>
 <tr>
@@ -395,6 +911,7 @@ import { CurrentPageReference } from 'lightning/navigation';
 @wire(CurrentPageReference)
 pageRef;
 ```
+
 </td>
 </tr>
 <tr>
@@ -408,6 +925,7 @@ new CustomEvent('eventName', {
     composed: false
 });
 ```
+
 </td>
 </tr>
 <tr>
@@ -419,6 +937,7 @@ disconnectedCallback() {
 
 }
 ```
+
 </td>
 </tr>
 <tr>
@@ -428,6 +947,7 @@ disconnectedCallback() {
 ```js
 this.dispatchEvent(customEvent);
 ```
+
 </td>
 </tr>
 <tr>
@@ -439,6 +959,7 @@ errorCallback(error, stack) {
 
 }
 ```
+
 </td>
 </tr>
 <tr>
@@ -463,6 +984,7 @@ import objectName from '@salesforce/schema/objectApiName';
 @wire(getObjectInfo, { objectApiName: objectName })
 propertyOrFunction;
 ```
+
 </td>
 </tr>
 <tr>
@@ -476,6 +998,7 @@ import fieldName from '@salesforce/schema/objectApiName.fieldApiName';
 @wire(getPicklistValues, { recordTypeId: '012000000000000AAA', fieldApiName: fieldName })
 propertyOrFunction;
 ```
+
 </td>
 </tr>
 <tr>
@@ -488,6 +1011,7 @@ import { getRecord } from 'lightning/uiRecordApi';
 @wire(getRecord, { recordId: 'recordId', fields: fields })
 propertyOrFunction;
 ```
+
 </td>
 </tr>
 <tr>
@@ -500,6 +1024,7 @@ import { getRecords } from 'lightning/uiRecordApi';
 @wire(getRecords, { records: [ { recordIds: 'recordIds', fields: fields } ] })
 propertyOrFunction;
 ```
+
 </td>
 </tr>
 <tr>
@@ -509,6 +1034,7 @@ propertyOrFunction;
 ```js
 import apexMethodName from '@salesforce/apex/Namespace.ClassName.apexMethodReference';
 ```
+
 </td>
 </tr>
 <tr>
@@ -518,6 +1044,7 @@ import apexMethodName from '@salesforce/apex/Namespace.ClassName.apexMethodRefer
 ```js
 import fieldName from '@salesforce/schema/objectApiName.fieldApiName';
 ```
+
 </td>
 </tr>
 <tr>
@@ -527,6 +1054,7 @@ import fieldName from '@salesforce/schema/objectApiName.fieldApiName';
 ```js
 import hasPermissionName from '@salesforce/userPermission/PermissionName';
 ```
+
 </td>
 </tr>
 <tr>
@@ -536,6 +1064,7 @@ import hasPermissionName from '@salesforce/userPermission/PermissionName';
 ```js
 import { NavigationMixin } from 'lightning/navigation';
 ```
+
 </td>
 </tr>
 <tr>
@@ -545,6 +1074,7 @@ import { NavigationMixin } from 'lightning/navigation';
 ```js
 import objectName from '@salesforce/schema/objectApiName';
 ```
+
 </td>
 </tr>
 <tr>
@@ -554,6 +1084,7 @@ import objectName from '@salesforce/schema/objectApiName';
 ```js
 import userId from '@salesforce/user/Id';
 ```
+
 </td>
 </tr>
 <tr>
@@ -567,6 +1098,7 @@ array.map((item, index) => {
     }
 });
 ```
+
 </td>
 </tr>
 <tr>
@@ -576,6 +1108,7 @@ array.map((item, index) => {
 ```js
 import channelName from '@salesforce/messageChannel/channelReference';
 ```
+
 </td>
 </tr>
 <tr>
@@ -594,6 +1127,7 @@ this[NavigationMixin.Navigate]({
     }
 });
 ```
+
 </td>
 </tr>
 <tr>
@@ -603,6 +1137,7 @@ this[NavigationMixin.Navigate]({
 ```js
 this.template.querySelector('element');
 ```
+
 </td>
 </tr>
 <tr>
@@ -612,6 +1147,7 @@ this.template.querySelector('element');
 ```js
 this.template.querySelectorAll('element');
 ```
+
 </td>
 </tr>
 <tr>
@@ -623,6 +1159,7 @@ render() {
 
 }
 ```
+
 </td>
 </tr>
 <tr>
@@ -639,6 +1176,7 @@ renderedCallback() {
     this.initialRender = false;
 }
 ```
+
 </td>
 </tr>
 <tr>
@@ -649,6 +1187,7 @@ renderedCallback() {
 import { ShowToastEvent } from 'lightning/platformShowToastEvent';
 new ShowToastEvent({ 'title', 'message', 'variant' });
 ```
+
 </td>
 </tr>
 <tr>
@@ -673,6 +1212,7 @@ apexMethodName({ apexMethodParams })
     console.error(error)
 });
 ```
+
 </td>
 </tr>
 <tr>
@@ -689,6 +1229,7 @@ wiredName({ error, data }) {
     }
 }
 ```
+
 </td>
 </tr>
 <tr>
@@ -699,11 +1240,13 @@ wiredName({ error, data }) {
 @wire(apexMethodName, { apexMethodParams })
 property;
 ```
+
 </td>
 </tr>
 </table>
 
 ## [XML](./snippets/lwc-xml.json)
+
 <table>
 <tr>
 <td> Prefix </td>
@@ -717,6 +1260,7 @@ property;
 <capability>lightningCommunity__RelaxedCSP</capability>
 <capability>lightning__ServiceCloudVoiceToolkitApi</capability>
 ```
+
 </td>
 </tr>
 <tr>
@@ -726,6 +1270,7 @@ property;
 ```xml
 <isExposed>true</isExposed>
 ```
+
 </td>
 </tr>
 <tr>
@@ -737,6 +1282,7 @@ property;
     <target>lightning__AppPage</target>
 </targets>
 ```
+
 </tr><tr>
 <td> targetConfig </td>
 <td>
@@ -752,6 +1298,7 @@ property;
     />
 </targetConfig>
 ```
+
 </tr>
 <tr>
 <td> propertyType </td>
@@ -766,6 +1313,7 @@ property;
     description="description"
 />
 ```
+
 </td>
 </tr>
 </table>
@@ -773,4 +1321,5 @@ property;
 ## Release Notes
 
 ### 1.1.1
+
 LWC-XML Snippets
