@@ -28,7 +28,7 @@
             "pageRef;"
         ],
         "description": "CurrentPageReference.",
-        "prefix": "CurrentPageReference",
+        "prefix": "currentPageReference",
         "scope": "javascript"
     },
     "LWC CustomEvent": {
@@ -217,7 +217,7 @@
             "});"
         ],
         "description": "NavigationMixin.Navigate.",
-        "prefix": "Navigate",
+        "prefix": "navigate",
         "scope": "javascript"
     },
     "LWC querySelector": {
@@ -267,7 +267,7 @@
             "new ShowToastEvent({ '${1:title}', '${2:message}', '${3:variant}' });"
         ],
         "description": "ShowToastEvent.",
-        "prefix": "ShowToastEvent",
+        "prefix": "showToastEvent",
         "scope": "javascript"
     },
     "LWC Static Resource": {

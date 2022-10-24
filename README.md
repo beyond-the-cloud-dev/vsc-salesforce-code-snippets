@@ -631,7 +631,7 @@ try {
 </tr>
 
 <tr>
-<td>tryCatchFinlly, tcf</td>
+<td>tryCatchFinally, tcf</td>
 <td>
 
 ```java
@@ -903,7 +903,7 @@ constructor() {
 </td>
 </tr>
 <tr>
-<td> CurrentPageReference </td>
+<td> currentPageReference </td>
 <td>
 
 ```js
@@ -1112,7 +1112,7 @@ import channelName from '@salesforce/messageChannel/channelReference';
 </td>
 </tr>
 <tr>
-<td> Navigate </td>
+<td> navigate </td>
 <td>
 
 ```js
@@ -1180,7 +1180,7 @@ renderedCallback() {
 </td>
 </tr>
 <tr>
-<td> ShowToastEvent </td>
+<td> showToastEvent </td>
 <td>
 
 ```js
