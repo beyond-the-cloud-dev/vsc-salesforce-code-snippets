@@ -6,7 +6,7 @@
         ],
         "description": "Assert equals condition in a test",
         "prefix": [
-            "AssertAreEqual",
+            "assertAreEqual",
             "aae"
         ],
         "scope": "apex,apex-anon"
@@ -18,7 +18,7 @@
         ],
         "description": "Assert not equals condition in a test",
         "prefix": [
-            "AssertAreNotEqual",
+            "assertAreNotEqual",
             "aane"
         ],
         "scope": "apex,apex-anon"
@@ -30,7 +30,7 @@
         ],
         "description": "Immediately return an error",
         "prefix": [
-            "AssertFail",
+            "assertFail",
             "af"
         ],
         "scope": "apex,apex-anon"
@@ -42,7 +42,7 @@
         ],
         "description": "Asserts that the specified condition is false",
         "prefix": [
-            "AsserIsFalse",
+            "assertIsFalse",
             "aif"
         ],
         "scope": "apex,apex-anon"
@@ -54,7 +54,7 @@
         ],
         "description": "Asserts that the instance is of the specified type",
         "prefix": [
-            "AssertIsInstanceOfType",
+            "assertIsInstanceOfType",
             "aii"
         ],
         "scope": "apex,apex-anon"
@@ -66,7 +66,7 @@
         ],
         "description": "Asserts that the instance isn’t of the specified type",
         "prefix": [
-            "AssertIsNotInstanceOfType",
+            "assertIsNotInstanceOfType",
             "aini"
         ],
         "scope": "apex,apex-anon"
@@ -78,7 +78,7 @@
         ],
         "description": "Asserts that the value isn’t null.",
         "prefix": [
-            "AssertIsNotNull",
+            "assertIsNotNull",
             "ainn"
         ],
         "scope": "apex,apex-anon"
@@ -90,7 +90,7 @@
         ],
         "description": "Asserts that the value is null.",
         "prefix": [
-            "AssertIsNull",
+            "assertIsNull",
             "ain"
         ],
         "scope": "apex,apex-anon"
@@ -102,7 +102,7 @@
         ],
         "description": "Asserts that the specified condition is true",
         "prefix": [
-            "AssertIsTrue",
+            "assertIsTrue",
             "ait"
         ],
         "scope": "apex,apex-anon"
@@ -113,7 +113,7 @@
         ],
         "description": "Execute a batch",
         "prefix": [
-            "DatabaseExecuteBatch",
+            "databaseExecuteBatch",
             "deb"
         ],
         "scope": "apex,apex-anon"
@@ -269,7 +269,7 @@
         ],
         "description": "Construct a new list and assign to a local variable",
         "prefix": [
-            "List",
+            "list",
             "nl"
         ],
         "scope": "apex,apex-anon"
@@ -280,7 +280,7 @@
         ],
         "description": "Construct a new map and assign to a local variable",
         "prefix": [
-            "Map",
+            "map",
             "nm"
         ],
         "scope": "apex,apex-anon"
@@ -302,7 +302,7 @@
         ],
         "description": "Construct a new map and assign to a local variable",
         "prefix": [
-            "Set",
+            "set",
             "ns"
         ],
         "scope": "apex,apex-anon"
@@ -313,7 +313,7 @@
         ],
         "description": "Create set of Ids from list of records",
         "prefix": [
-            "SetOfIds",
+            "setOfIds",
             "nsfl"
         ],
         "scope": "apex,apex-anon"
@@ -373,7 +373,7 @@
         ],
         "description": "Create a SOQL query",
         "prefix": [
-            "Select",
+            "select",
             "SEL"
         ],
         "scope": "apex,apex-anon"
@@ -384,7 +384,7 @@
         ],
         "description": "Create a SOQL query with all fields",
         "prefix": [
-            "SelectAll",
+            "selectAll",
             "SELALL"
         ],
         "scope": "apex,apex-anon"
@@ -418,7 +418,7 @@
         ],
         "description": "Create a SOQL query and assign result to map",
         "prefix": [
-            "SelectToMap",
+            "selectToMap",
             "sqm"
         ],
         "scope": "apex,apex-anon"
@@ -429,7 +429,7 @@
         ],
         "description": "Assert a condition in a unit test",
         "prefix": [
-            "SystemAssert",
+            "systemAssert",
             "sa"
         ],
         "scope": "apex,apex-anon"
@@ -440,7 +440,7 @@
         ],
         "description": "Assert that a value is an expected value in a unit test",
         "prefix": [
-            "SystemAssertEquals",
+            "systemAssertEquals",
             "sae"
         ],
         "scope": "apex,apex-anon"
@@ -451,7 +451,7 @@
         ],
         "description": "Assert that a value is null in a unit test",
         "prefix": [
-            "System.assertEquals",
+            "systemAssertEquals",
             "san"
         ],
         "scope": "apex,apex-anon"
@@ -462,7 +462,7 @@
         ],
         "description": "Fail unit test when this assert is reached",
         "prefix": [
-            "SystemAssertFail",
+            "systemAssertFail",
             "saf"
         ],
         "scope": "apex,apex-anon"
@@ -484,7 +484,7 @@
         ],
         "description": "Assert that a value is not null in a unit test ",
         "prefix": [
-            "System.assertNotEquals",
+            "systemAssertNotEqualsMessage",
             "sann"
         ],
         "scope": "apex,apex-anon"
@@ -495,7 +495,7 @@
         ],
         "description": "Debug",
         "prefix": [
-            "SystemDebug",
+            "systemDebug",
             "sd"
         ],
         "scope": "apex,apex-anon"
@@ -506,7 +506,7 @@
         ],
         "description": "Debug objects or collections",
         "prefix": [
-            "SystemDebugPretty",
+            "systemDebugPretty",
             "sdp"
         ],
         "scope": "apex,apex-anon"
@@ -519,7 +519,7 @@
         ],
         "description": "System Run As User statement.",
         "prefix": [
-            "SystemRunAs",
+            "systemRunAs",
             "sra"
         ],
         "scope": "apex,apex-anon"

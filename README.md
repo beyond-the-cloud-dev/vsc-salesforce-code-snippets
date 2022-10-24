@@ -37,7 +37,7 @@ A [VS Code Extension](https://marketplace.visualstudio.com/items?itemName=Beyond
 </tr>
 
 <tr>
-<td>AssertAreEqual, aae</td>
+<td>assertAreEqual, aae</td>
 <td>
 
 ```java
@@ -48,7 +48,7 @@ Assert.areEqual(1, 2, 'NOT EQUAL');
 </tr>
 
 <tr>
-<td>AssertAreNotEqual, aane</td>
+<td>assertAreNotEqual, aane</td>
 
 <td>
 
@@ -60,7 +60,7 @@ Assert.areNotEqual(1, 1, 'Your custom message here');
 </tr>
 
 <tr>
-<td>AssertFail, af</td>
+<td>assertFail, af</td>
 <td>
 
 ```java
@@ -71,7 +71,7 @@ Assert.fail('Your custom message here');
 </tr>
 
 <tr>
-<td>AsserIsFalse, aif</td>
+<td>assertIsFalse, aif</td>
 <td>
 
 ```java
@@ -82,7 +82,7 @@ Assert.isFalse(true, 'Your custom message here');
 </tr>
 
 <tr>
-<td>AssertIsInstanceOfType, aii</td>
+<td>assertIsInstanceOfType, aii</td>
 <td>
 
 ```java
@@ -93,7 +93,7 @@ Assert.isInstanceOfType(new Account(), Contact.class, 'Your custom message here'
 </tr>
 
 <tr>
-<td>AssertIsNotInstanceOfType, aini</td>
+<td>assertIsNotInstanceOfType, aini</td>
 <td>
 
 ```java
@@ -104,7 +104,7 @@ Assert.isNotInstanceOfType(new Account(), Account.class, 'Your custom message he
 </tr>
 
 <tr>
-<td>AssertIsNotNull, ainn</td>
+<td>assertIsNotNull, ainn</td>
 <td>
 
 ```java
@@ -115,7 +115,7 @@ Assert.isNotNull(null, 'Your message here');
 </tr>
 
 <tr>
-<td>AssertIsNull, ain</td>
+<td>assertIsNull, ain</td>
 <td>
 
 ```java
@@ -126,7 +126,7 @@ Assert.isNull(null, 'Your message here');
 </tr>
 
 <tr>
-<td>AssertIsTrue, ait</td>
+<td>assertIsTrue, ait</td>
 <td>
 
 ```java
@@ -137,7 +137,7 @@ Assert.isTrue(null, 'Your message here');
 </tr>
 
 <tr>
-<td>DatabaseExecuteBatch, deb</td>
+<td>databaseExecuteBatch, deb</td>
 <td>
 
 ```java
@@ -307,7 +307,7 @@ if (myAccount == null) {
 </tr>
 
 <tr>
-<td>List, nl</td>
+<td>list, nl</td>
 <td>
 
 ```java
@@ -318,7 +318,7 @@ List<Account> testAccounts = new List<Account>();
 </tr>
 
 <tr>
-<td>Map, nm</td>
+<td>map, nm</td>
 <td>
 
 ```java
@@ -329,7 +329,7 @@ Map<Id, Account> testAccounts = new Map<Id, Account>();
 </tr>
 
 <tr>
-<td>Set, ns</td>
+<td>set, ns</td>
 <td>
 
 ```java
@@ -340,7 +340,7 @@ Set<Id> accountIds = new Set<Id>();
 </tr>
 
 <tr>
-<td>SetOfIds, nsfl</td>
+<td>setOfIds, nsfl</td>
 <td>
 
 ```java
@@ -417,7 +417,7 @@ public static final String
 </tr>
 
 <tr>
-<td>Select, SEL</td>
+<td>select, SEL</td>
 <td>
 
 ```java
@@ -428,7 +428,7 @@ SELECT Id FROM Account
 </tr>
 
 <tr>
-<td>SelectAll, SELALL</td>
+<td>selectAll, SELALL</td>
 <td>
 
 ```java
@@ -439,7 +439,7 @@ SELECT FIELDS(ALL) FROM Account LIMIT 200
 </tr>
 
 <tr>
-<td>SelectToMap, sqm</td>
+<td>selectToMap, sqm</td>
 <td>
 
 ```java
@@ -450,7 +450,7 @@ Map<Id, Account> myAccounts = new Map<Id, Account>([SELECT Id FROM Account LIMIT
 </tr>
 
 <tr>
-<td>SelectToList, sql</td>
+<td>selectToList, sql</td>
 <td>
 
 ```java
@@ -461,7 +461,7 @@ List<Account> myAccounts = [SELECT Id, Name FROM Account];
 </tr>
 
 <tr>
-<td>SelectToObject, sql1</td>
+<td>selectToObject, sql1</td>
 <td>
 
 ```java
@@ -473,7 +473,7 @@ Account myAcc = myAccounts.size() == 1 ? myAccounts.get(0) : null;
 </tr>
 
 <tr>
-<td>SystemAssert, sa</td>
+<td>systemAssert, sa</td>
 <td>
 
 ```java
@@ -484,7 +484,7 @@ System.assert(condition, 'Your message here');
 </tr>
 
 <tr>
-<td>SystemAssertEquals, sae</td>
+<td>systemAssertEquals, sae</td>
 <td>
 
 ```java
@@ -495,7 +495,7 @@ System.assertEquals(expected, actual, 'Your message here');
 </tr>
 
 <tr>
-<td>san</td>
+<td>systemAssertEquals, san</td>
 <td>
 
 ```java
@@ -506,7 +506,7 @@ System.assertEquals(null, actual, 'Your message here');
 </tr>
 
 <tr>
-<td>SystemAssertFail, saf</td>
+<td>systemAssertFail, saf</td>
 <td>
 
 ```java
@@ -517,7 +517,7 @@ System.assert(false, 'Your message here');
 </tr>
 
 <tr>
-<td>SystemAssertNotEquals, sane</td>
+<td>systemAssertNotEquals, sane</td>
 <td>
 
 ```java
@@ -528,7 +528,7 @@ System.assertNotEquals(expected, actual, 'Your message here');
 </tr>
 
 <tr>
-<td>sann</td>
+<td>systemAssertNotEquals, sann</td>
 <td>
 
 ```java
@@ -539,7 +539,7 @@ System.assertNotEquals(null, 'Your message here');
 </tr>
 
 <tr>
-<td>SystemDebug, sd</td>
+<td>systemDebug, sd</td>
 <td>
 
 ```java
@@ -550,7 +550,7 @@ System.debug(LoggingLevel.DEBUG, 'your message here: ' + variableHere);
 </tr>
 
 <tr>
-<td>SystemDebugPretty, sdp</td>
+<td>systemDebugPretty, sdp</td>
 <td>
 
 ```java
@@ -561,7 +561,7 @@ System.debug(LoggingLevel.DEBUG, 'your message here: ' + JSON.SerializePretty(ob
 </tr>
 
 <tr>
-<td>SystemRunAs, sra</td>
+<td>systemRunAs, sra</td>
 <td>
 
 ```java
