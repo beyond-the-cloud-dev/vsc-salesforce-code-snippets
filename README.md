@@ -2,8 +2,8 @@
 
 A [VS Code Extension](https://marketplace.visualstudio.com/items?itemName=BeyondTheCloud.salesforce-snippets-beyondthecloud) with Apex and LWC Snippets.
 
-[![Installs](https://vsmarketplacebadge.apphb.com/installs/BeyondTheCloud.salesforce-snippets-beyondthecloud.svg)](https://marketplace.visualstudio.com/items?itemName=BeyondTheCloud.salesforce-snippets-beyondthecloud)
-[![Ratings](https://vsmarketplacebadge.apphb.com/rating-short/BeyondTheCloud.salesforce-snippets-beyondthecloud.svg)](https://marketplace.visualstudio.com/items?itemName=BeyondTheCloud.salesforce-snippets-beyondthecloud)
+
+[![Visual Studio Marketplace Installs](https://img.shields.io/visual-studio-marketplace/i/BeyondTheCloud.salesforce-snippets-beyondthecloud?color=darkgreen)](https://marketplace.visualstudio.com/items?itemName=BeyondTheCloud.salesforce-snippets-beyondthecloud)
 
 ## List of Snippets
 
@@ -37,7 +37,7 @@ A [VS Code Extension](https://marketplace.visualstudio.com/items?itemName=Beyond
 </tr>
 
 <tr>
-<td>aae</td>
+<td>AssertAreEqual, aae</td>
 <td>
 
 ```java
@@ -48,7 +48,7 @@ Assert.areEqual(1, 2, 'NOT EQUAL');
 </tr>
 
 <tr>
-<td>aane</td>
+<td>AssertAreNotEqual, aane</td>
 
 <td>
 
@@ -60,7 +60,7 @@ Assert.areNotEqual(1, 1, 'Your custom message here');
 </tr>
 
 <tr>
-<td>af</td>
+<td>AssertFail, af</td>
 <td>
 
 ```java
@@ -71,7 +71,7 @@ Assert.fail('Your custom message here');
 </tr>
 
 <tr>
-<td>aif</td>
+<td>AsserIsFalse, aif</td>
 <td>
 
 ```java
@@ -82,7 +82,7 @@ Assert.isFalse(true, 'Your custom message here');
 </tr>
 
 <tr>
-<td>aii</td>
+<td>AssertIsInstanceOfType, aii</td>
 <td>
 
 ```java
@@ -93,7 +93,7 @@ Assert.isInstanceOfType(new Account(), Contact.class, 'Your custom message here'
 </tr>
 
 <tr>
-<td>aini</td>
+<td>AssertIsNotInstanceOfType, aini</td>
 <td>
 
 ```java
@@ -104,7 +104,7 @@ Assert.isNotInstanceOfType(new Account(), Account.class, 'Your custom message he
 </tr>
 
 <tr>
-<td>ainn</td>
+<td>AssertIsNotNull, ainn</td>
 <td>
 
 ```java
@@ -115,7 +115,7 @@ Assert.isNotNull(null, 'Your message here');
 </tr>
 
 <tr>
-<td>ain</td>
+<td>AssertIsNull, ain</td>
 <td>
 
 ```java
@@ -126,7 +126,7 @@ Assert.isNull(null, 'Your message here');
 </tr>
 
 <tr>
-<td>ait</td>
+<td>AssertIsTrue, ait</td>
 <td>
 
 ```java
@@ -137,7 +137,7 @@ Assert.isTrue(null, 'Your message here');
 </tr>
 
 <tr>
-<td>deb</td>
+<td>DatabaseExecuteBatch, deb</td>
 <td>
 
 ```java
@@ -148,7 +148,7 @@ Id jobId = Database.executeBatch(new BatchLeadConvert(), 200);
 </tr>
 
 <tr>
-<td>foro</td>
+<td>forSoql, foro</td>
 <td>
 
 ```java
@@ -161,7 +161,7 @@ for (Type variable : [SELECT fieldsList FROM Type) {
 </tr>
 
 <tr>
-<td>itar</td>
+<td>fori, itar</td>
 <td>
 
 ```java
@@ -175,7 +175,7 @@ for (Integer i = 0; i < listName.size(); i++) {
 </tr>
 
 <tr>
-<td>itme</td>
+<td>forMap, itme</td>
 <td>
 
 ```java
@@ -189,7 +189,7 @@ for (Id accountId : mapName.keySet()) {
 </tr>
 
 <tr>
-<td>ritar</td>
+<td>forReversedOrder, ritar</td>
 <td>
 
 ```java
@@ -230,14 +230,14 @@ if (true) {
 </tr>
 
 <tr>
-<td>ife</td>
+<td>ifElse, ife</td>
 <td>
 
 ```java
 if(true) {
     //Your code here
 } else {
-    
+
 }
 ```
 
@@ -245,7 +245,7 @@ if(true) {
 </tr>
 
 <tr>
-<td>inst</td>
+<td>instanceOf, inst</td>
 <td>
 
 ```java
@@ -283,7 +283,7 @@ ChildType.class.isAssignableFrom(SourceType.class);
 </tr>
 
 <tr>
-<td>lst</td>
+<td>lastListElement, lst</td>
 <td>
 
 ```java
@@ -307,7 +307,7 @@ if (myAccount == null) {
 </tr>
 
 <tr>
-<td>nl</td>
+<td>List, nl</td>
 <td>
 
 ```java
@@ -318,7 +318,7 @@ List<Account> testAccounts = new List<Account>();
 </tr>
 
 <tr>
-<td>nm</td>
+<td>Map, nm</td>
 <td>
 
 ```java
@@ -329,7 +329,7 @@ Map<Id, Account> testAccounts = new Map<Id, Account>();
 </tr>
 
 <tr>
-<td>ns</td>
+<td>Set, ns</td>
 <td>
 
 ```java
@@ -340,7 +340,7 @@ Set<Id> accountIds = new Set<Id>();
 </tr>
 
 <tr>
-<td>nsfl</td>
+<td>SetOfIds, nsfl</td>
 <td>
 
 ```java
@@ -351,7 +351,7 @@ Set<Id> accountIds = new Map<Id, Account>([SELECT Id FROM Account LIMIT 10]).key
 </tr>
 
 <tr>
-<td>nmfl</td>
+<td>MapFromList, nmfl</td>
 <td>
 
 ```java
@@ -384,7 +384,7 @@ Map<Id, Account> myAccounts = new Map<Id, Account>(accountsList);
 </tr>
 
 <tr>
-<td>psf</td>
+<td>final, psf</td>
 <td>
 
 ```java
@@ -395,7 +395,7 @@ public static final
 </tr>
 
 <tr>
-<td>psfi</td>
+<td>finalInteger, psfi</td>
 <td>
 
 ```java
@@ -406,7 +406,7 @@ public static final Integer
 </tr>
 
 <tr>
-<td>psfs</td>
+<td>finalString, psfs</td>
 <td>
 
 ```java
@@ -417,7 +417,7 @@ public static final String
 </tr>
 
 <tr>
-<td>SEL</td>
+<td>Select, SEL</td>
 <td>
 
 ```java
@@ -428,7 +428,7 @@ SELECT Id FROM Account
 </tr>
 
 <tr>
-<td>SELALL</td>
+<td>SelectAll, SELALL</td>
 <td>
 
 ```java
@@ -439,7 +439,7 @@ SELECT FIELDS(ALL) FROM Account LIMIT 200
 </tr>
 
 <tr>
-<td>sqm</td>
+<td>SelectToMap, sqm</td>
 <td>
 
 ```java
@@ -450,7 +450,7 @@ Map<Id, Account> myAccounts = new Map<Id, Account>([SELECT Id FROM Account LIMIT
 </tr>
 
 <tr>
-<td>sql</td>
+<td>SelectToList, sql</td>
 <td>
 
 ```java
@@ -461,7 +461,7 @@ List<Account> myAccounts = [SELECT Id, Name FROM Account];
 </tr>
 
 <tr>
-<td>sql1</td>
+<td>SelectToObject, sql1</td>
 <td>
 
 ```java
@@ -473,7 +473,7 @@ Account myAcc = myAccounts.size() == 1 ? myAccounts.get(0) : null;
 </tr>
 
 <tr>
-<td>sa</td>
+<td>SystemAssert, sa</td>
 <td>
 
 ```java
@@ -484,7 +484,7 @@ System.assert(condition, 'Your message here');
 </tr>
 
 <tr>
-<td>sae</td>
+<td>SystemAssertEquals, sae</td>
 <td>
 
 ```java
@@ -506,7 +506,7 @@ System.assertEquals(null, actual, 'Your message here');
 </tr>
 
 <tr>
-<td>saf</td>
+<td>SystemAssertFail, saf</td>
 <td>
 
 ```java
@@ -517,7 +517,7 @@ System.assert(false, 'Your message here');
 </tr>
 
 <tr>
-<td>sane</td>
+<td>SystemAssertNotEquals, sane</td>
 <td>
 
 ```java
@@ -539,7 +539,7 @@ System.assertNotEquals(null, 'Your message here');
 </tr>
 
 <tr>
-<td>sd</td>
+<td>SystemDebug, sd</td>
 <td>
 
 ```java
@@ -550,7 +550,7 @@ System.debug(LoggingLevel.DEBUG, 'your message here: ' + variableHere);
 </tr>
 
 <tr>
-<td>sdp</td>
+<td>SystemDebugPretty, sdp</td>
 <td>
 
 ```java
@@ -561,7 +561,7 @@ System.debug(LoggingLevel.DEBUG, 'your message here: ' + JSON.SerializePretty(ob
 </tr>
 
 <tr>
-<td>sra</td>
+<td>SystemRunAs, sra</td>
 <td>
 
 ```java
@@ -574,7 +574,7 @@ System.runAs(user) {
 </tr>
 
 <tr>
-<td>tstm | @TestMethod</td>
+<td>@TestMethod, tstm</td>
 <td>
 
 ```java
@@ -582,7 +582,7 @@ System.runAs(user) {
 static void exampleName() {
     //Your code here
     Test.startTest();
-    
+
     Test.stopTest();
 }
 ```
@@ -591,7 +591,7 @@ static void exampleName() {
 </tr>
 
 <tr>
-<td>tsts | @TestSetup</td>
+<td>@TestSetup, tsts</td>
 <td>
 
 ```java
@@ -605,7 +605,7 @@ static void setup() {
 </tr>
 
 <tr>
-<td>thr</td>
+<td>throw, thr</td>
 <td>
 
 ```java
@@ -616,14 +616,14 @@ throw new CustomException();
 </tr>
 
 <tr>
-<td>tc</td>
+<td>tryCatch, tc</td>
 <td>
 
 ```java
 try {
     //Your code here
 } catch (CustomException ex) {
-    
+
 }
 ```
 
@@ -631,16 +631,16 @@ try {
 </tr>
 
 <tr>
-<td>tcf</td>
+<td>tryCatchFinlly, tcf</td>
 <td>
 
 ```java
 try {
     //Your code here
 } catch (CustomException ex) {
-    
+
 } finally {
-    
+
 }
 ```
 
@@ -648,7 +648,7 @@ try {
 </tr>
 
 <tr>
-<td>wh</td>
+<td>while, wh</td>
 <td>
 
 ```java
