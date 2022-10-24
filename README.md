@@ -203,7 +203,7 @@ for (Integer i = listName.size()-1; i >= 0; i--) {
 </tr>
 
 <tr>
-<td>@future</td>
+<td>future</td>
 <td>
 
 ```java
@@ -258,7 +258,7 @@ if (objects[0] instanceof Account) {
 </tr>
 
 <tr>
-<td>@InvocableMethod</td>
+<td>invocableMethod</td>
 <td>
 
 ```java
@@ -574,7 +574,7 @@ System.runAs(user) {
 </tr>
 
 <tr>
-<td>@TestMethod, tstm</td>
+<td>isTest, tstm</td>
 <td>
 
 ```java
@@ -591,7 +591,7 @@ static void exampleName() {
 </tr>
 
 <tr>
-<td>@TestSetup, tsts</td>
+<td>testSetup, tsts</td>
 <td>
 
 ```java

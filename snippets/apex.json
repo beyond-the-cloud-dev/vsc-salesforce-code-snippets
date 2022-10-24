@@ -181,7 +181,7 @@
             "}"
         ],
         "description": "Future method.",
-        "prefix": "@future",
+        "prefix": "future",
         "scope": "apex,apex-anon"
     },
     "If": {
@@ -231,7 +231,7 @@
             "}"
         ],
         "description": "Invocable method.",
-        "prefix": "@InvocableMethod",
+        "prefix": "invocableMethod",
         "scope": "apex,apex-anon"
     },
     "Is Assignable": {
@@ -536,7 +536,7 @@
         ],
         "description": "Test setup for creating data before test methods run.",
         "prefix": [
-            "@TestMethod",
+            "isTest",
             "tstm"
         ],
         "scope": "apex,apex-anon"
@@ -550,7 +550,7 @@
         ],
         "description": "Test setup for creating data before test methods run.",
         "prefix": [
-            "@TestSetup",
+            "testSetup",
             "tsts"
         ],
         "scope": "apex,apex-anon"
