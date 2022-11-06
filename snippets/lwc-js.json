@@ -236,6 +236,14 @@
         "prefix": "querySelectorAll",
         "scope": "javascript"
     },
+    "LWC refreshApex": {
+        "body": [
+            "import { refreshApex } from '@salesforce/apex';"
+        ],
+        "description": "refreshApex.",
+        "prefix": "importRefreshApex",
+        "scope": "javascript"
+    },
     "LWC render": {
         "body": [
             "render() {",
