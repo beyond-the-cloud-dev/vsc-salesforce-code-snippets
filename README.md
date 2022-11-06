@@ -9,8 +9,8 @@ A [VS Code Extension](https://marketplace.visualstudio.com/items?itemName=Beyond
 
 [![Apex](https://img.shields.io/badge/Apex-52-green?style=flat-square)](#apex)
 [![LWC-HTML](https://img.shields.io/badge/LWC_HTML-13-yellow?style=flat-square)](#html)
-[![LWC-JS](https://img.shields.io/badge/LWC_JavaScript-32-blue?style=flat-square)](#js)
-[![LWC-XML](https://img.shields.io/badge/LWC_XML-5-red?style=flat-square)](#xml)
+[![LWC-JS](https://img.shields.io/badge/LWC_JavaScript-33-blue?style=flat-square)](#js)
+[![LWC-XML](https://img.shields.io/badge/LWC_XML-6-red?style=flat-square)](#xml)
 
 ### Apex example
 
@@ -1151,6 +1151,16 @@ this.template.querySelectorAll('element');
 </td>
 </tr>
 <tr>
+<td> importRefreshApex </td>
+<td>
+
+```js
+import { refreshApex } from '@salesforce/apex';
+```
+
+</td>
+</tr>
+<tr>
 <td> render </td>
 <td>
 
@@ -1269,6 +1279,16 @@ property;
 
 ```xml
 <isExposed>true</isExposed>
+```
+
+</td>
+</tr>
+<tr>
+<td> masterLabel </td>
+<td>
+
+```xml
+<masterLabel>titleOfTheComponent</masterLabel>
 ```
 
 </td>

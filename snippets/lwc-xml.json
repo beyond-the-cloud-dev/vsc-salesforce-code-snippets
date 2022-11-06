@@ -19,6 +19,16 @@
         ],
         "scope": "xml"
     },
+    "LWC masterLabel": {
+        "body": [
+            "<masterLabel>${1:titleOfTheComponent}</masterLabel>"
+        ],
+        "description": "masterLabel",
+        "prefix": [
+            "masterLabel"
+        ],
+        "scope": "xml"
+    },
     "LWC Property Type": {
         "body": [
             "<propertyType",
