@@ -1,43 +1,110 @@
-# This is a basic workflow to help you get started with Actions
+name: 'VS Code Publisher'
 
-name: VSCodePublisher
-
-# Controls when the workflow will run
 on:
-  # Triggers the workflow on push or pull request events but only for the "main" branch
   push:
     branches: [ "main" ]
+    paths-ignore:
+      - "package.json"
+      - "CHANGELOG.md"
 
-  # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
-# A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  # This workflow contains a single job called "build"
-  publish:
-    # The type of runner that the job will run on
+  bump-version:
+    name: 'Bump version on main'
+    outputs:
+      new-version: ${{ steps.version-bump.outputs.newTag }}
     runs-on: ubuntu-latest
-
-    # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - name: Checkout
         uses: actions/checkout@v3
-
-      - name: Install Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: 16.x
-
-      - run: npm install
-
       - name: Set Git Config
         run: |
           git config --global user.email "contact@beyondthecloud.dev"
           git config --global user.name "Beyond The Cloud"
+      - name: 'Automated Version Bump'
+        id: version-bump
+        uses: 'phips28/gh-action-bump-version@master'
+        with:
+          tag-prefix: 'v'
+          minor-wording: 'add,new,minor'
+          major-wording: 'major'
+          patch-wording: 'patch,fix'
+        env:
+          GITHUB_TOKEN: ${{ secrets.BUMP_VERSION_SECRET }}
+      - name: 'Output Step'
+        run: echo "NEW_TAG=${{ steps.version-bump.outputs.newTag }}" >> $GITHUB_OUTPUT
 
+  publisher:
+    name: "Publish Extension"
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+        with:
+          ref: 'main'
+          fetch-depth: 0
+      - name: Install Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16.x
+      - run: npm install
+      - name: Set Git Config
+        run: |
+          git config --global user.email "contact@beyondthecloud.dev"
+          git config --global user.name "Beyond The Cloud"
       - name: Publish
         if: success()
-        run: npm run deploy-patch
+        run: npm run deploy
         env:
           VSCE_PAT: ${{ secrets.VSCE_PAT }}
+
+  release-builder:
+    needs: ['bump-version','publisher']
+    name: "Create Release"
+    runs-on: "ubuntu-latest"
+    permissions:
+      contents: write
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v3
+      with:
+        ref: 'main'
+        fetch-depth: 0
+    - name: Build Changelog
+      id: github_release
+      uses: mikepenz/release-changelog-builder-action@v3
+      env:
+        GITHUB_TOKEN: ${{ secrets.BUMP_VERSION_SECRET }}
+      with:
+        configurationJson: |
+          {
+            "template": "Summary:\n\n#{{CHANGELOG}}\n\n#{{UNCATEGORIZED}}",
+            "pr_template": "- #{{TITLE}}\n   - PR: #{{URL}}\n   - Description: #{{BODY}}",
+            "empty_template": "- no changes",
+            "categories": [
+              {
+                "title": "## 🚀 Features",
+                "labels": ["feature"]
+              },
+              {
+                  "title": "## 💬 Other",
+                  "labels": ["other"]
+              },
+              {
+                  "title": "## 📦 Dependencies",
+                  "labels": ["dependencies"]
+              }
+            ],
+            "sort": {
+              "order": "ASC",
+              "on_property": "mergedAt"
+            }
+          }
+    - name: Create Github Release
+      uses: ncipollo/release-action@v1
+      with:
+        artifacts: "README.md"
+        body: ${{ steps.github_release.outputs.changelog }}
+        token: ${{ secrets.BUMP_VERSION_SECRET }}
+        tag: ${{ needs.bump-version.outputs.new-version }}
