@@ -28,38 +28,38 @@
   "badges": [
     {
       "description": "Visual Studio Marketplace Installs",
-      "href": "https://marketplace.visualstudio.com/items?itemName=BeyondTheCloud.salesforce-snippets-beyondthecloud",
-      "url": "https://img.shields.io/visual-studio-marketplace/i/BeyondTheCloud.salesforce-snippets-beyondthecloud?color=darkgreen"
+      "url": "https://img.shields.io/visual-studio-marketplace/i/BeyondTheCloud.salesforce-snippets-beyondthecloud?color=darkgreen",
+      "href": "https://marketplace.visualstudio.com/items?itemName=BeyondTheCloud.salesforce-snippets-beyondthecloud"
     },
     {
       "description": "Stars",
       "url": "https://badgen.net/github/stars/beyond-the-cloud-dev/vsc-salesforce-code-snippets",
-      "href": ""
+      "href": "https://github.com/beyond-the-cloud-dev/vsc-salesforce-code-snippets/stargazers"
     },
     {
       "description": "LastCommit",
       "url": "https://img.shields.io/github/last-commit/beyond-the-cloud-dev/vsc-salesforce-code-snippets",
-      "href": ""
+      "href": "https://github.com/beyond-the-cloud-dev/vsc-salesforce-code-snippets"
     },
     {
       "description": "Apex",
       "url": "https://img.shields.io/badge/Apex-52-green?style=flat-square",
-      "href": "https://github.com/beyond-the-cloud-dev/vsc-salesforce-code-snippets#apex"
+      "href": "#apex"
     },
     {
       "description": "LWC-HTML",
       "url": "https://img.shields.io/badge/LWC_HTML-13-yellow?style=flat-square",
-      "href": "https://github.com/beyond-the-cloud-dev/vsc-salesforce-code-snippets#html"
+      "href": "#html"
     },
     {
       "description": "LWC-JS",
       "url": "https://img.shields.io/badge/LWC_JavaScript-33-blue?style=flat-square",
-      "href": "https://github.com/beyond-the-cloud-dev/vsc-salesforce-code-snippets#js"
+      "href": "#js"
     },
     {
       "description": "LWC-XML",
       "url": "https://img.shields.io/badge/LWC_XML-6-red?style=flat-square",
-      "href": "https://github.com/beyond-the-cloud-dev/vsc-salesforce-code-snippets#xml"
+      "href": "#xml"
     }
   ],
   "contributes": {
