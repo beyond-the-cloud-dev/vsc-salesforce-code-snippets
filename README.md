@@ -4,6 +4,8 @@ A [VS Code Extension](https://marketplace.visualstudio.com/items?itemName=Beyond
 
 
 [![Visual Studio Marketplace Installs](https://img.shields.io/visual-studio-marketplace/i/BeyondTheCloud.salesforce-snippets-beyondthecloud?color=darkgreen)](https://marketplace.visualstudio.com/items?itemName=BeyondTheCloud.salesforce-snippets-beyondthecloud)
+[![Stars](https://badgen.net/github/stars/beyond-the-cloud-dev/vsc-salesforce-code-snippets)]()
+[![LastCommit](https://img.shields.io/github/last-commit/beyond-the-cloud-dev/vsc-salesforce-code-snippets)]()
 
 ## List of Snippets
 

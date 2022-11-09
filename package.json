@@ -25,6 +25,43 @@
     "lwc",
     "lightning components"
   ],
+  "badges": [
+    {
+      "description": "Visual Studio Marketplace Installs",
+      "url": "https://img.shields.io/visual-studio-marketplace/i/BeyondTheCloud.salesforce-snippets-beyondthecloud?color=darkgreen",
+      "href": "https://marketplace.visualstudio.com/items?itemName=BeyondTheCloud.salesforce-snippets-beyondthecloud"
+    },
+    {
+      "description": "Stars",
+      "url": "https://badgen.net/github/stars/beyond-the-cloud-dev/vsc-salesforce-code-snippets",
+      "href": "https://github.com/beyond-the-cloud-dev/vsc-salesforce-code-snippets/stargazers"
+    },
+    {
+      "description": "LastCommit",
+      "url": "https://img.shields.io/github/last-commit/beyond-the-cloud-dev/vsc-salesforce-code-snippets",
+      "href": "https://github.com/beyond-the-cloud-dev/vsc-salesforce-code-snippets"
+    },
+    {
+      "description": "Apex",
+      "url": "https://img.shields.io/badge/Apex-52-green?style=flat-square",
+      "href": "#apex"
+    },
+    {
+      "description": "LWC-HTML",
+      "url": "https://img.shields.io/badge/LWC_HTML-13-yellow?style=flat-square",
+      "href": "#html"
+    },
+    {
+      "description": "LWC-JS",
+      "url": "https://img.shields.io/badge/LWC_JavaScript-33-blue?style=flat-square",
+      "href": "#js"
+    },
+    {
+      "description": "LWC-XML",
+      "url": "https://img.shields.io/badge/LWC_XML-6-red?style=flat-square",
+      "href": "#xml"
+    }
+  ],
   "contributes": {
     "snippets": [
       {
