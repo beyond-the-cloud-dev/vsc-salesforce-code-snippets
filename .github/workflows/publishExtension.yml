@@ -27,15 +27,13 @@ jobs:
         uses: 'phips28/gh-action-bump-version@master'
         with:
           tag-prefix: 'v'
-          minor-wording: 'add,new,minor'
-          major-wording: 'major'
-          patch-wording: 'patch,fix'
         env:
           GITHUB_TOKEN: ${{ secrets.BUMP_VERSION_SECRET }}
       - name: 'Output Step'
         run: echo "NEW_TAG=${{ steps.version-bump.outputs.newTag }}" >> $GITHUB_OUTPUT
 
   publisher:
+    needs: ['bump-version']
     name: "Publish Extension"
     runs-on: ubuntu-latest
     steps:
