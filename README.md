@@ -39,7 +39,7 @@ A [VS Code Extension](https://marketplace.visualstudio.com/items?itemName=Beyond
 </tr>
 
 <tr>
-<td>assertAreEqual, aae</td>
+<td>assertAreEqual, Assert.areEqual, aae</td>
 <td>
 
 ```java
@@ -50,7 +50,7 @@ Assert.areEqual(1, 2, 'NOT EQUAL');
 </tr>
 
 <tr>
-<td>assertAreNotEqual, aane</td>
+<td>assertAreNotEqual, Assert.areNotEqual, aane</td>
 
 <td>
 
@@ -62,7 +62,7 @@ Assert.areNotEqual(1, 1, 'Your custom message here');
 </tr>
 
 <tr>
-<td>assertFail, af</td>
+<td>assertFail, Assert.fail, af</td>
 <td>
 
 ```java
@@ -73,7 +73,7 @@ Assert.fail('Your custom message here');
 </tr>
 
 <tr>
-<td>assertIsFalse, aif</td>
+<td>assertIsFalse, Assert.isFalse, aif</td>
 <td>
 
 ```java
@@ -84,7 +84,7 @@ Assert.isFalse(true, 'Your custom message here');
 </tr>
 
 <tr>
-<td>assertIsInstanceOfType, aii</td>
+<td>assertIsInstanceOfType, Assert.isInstanceOfType, aii</td>
 <td>
 
 ```java
@@ -95,7 +95,7 @@ Assert.isInstanceOfType(new Account(), Contact.class, 'Your custom message here'
 </tr>
 
 <tr>
-<td>assertIsNotInstanceOfType, aini</td>
+<td>assertIsNotInstanceOfType, Assert.isNotInstanceOfType, aini</td>
 <td>
 
 ```java
@@ -106,7 +106,7 @@ Assert.isNotInstanceOfType(new Account(), Account.class, 'Your custom message he
 </tr>
 
 <tr>
-<td>assertIsNotNull, ainn</td>
+<td>assertIsNotNull, Assert.isNotNull, ainn</td>
 <td>
 
 ```java
@@ -117,7 +117,7 @@ Assert.isNotNull(null, 'Your message here');
 </tr>
 
 <tr>
-<td>assertIsNull, ain</td>
+<td>assertIsNull, Assert.isNull, ain</td>
 <td>
 
 ```java
@@ -128,7 +128,7 @@ Assert.isNull(null, 'Your message here');
 </tr>
 
 <tr>
-<td>assertIsTrue, ait</td>
+<td>assertIsTrue, Assert.isTrue, ait</td>
 <td>
 
 ```java
