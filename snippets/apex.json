@@ -7,6 +7,7 @@
         "description": "Assert equals condition in a test",
         "prefix": [
             "assertAreEqual",
+            "Assert.areEqual",
             "aae"
         ],
         "scope": "apex,apex-anon"
@@ -19,6 +20,7 @@
         "description": "Assert not equals condition in a test",
         "prefix": [
             "assertAreNotEqual",
+            "Assert.areNotEqual",
             "aane"
         ],
         "scope": "apex,apex-anon"
@@ -31,6 +33,7 @@
         "description": "Immediately return an error",
         "prefix": [
             "assertFail",
+            "Assert.fail",
             "af"
         ],
         "scope": "apex,apex-anon"
@@ -43,6 +46,7 @@
         "description": "Asserts that the specified condition is false",
         "prefix": [
             "assertIsFalse",
+            "Assert.isFalse",
             "aif"
         ],
         "scope": "apex,apex-anon"
@@ -55,6 +59,7 @@
         "description": "Asserts that the instance is of the specified type",
         "prefix": [
             "assertIsInstanceOfType",
+            "Assert.isInstanceOfType",
             "aii"
         ],
         "scope": "apex,apex-anon"
@@ -67,6 +72,7 @@
         "description": "Asserts that the instance isn’t of the specified type",
         "prefix": [
             "assertIsNotInstanceOfType",
+            "Assert.isNotInstanceOfType",
             "aini"
         ],
         "scope": "apex,apex-anon"
@@ -79,6 +85,7 @@
         "description": "Asserts that the value isn’t null.",
         "prefix": [
             "assertIsNotNull",
+            "Assert.isNotNull",
             "ainn"
         ],
         "scope": "apex,apex-anon"
@@ -91,6 +98,7 @@
         "description": "Asserts that the value is null.",
         "prefix": [
             "assertIsNull",
+            "Assert.isNull",
             "ain"
         ],
         "scope": "apex,apex-anon"
@@ -103,6 +111,7 @@
         "description": "Asserts that the specified condition is true",
         "prefix": [
             "assertIsTrue",
+            "Assert.isTrue",
             "ait"
         ],
         "scope": "apex,apex-anon"
