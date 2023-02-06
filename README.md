@@ -9,7 +9,7 @@ A [VS Code Extension](https://marketplace.visualstudio.com/items?itemName=Beyond
 
 ## List of Snippets
 
-[![Apex](https://img.shields.io/badge/Apex-52-green?style=flat-square)](#apex)
+[![Apex](https://img.shields.io/badge/Apex-55-green?style=flat-square)](#apex)
 [![LWC-HTML](https://img.shields.io/badge/LWC_HTML-13-yellow?style=flat-square)](#html)
 [![LWC-JS](https://img.shields.io/badge/LWC_JavaScript-33-blue?style=flat-square)](#js)
 [![LWC-XML](https://img.shields.io/badge/LWC_XML-6-red?style=flat-square)](#xml)
@@ -1405,9 +1405,3 @@ property;
 </td>
 </tr>
 </table>
-
-## Release Notes
-
-### 1.2.3
-
-Apex Snippets and documentation update.
