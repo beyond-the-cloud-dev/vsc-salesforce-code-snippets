@@ -116,14 +116,44 @@
         ],
         "scope": "apex,apex-anon"
     },
+    "Database Delete": {
+        "body": [
+            "List<Database.DeleteResult> ${1:deleteResults} = Database.delete(${2:recordsToDelete}, ${3:allOrNone});$0"
+        ],
+        "description": "Deletes a list of existing sObject records.",
+        "prefix": [
+            "Database.delete"
+        ],
+        "scope": "apex,apex-anon"
+    },
     "Database Execute Batch": {
         "body": [
             "Id ${1:jobIdVariable} = Database.executeBatch(${2:batchInstance}, ${3:batchSize});$0"
         ],
         "description": "Execute a batch",
         "prefix": [
-            "databaseExecuteBatch",
+            "Database.executeBatch",
             "deb"
+        ],
+        "scope": "apex,apex-anon"
+    },
+    "Database Insert": {
+        "body": [
+            "List<Database.SaveResult> ${1:saveResults} = Database.insert(${2:recordsToInsert}, ${3:allOrNone});$0"
+        ],
+        "description": "Adds one or more sObjects.",
+        "prefix": [
+            "Database.insert"
+        ],
+        "scope": "apex,apex-anon"
+    },
+    "Database Update": {
+        "body": [
+            "List<Database.SaveResult> ${1:updateResults} = Database.update(${2:recordsToUpdate}, ${3:allOrNone});$0"
+        ],
+        "description": "Modifies one or more existing sObject records.",
+        "prefix": [
+            "Database.update"
         ],
         "scope": "apex,apex-anon"
     },

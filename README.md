@@ -32,6 +32,8 @@ A [VS Code Extension](https://marketplace.visualstudio.com/items?itemName=Beyond
 
 # [Apex](./snippets/apex.json)
 
+## [Assert Class](https://developer.salesforce.com/docs/atlas.en-us.apexref.meta/apexref/apex_class_System_Assert.htm)
+
 <table>
 <tr>
 <td> Prefix </td>
@@ -148,6 +150,70 @@ Id jobId = Database.executeBatch(new BatchLeadConvert(), 200);
 
 </td>
 </tr>
+</table>
+
+## [Database Class](https://developer.salesforce.com/docs/atlas.en-us.apexref.meta/apexref/apex_methods_system_database.htm#apex_System_Database_update_2)
+
+<table>
+<tr>
+<td> Prefix </td>
+<td> Example </td>
+</tr>
+
+<tr>
+<td>Database.delete</td>
+<td>
+
+```java
+List<Database.DeleteResult> deleteResults = Database.delete(recordsToDelete, allOrNone);
+```
+
+</td>
+</tr>
+
+<tr>
+<td>Database.executeBatch, deb</td>
+<td>
+
+```java
+Id jobId = Database.executeBatch(new BatchLeadConvert(), 200);
+```
+
+</td>
+</tr>
+
+<tr>
+<td>Database.insert</td>
+<td>
+
+```java
+List<Database.SaveResult> saveResults = Database.insert(recordsToInsert, allOrNone);
+```
+
+</td>
+</tr>
+
+<tr>
+<td>Database.update</td>
+<td>
+
+```java
+List<Database.SaveResult> updateResults = Database.update(recordsToUpdate, allOrNone);
+```
+
+</td>
+</tr>
+</table>
+
+## Others
+
+<table>
+<tr>
+<td> Prefix </td>
+<td> Example </td>
+</tr>
+
+
 
 <tr>
 <td>forSoql, foro</td>
