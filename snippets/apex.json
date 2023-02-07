@@ -116,6 +116,16 @@
         ],
         "scope": "apex,apex-anon"
     },
+    "Database Count Query": {
+        "body": [
+            "Integer ${1:recordsAmount} = Database.countQuery(${2:queryString})$0"
+        ],
+        "description": "eturns the number of records that a dynamic SOQL query.",
+        "prefix": [
+            "Database.countQuery"
+        ],
+        "scope": "apex,apex-anon"
+    },
     "Database Delete": {
         "body": [
             "List<Database.DeleteResult> ${1:deleteResults} = Database.delete(${2:recordsToDelete}, ${3:allOrNone});$0"
@@ -279,6 +289,46 @@
         ],
         "description": "Check if Child Type is assignable from Source Type",
         "prefix": "isAssignableFrom",
+        "scope": "apex,apex-anon"
+    },
+    "JSON Deserialize": {
+        "body": [
+            "${1:ApexType} ${2:result} = (${1:ApexType}) JSON.deserialize(${3:jsonString}, ${1:ApexType}.class);$0"
+        ],
+        "description": "Deserializes the specified JSON string into an Apex object of the specified type.",
+        "prefix": [
+            "JSON.deserialize"
+        ],
+        "scope": "apex,apex-anon"
+    },
+    "JSON Deserialize Strict": {
+        "body": [
+            "${1:ApexType} ${2:result} = (${1:ApexType}) JSON.deserializeStrict(${3:jsonString}, ${1:ApexType}.class);$0"
+        ],
+        "description": "Deserializes the specified JSON string into an Apex object of the specified type.",
+        "prefix": [
+            "JSON.deserializeStrict"
+        ],
+        "scope": "apex,apex-anon"
+    },
+    "JSON Serialize": {
+        "body": [
+            "String ${1:serializedResult} = JSON.serialize(${2:objectToSerialize});$0"
+        ],
+        "description": "Serializes Apex objects into JSON content.",
+        "prefix": [
+            "JSON.serialize"
+        ],
+        "scope": "apex,apex-anon"
+    },
+    "JSON Serialize Pretty": {
+        "body": [
+            "String ${1:serializedResult} = JSON.serializePretty(${2:objectToSerialize});$0"
+        ],
+        "description": "Serializes Apex objects into JSON content.",
+        "prefix": [
+            "JSON.serializePretty"
+        ],
         "scope": "apex,apex-anon"
     },
     "Last element of list": {
