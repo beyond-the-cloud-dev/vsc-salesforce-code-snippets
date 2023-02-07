@@ -9,7 +9,7 @@ A [VS Code Extension](https://marketplace.visualstudio.com/items?itemName=Beyond
 
 ## List of Snippets
 
-[![Apex](https://img.shields.io/badge/Apex-52-green?style=flat-square)](#apex)
+[![Apex](https://img.shields.io/badge/Apex-55-green?style=flat-square)](#apex)
 [![LWC-HTML](https://img.shields.io/badge/LWC_HTML-13-yellow?style=flat-square)](#html)
 [![LWC-JS](https://img.shields.io/badge/LWC_JavaScript-33-blue?style=flat-square)](#js)
 [![LWC-XML](https://img.shields.io/badge/LWC_XML-6-red?style=flat-square)](#xml)
@@ -31,6 +31,8 @@ A [VS Code Extension](https://marketplace.visualstudio.com/items?itemName=Beyond
 ## Features
 
 # [Apex](./snippets/apex.json)
+
+## [Assert Class](https://developer.salesforce.com/docs/atlas.en-us.apexref.meta/apexref/apex_class_System_Assert.htm)
 
 <table>
 <tr>
@@ -148,6 +150,70 @@ Id jobId = Database.executeBatch(new BatchLeadConvert(), 200);
 
 </td>
 </tr>
+</table>
+
+## [Database Class](https://developer.salesforce.com/docs/atlas.en-us.apexref.meta/apexref/apex_methods_system_database.htm#apex_System_Database_update_2)
+
+<table>
+<tr>
+<td> Prefix </td>
+<td> Example </td>
+</tr>
+
+<tr>
+<td>Database.delete</td>
+<td>
+
+```java
+List<Database.DeleteResult> deleteResults = Database.delete(recordsToDelete, allOrNone);
+```
+
+</td>
+</tr>
+
+<tr>
+<td>Database.executeBatch, deb</td>
+<td>
+
+```java
+Id jobId = Database.executeBatch(new BatchLeadConvert(), 200);
+```
+
+</td>
+</tr>
+
+<tr>
+<td>Database.insert</td>
+<td>
+
+```java
+List<Database.SaveResult> saveResults = Database.insert(recordsToInsert, allOrNone);
+```
+
+</td>
+</tr>
+
+<tr>
+<td>Database.update</td>
+<td>
+
+```java
+List<Database.SaveResult> updateResults = Database.update(recordsToUpdate, allOrNone);
+```
+
+</td>
+</tr>
+</table>
+
+## Others
+
+<table>
+<tr>
+<td> Prefix </td>
+<td> Example </td>
+</tr>
+
+
 
 <tr>
 <td>forSoql, foro</td>
@@ -1339,9 +1405,3 @@ property;
 </td>
 </tr>
 </table>
-
-## Release Notes
-
-### 1.2.3
-
-Apex Snippets and documentation update.
