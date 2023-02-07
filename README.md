@@ -9,7 +9,7 @@ A [VS Code Extension](https://marketplace.visualstudio.com/items?itemName=Beyond
 
 ## List of Snippets
 
-[![Apex](https://img.shields.io/badge/Apex-55-green?style=flat-square)](#apex)
+[![Apex](https://img.shields.io/badge/Apex-60-green?style=flat-square)](#apex)
 [![LWC-HTML](https://img.shields.io/badge/LWC_HTML-13-yellow?style=flat-square)](#html)
 [![LWC-JS](https://img.shields.io/badge/LWC_JavaScript-33-blue?style=flat-square)](#js)
 [![LWC-XML](https://img.shields.io/badge/LWC_XML-6-red?style=flat-square)](#xml)
@@ -138,18 +138,7 @@ Assert.isTrue(null, 'Your message here');
 ```
 
 </td>
-</tr>
 
-<tr>
-<td>databaseExecuteBatch, deb</td>
-<td>
-
-```java
-Id jobId = Database.executeBatch(new BatchLeadConvert(), 200);
-```
-
-</td>
-</tr>
 </table>
 
 ## [Database Class](https://developer.salesforce.com/docs/atlas.en-us.apexref.meta/apexref/apex_methods_system_database.htm#apex_System_Database_update_2)
@@ -158,6 +147,17 @@ Id jobId = Database.executeBatch(new BatchLeadConvert(), 200);
 <tr>
 <td> Prefix </td>
 <td> Example </td>
+</tr>
+
+<tr>
+<td>Database.countQuery</td>
+<td>
+
+```java
+Integer recordsAmount = Database.countQuery(queryString);
+```
+
+</td>
 </tr>
 
 <tr>
@@ -204,6 +204,61 @@ List<Database.SaveResult> updateResults = Database.update(recordsToUpdate, allOr
 </td>
 </tr>
 </table>
+
+## [JSON Class](https://developer.salesforce.com/docs/atlas.en-us.apexref.meta/apexref/apex_class_System_Json.htm)
+
+<table>
+<tr>
+<td> Prefix </td>
+<td> Example </td>
+</tr>
+
+<tr>
+<td>JSON.deserialize</td>
+<td>
+
+```java
+ApexType result = (ApexType) JSON.deserialize(jsonString, ApexType.class);
+```
+
+</td>
+</tr>
+
+<tr>
+<td>JSON.deserializeStrict</td>
+<td>
+
+```java
+ApexType result = (ApexType) JSON.deserializeStrict(jsonString, ApexType.class);
+```
+
+</td>
+</tr>
+
+<tr>
+<td>JSON.serialize</td>
+<td>
+
+```java
+String serializedResult = JSON.serialize(objectToSerialize);
+```
+
+</td>
+</tr>
+
+<tr>
+<td>JSON.serializePretty</td>
+<td>
+
+```java
+String serializedResult = JSON.serializePretty(objectToSerialize);
+```
+
+</td>
+</tr>
+
+</table>
+
 
 ## Others
 
