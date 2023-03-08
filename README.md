@@ -9,7 +9,7 @@ A [VS Code Extension](https://marketplace.visualstudio.com/items?itemName=Beyond
 
 ## List of Snippets
 
-[![Apex](https://img.shields.io/badge/Apex-60-green?style=flat-square)](#apex)
+[![Apex](https://img.shields.io/badge/Apex-67-green?style=flat-square)](#apex)
 [![LWC-HTML](https://img.shields.io/badge/LWC_HTML-13-yellow?style=flat-square)](#html)
 [![LWC-JS](https://img.shields.io/badge/LWC_JavaScript-33-blue?style=flat-square)](#js)
 [![LWC-XML](https://img.shields.io/badge/LWC_XML-6-red?style=flat-square)](#xml)
@@ -259,6 +259,94 @@ String serializedResult = JSON.serializePretty(objectToSerialize);
 
 </table>
 
+## [String Class](https://developer.salesforce.com/docs/atlas.en-us.apexref.meta/apexref/apex_methods_system_string.htm#apex_System_String_join)
+
+<table>
+<tr>
+<td> Prefix </td>
+<td> Example </td>
+</tr>
+
+<tr>
+<td>String.escapeSingleQuotes</td>
+<td>
+
+```java
+String result = String.escapeSingleQuotes(stringToEscape);
+```
+
+</td>
+</tr>
+
+<tr>
+<td>String.format</td>
+<td>
+
+```java
+String template = '{0} was last updated {1}';
+List<Object> parameters = new List<Object>{ 'Universal Containers', DateTime.newInstance(2018, 11, 15) };
+String formatted = String.format(template, parameters);
+```
+
+</td>
+</tr>
+
+<tr>
+<td>String.isBlank</td>
+<td>
+
+```java
+String.isBlank(inputString)
+```
+
+</td>
+</tr>
+
+<tr>
+<td>String.isNotBlank</td>
+<td>
+
+```java
+String.isNotBlank(inputString)
+```
+
+</td>
+</tr>
+
+<tr>
+<td>String.isNotEmpty</td>
+<td>
+
+```java
+String.isNotEmpty(inputString)
+```
+
+</td>
+</tr>
+
+<tr>
+<td>String.join</td>
+<td>
+
+```java
+String result = String.join(iterableObj, 'separator');
+```
+
+</td>
+</tr>
+
+<tr>
+<td>String.valueOf</td>
+<td>
+
+```java
+String result = String.valueOf(valueToConvert);
+```
+
+</td>
+</tr>
+
+</table>
 
 ## Others
 

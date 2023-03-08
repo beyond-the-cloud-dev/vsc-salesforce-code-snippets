@@ -512,6 +512,78 @@
         ],
         "scope": "apex,apex-anon"
     },
+    "String escapeSingleQuotes": {
+        "body": [
+            "String result = String.escapeSingleQuotes(${1:stringToEscape});"
+        ],
+        "description": "String.escapeSingleQuotes",
+        "prefix": [
+            "String.escapeSingleQuotes"
+        ],
+        "scope": "apex,apex-anon"
+    },
+    "String format": {
+        "body": [
+            "String template = '{0} was last updated {1}';",
+            "List<Object> parameters = new List<Object>{ 'Universal Containers', DateTime.newInstance(2018, 11, 15) };",
+            "String formatted = String.format(${1:template}, ${2:parameters});"
+        ],
+        "description": "String.format",
+        "prefix": [
+            "String.format"
+        ],
+        "scope": "apex,apex-anon"
+    },
+    "String isBlank": {
+        "body": [
+            "String.isBlank(${1:inputString})"
+        ],
+        "description": "String.isBlank",
+        "prefix": [
+            "String.isBlank"
+        ],
+        "scope": "apex,apex-anon"
+    },
+    "String isNotBlank": {
+        "body": [
+            "String.isNotBlank(${1:inputString})"
+        ],
+        "description": "String.isNotBlank",
+        "prefix": [
+            "String.isNotBlank"
+        ],
+        "scope": "apex,apex-anon"
+    },
+    "String isNotEmpty": {
+        "body": [
+            "String.isNotEmpty(${1:inputString})"
+        ],
+        "description": "String.isNotEmpty",
+        "prefix": [
+            "String.isNotEmpty"
+        ],
+        "scope": "apex,apex-anon"
+    },
+    "String join": {
+        "body": [
+            "String result = String.join(${1:iterableObj}, '${2:separator}');"
+        ],
+        "description": "String.join",
+        "prefix": [
+            "String.join"
+        ],
+        "scope": "apex,apex-anon"
+    },
+    "String valueOf": {
+        "body": [
+            "String result = String.valueOf(${1:valueToConvert});"
+        ],
+        "description": "String.valueOf",
+        "prefix": [
+            "String.valueOf"
+        ],
+        "scope": "apex,apex-anon"
+    },
     "System Assert": {
         "body": [
             "System.assert(${1:expected}, ${2:message});"
