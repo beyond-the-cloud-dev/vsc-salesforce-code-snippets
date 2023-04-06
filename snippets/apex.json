@@ -759,6 +759,96 @@
         ],
         "scope": "apex,apex-anon"
     },
+    "UserInfo.getDefaultCurrency": {
+        "body": [
+            "UserInfo.getDefaultCurrency();"
+        ],
+        "description": "Get User default currency.",
+        "prefix": [
+            "UserInfogetDefaultCurrency"
+        ],
+        "scope": "apex,apex-anon"
+    },
+    "UserInfo.getFirstName": {
+        "body": [
+            "UserInfo.getFirstName();"
+        ],
+        "description": "Get User first name.",
+        "prefix": [
+            "UserInfogetFirstName"
+        ],
+        "scope": "apex,apex-anon"
+    },
+    "UserInfo.getLanguage": {
+        "body": [
+            "UserInfo.getLanguage();"
+        ],
+        "description": "Get User language.",
+        "prefix": [
+            "UserInfogetLanguage"
+        ],
+        "scope": "apex,apex-anon"
+    },
+    "UserInfo.getLastName": {
+        "body": [
+            "UserInfo.getLastName();"
+        ],
+        "description": "Get User last name.",
+        "prefix": [
+            "UserInfogetLastName"
+        ],
+        "scope": "apex,apex-anon"
+    },
+    "UserInfo.getName": {
+        "body": [
+            "UserInfo.getName();"
+        ],
+        "description": "Get User name.",
+        "prefix": [
+            "UserInfogetName"
+        ],
+        "scope": "apex,apex-anon"
+    },
+    "UserInfo.getProfileId": {
+        "body": [
+            "UserInfo.getProfileId();"
+        ],
+        "description": "Get User profile id.",
+        "prefix": [
+            "UserInfogetProfileId"
+        ],
+        "scope": "apex,apex-anon"
+    },
+    "UserInfo.getUserEmail": {
+        "body": [
+            "UserInfo.getUserEmail();"
+        ],
+        "description": "Get User user email.",
+        "prefix": [
+            "UserInfogetUserEmail"
+        ],
+        "scope": "apex,apex-anon"
+    },
+    "UserInfo.getUserId": {
+        "body": [
+            "UserInfo.getUserId();"
+        ],
+        "description": "Get User user id.",
+        "prefix": [
+            "UserInfogetUserId"
+        ],
+        "scope": "apex,apex-anon"
+    },
+    "UserInfo.getUserType": {
+        "body": [
+            "UserInfo.getUserType();"
+        ],
+        "description": "Get User user type.",
+        "prefix": [
+            "UserInfogetUserType"
+        ],
+        "scope": "apex,apex-anon"
+    },
     "While": {
         "body": [
             "while (${1:condition}) {",
