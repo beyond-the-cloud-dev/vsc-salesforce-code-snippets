@@ -9,12 +9,18 @@ A [VS Code Extension](https://marketplace.visualstudio.com/items?itemName=Beyond
 
 ## List of Snippets
 
-**Extension contains 119 code snippets.**
+**Extension contains 128 code snippets.**
 
-[![Apex](https://img.shields.io/badge/Apex-67-green?style=flat-square)](#apex)
+[![Apex](https://img.shields.io/badge/Apex-75-green?style=flat-square)](#apex)
 [![LWC-HTML](https://img.shields.io/badge/LWC_HTML-13-yellow?style=flat-square)](#html)
 [![LWC-JS](https://img.shields.io/badge/LWC_JavaScript-33-blue?style=flat-square)](#js)
 [![LWC-XML](https://img.shields.io/badge/LWC_XML-6-red?style=flat-square)](#xml)
+
+[Apex](#apex)
+[Assert](#assert-class) | [Database](#database-class) | [JSON](#json-class) | [String](#string-class) | [UserInfo](#userinfo-class) | [Other](#others)
+
+[LWC](#lwc)
+[HTML](#html) | [JS](#js) | [XML](#xml)
 
 ### Apex example
 
@@ -349,6 +355,121 @@ String result = String.valueOf(valueToConvert);
 </tr>
 
 </table>
+
+## [UserInfo Class](https://developer.salesforce.com/docs/atlas.en-us.apexref.meta/apexref/apex_methods_system_userinfo.htm)
+
+<table>
+<tr>
+<td> Prefix </td>
+<td> Example </td>
+</tr>
+
+<tr>
+<td>UserInfogetDefaultCurrency</td>
+<td>
+
+```java
+UserInfo.getDefaultCurrency();
+```
+
+</td>
+</tr>
+
+<tr>
+<td>UserInfogetFirstName</td>
+
+<td>
+
+```java
+UserInfo.getFirstName();
+```
+
+</td>
+</tr>
+
+<tr>
+<td>UserInfogetLanguage</td>
+
+<td>
+
+```java
+UserInfo.getLanguage();
+```
+
+</td>
+</tr>
+
+<tr>
+<td>UserInfogetLastName</td>
+
+<td>
+
+```java
+UserInfo.getLastName();
+```
+
+</td>
+</tr>
+
+<tr>
+<td>UserInfogetName</td>
+
+<td>
+
+```java
+UserInfo.getName();
+```
+
+</td>
+</tr>
+
+<tr>
+<td>UserInfogetProfileId</td>
+
+<td>
+
+```java
+UserInfo.getProfileId();
+```
+
+</td>
+</tr>
+
+<tr>
+<td>UserInfogetUserEmail</td>
+
+<td>
+
+```java
+UserInfo.getUserEmail();
+```
+
+</td>
+</tr>
+
+<tr>
+<td>UserInfogetUserId</td>
+
+<td>
+
+```java
+UserInfo.getUserId();
+```
+
+</td>
+</tr>
+
+<tr>
+<td>UserInfogetUserType</td>
+
+<td>
+
+```java
+UserInfo.getUserType();
+```
+
+</td>
+</tr>
 
 ## Others
 
