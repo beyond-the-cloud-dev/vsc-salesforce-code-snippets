@@ -472,6 +472,7 @@ UserInfo.getUserType();
 
 </td>
 </tr>
+</table>
 
 ## Others
 
