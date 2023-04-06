@@ -17,9 +17,11 @@ A [VS Code Extension](https://marketplace.visualstudio.com/items?itemName=Beyond
 [![LWC-XML](https://img.shields.io/badge/LWC_XML-6-red?style=flat-square)](#xml)
 
 [Apex](#apex)
+
 [Assert](#assert-class) | [Database](#database-class) | [JSON](#json-class) | [String](#string-class) | [UserInfo](#userinfo-class) | [Other](#others)
 
 [LWC](#lwc)
+
 [HTML](#html) | [JS](#js) | [XML](#xml)
 
 ### Apex example
