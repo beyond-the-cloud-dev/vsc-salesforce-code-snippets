@@ -9,16 +9,16 @@ A [VS Code Extension](https://marketplace.visualstudio.com/items?itemName=Beyond
 
 ## List of Snippets
 
-**Extension contains 128 code snippets.**
+**Extension contains 134 code snippets.**
 
-[![Apex](https://img.shields.io/badge/Apex-75-green?style=flat-square)](#apex)
+[![Apex](https://img.shields.io/badge/Apex-81-green?style=flat-square)](#apex)
 [![LWC-HTML](https://img.shields.io/badge/LWC_HTML-13-yellow?style=flat-square)](#html)
 [![LWC-JS](https://img.shields.io/badge/LWC_JavaScript-33-blue?style=flat-square)](#js)
 [![LWC-XML](https://img.shields.io/badge/LWC_XML-6-red?style=flat-square)](#xml)
 
 [Apex](#apex)
 
-[Assert](#assert-class) | [Database](#database-class) | [JSON](#json-class) | [String](#string-class) | [UserInfo](#userinfo-class) | [Other](#others)
+[AccessLevel](#accesslevel) | [AccessType](#accesstype) | [Assert](#assert-class) | [Database](#database-class) | [JSON](#json-class) | [String](#string-class) | [UserInfo](#userinfo-class) | [Other](#others)
 
 [LWC](#lwc)
 
@@ -41,6 +41,92 @@ A [VS Code Extension](https://marketplace.visualstudio.com/items?itemName=Beyond
 ## Features
 
 # [Apex](./snippets/apex.json)
+
+## [AccessLevel](https://developer.salesforce.com/docs/atlas.en-us.apexref.meta/apexref/apex_class_System_AccessLevel.htm#apex_System_AccessLevel_properties)
+
+<table>
+<tr>
+<td> Prefix </td>
+<td> Example </td>
+</tr>
+
+<tr>
+<td>AccessLevelSystemMode</td>
+<td>
+
+```java
+AccessLevel.SYSTEM_MODE
+```
+
+</td>
+</tr>
+
+<tr>
+<td>AccessLevelUserMode</td>
+<td>
+
+```java
+AccessLevel.USER_MODE
+```
+
+</td>
+</tr>
+
+</table>
+
+## [AccessType](https://developer.salesforce.com/docs/atlas.en-us.apexref.meta/apexref/apex_enum_System_AccessType.htm)
+
+<table>
+<tr>
+<td> Prefix </td>
+<td> Example </td>
+</tr>
+
+<tr>
+<td>AccessTypeCreatable</td>
+<td>
+
+```java
+AccessType.CREATABLE
+```
+
+</td>
+</tr>
+
+<tr>
+<td>AccessTypeReadable</td>
+<td>
+
+```java
+AccessType.READABLE
+```
+
+</td>
+</tr>
+
+<tr>
+<td>AccessTypeUpdatable</td>
+<td>
+
+```java
+AccessType.UPDATABLE
+```
+
+</td>
+</tr>
+
+<tr>
+<td>AccessTypeUpsertable</td>
+<td>
+
+```java
+AccessType.UPSERTABLE
+```
+
+</td>
+</tr>
+
+</table>
 
 ## [Assert Class](https://developer.salesforce.com/docs/atlas.en-us.apexref.meta/apexref/apex_class_System_Assert.htm)
 
@@ -1308,6 +1394,7 @@ array.forEach((item, index) => {
 
 });
 ```
+
 </td>
 </tr>
 <tr>
@@ -1544,6 +1631,7 @@ new ShowToastEvent({ 'title', 'message', 'variant' });
 ```js
 import resourceName from '@salesforce/resourceUrl/resourceName';
 ```
+
 </td>
 </tr>
 <tr>
