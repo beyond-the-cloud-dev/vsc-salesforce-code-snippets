@@ -9,16 +9,16 @@ A [VS Code Extension](https://marketplace.visualstudio.com/items?itemName=Beyond
 
 ## List of Snippets
 
-**Extension contains 128 code snippets.**
+**Extension contains 134 code snippets.**
 
-[![Apex](https://img.shields.io/badge/Apex-75-green?style=flat-square)](#apex)
+[![Apex](https://img.shields.io/badge/Apex-81-green?style=flat-square)](#apex)
 [![LWC-HTML](https://img.shields.io/badge/LWC_HTML-13-yellow?style=flat-square)](#html)
 [![LWC-JS](https://img.shields.io/badge/LWC_JavaScript-33-blue?style=flat-square)](#js)
 [![LWC-XML](https://img.shields.io/badge/LWC_XML-6-red?style=flat-square)](#xml)
 
 [Apex](#apex)
 
-[Assert](#assert-class) | [Database](#database-class) | [JSON](#json-class) | [String](#string-class) | [UserInfo](#userinfo-class) | [Other](#others)
+[AccessLevel](#accesslevel) | [AccessType](#accesstype) | [Assert](#assert-class) | [Database](#database-class) | [JSON](#json-class) | [String](#string-class) | [UserInfo](#userinfo-class) | [Other](#others)
 
 [LWC](#lwc)
 
@@ -42,6 +42,80 @@ A [VS Code Extension](https://marketplace.visualstudio.com/items?itemName=Beyond
 
 # [Apex](./snippets/apex.json)
 
+## [AccessLevel](https://developer.salesforce.com/docs/atlas.en-us.apexref.meta/apexref/apex_class_System_AccessLevel.htm#apex_System_AccessLevel_properties)
+
+<table>
+<tr>
+<td> Prefix </td>
+<td> Example </td>
+</tr>
+
+<tr>
+<td>AccessLevelSystemMode</td>
+<td>
+```java
+AccessLevel.SYSTEM_MODE
+```
+</td>
+</tr>
+
+<tr>
+<td>AccessLevelUserMode</td>
+<td>
+```java
+AccessLevel.USER_MODE
+```
+</td>
+</tr>
+
+</table>
+
+## [AccessType](https://developer.salesforce.com/docs/atlas.en-us.apexref.meta/apexref/apex_enum_System_AccessType.htm)
+
+<table>
+<tr>
+<td> Prefix </td>
+<td> Example </td>
+</tr>
+
+<tr>
+<td>AccessTypeCreatable</td>
+<td>
+```java
+AccessType.CREATABLE
+```
+</td>
+</tr>
+
+<tr>
+<td>AccessTypeReadable</td>
+<td>
+```java
+AccessType.READABLE
+```
+</td>
+</tr>
+
+<tr>
+<td>AccessTypeUpdatable</td>
+<td>
+```java
+AccessType.UPDATABLE
+```
+</td>
+</tr>
+
+<tr>
+<td>AccessTypeUpsertable</td>
+<td>
+```java
+AccessType.UPSERTABLE
+```
+</td>
+</tr>
+
+</table>
+
 ## [Assert Class](https://developer.salesforce.com/docs/atlas.en-us.apexref.meta/apexref/apex_class_System_Assert.htm)
 
 <table>
@@ -53,11 +127,9 @@ A [VS Code Extension](https://marketplace.visualstudio.com/items?itemName=Beyond
 <tr>
 <td>assertAreEqual, Assert.areEqual, aae</td>
 <td>
-
 ```java
 Assert.areEqual(1, 2, 'NOT EQUAL');
 ```
-
 </td>
 </tr>
 
@@ -65,88 +137,72 @@ Assert.areEqual(1, 2, 'NOT EQUAL');
 <td>assertAreNotEqual, Assert.areNotEqual, aane</td>
 
 <td>
-
 ```java
 Assert.areNotEqual(1, 1, 'Your custom message here');
 ```
-
 </td>
 </tr>
 
 <tr>
 <td>assertFail, Assert.fail, af</td>
 <td>
-
 ```java
 Assert.fail('Your custom message here');
 ```
-
 </td>
 </tr>
 
 <tr>
 <td>assertIsFalse, Assert.isFalse, aif</td>
 <td>
-
 ```java
 Assert.isFalse(true, 'Your custom message here');
 ```
-
 </td>
 </tr>
 
 <tr>
 <td>assertIsInstanceOfType, Assert.isInstanceOfType, aii</td>
 <td>
-
 ```java
 Assert.isInstanceOfType(new Account(), Contact.class, 'Your custom message here');
 ```
-
 </td>
 </tr>
 
 <tr>
 <td>assertIsNotInstanceOfType, Assert.isNotInstanceOfType, aini</td>
 <td>
-
 ```java
 Assert.isNotInstanceOfType(new Account(), Account.class, 'Your custom message here');
 ```
-
 </td>
 </tr>
 
 <tr>
 <td>assertIsNotNull, Assert.isNotNull, ainn</td>
 <td>
-
 ```java
 Assert.isNotNull(null, 'Your message here');
 ```
-
 </td>
 </tr>
 
 <tr>
 <td>assertIsNull, Assert.isNull, ain</td>
 <td>
-
 ```java
 Assert.isNull(null, 'Your message here');
 ```
-
 </td>
 </tr>
 
 <tr>
 <td>assertIsTrue, Assert.isTrue, ait</td>
 <td>
-
 ```java
 Assert.isTrue(null, 'Your message here');
 ```
-
 </td>
 
 </table>
@@ -162,55 +218,45 @@ Assert.isTrue(null, 'Your message here');
 <tr>
 <td>Database.countQuery</td>
 <td>
-
 ```java
 Integer recordsAmount = Database.countQuery(queryString);
 ```
-
 </td>
 </tr>
 
 <tr>
 <td>Database.delete</td>
 <td>
-
 ```java
 List<Database.DeleteResult> deleteResults = Database.delete(recordsToDelete, allOrNone);
 ```
-
 </td>
 </tr>
 
 <tr>
 <td>Database.executeBatch, deb</td>
 <td>
-
 ```java
 Id jobId = Database.executeBatch(new BatchLeadConvert(), 200);
 ```
-
 </td>
 </tr>
 
 <tr>
 <td>Database.insert</td>
 <td>
-
 ```java
 List<Database.SaveResult> saveResults = Database.insert(recordsToInsert, allOrNone);
 ```
-
 </td>
 </tr>
 
 <tr>
 <td>Database.update</td>
 <td>
-
 ```java
 List<Database.SaveResult> updateResults = Database.update(recordsToUpdate, allOrNone);
 ```
-
 </td>
 </tr>
 </table>
@@ -226,44 +272,36 @@ List<Database.SaveResult> updateResults = Database.update(recordsToUpdate, allOr
 <tr>
 <td>JSON.deserialize</td>
 <td>
-
 ```java
 ApexType result = (ApexType) JSON.deserialize(jsonString, ApexType.class);
 ```
-
 </td>
 </tr>
 
 <tr>
 <td>JSON.deserializeStrict</td>
 <td>
-
 ```java
 ApexType result = (ApexType) JSON.deserializeStrict(jsonString, ApexType.class);
 ```
-
 </td>
 </tr>
 
 <tr>
 <td>JSON.serialize</td>
 <td>
-
 ```java
 String serializedResult = JSON.serialize(objectToSerialize);
 ```
-
 </td>
 </tr>
 
 <tr>
 <td>JSON.serializePretty</td>
 <td>
-
 ```java
 String serializedResult = JSON.serializePretty(objectToSerialize);
 ```
-
 </td>
 </tr>
 
@@ -280,79 +318,65 @@ String serializedResult = JSON.serializePretty(objectToSerialize);
 <tr>
 <td>String.escapeSingleQuotes</td>
 <td>
-
 ```java
 String result = String.escapeSingleQuotes(stringToEscape);
 ```
-
 </td>
 </tr>
 
 <tr>
 <td>String.format</td>
 <td>
-
 ```java
 String template = '{0} was last updated {1}';
 List<Object> parameters = new List<Object>{ 'Universal Containers', DateTime.newInstance(2018, 11, 15) };
 String formatted = String.format(template, parameters);
 ```
-
 </td>
 </tr>
 
 <tr>
 <td>String.isBlank</td>
 <td>
-
 ```java
 String.isBlank(inputString)
 ```
-
 </td>
 </tr>
 
 <tr>
 <td>String.isNotBlank</td>
 <td>
-
 ```java
 String.isNotBlank(inputString)
 ```
-
 </td>
 </tr>
 
 <tr>
 <td>String.isNotEmpty</td>
 <td>
-
 ```java
 String.isNotEmpty(inputString)
 ```
-
 </td>
 </tr>
 
 <tr>
 <td>String.join</td>
 <td>
-
 ```java
 String result = String.join(iterableObj, 'separator');
 ```
-
 </td>
 </tr>
 
 <tr>
 <td>String.valueOf</td>
 <td>
-
 ```java
 String result = String.valueOf(valueToConvert);
 ```
-
 </td>
 </tr>
 
@@ -369,11 +393,9 @@ String result = String.valueOf(valueToConvert);
 <tr>
 <td>UserInfogetDefaultCurrency</td>
 <td>
-
 ```java
 UserInfo.getDefaultCurrency();
 ```
-
 </td>
 </tr>
 
@@ -381,11 +403,9 @@ UserInfo.getDefaultCurrency();
 <td>UserInfogetFirstName</td>
 
 <td>
-
 ```java
 UserInfo.getFirstName();
 ```
-
 </td>
 </tr>
 
@@ -393,11 +413,9 @@ UserInfo.getFirstName();
 <td>UserInfogetLanguage</td>
 
 <td>
-
 ```java
 UserInfo.getLanguage();
 ```
-
 </td>
 </tr>
 
@@ -405,11 +423,9 @@ UserInfo.getLanguage();
 <td>UserInfogetLastName</td>
 
 <td>
-
 ```java
 UserInfo.getLastName();
 ```
-
 </td>
 </tr>
 
@@ -417,11 +433,9 @@ UserInfo.getLastName();
 <td>UserInfogetName</td>
 
 <td>
-
 ```java
 UserInfo.getName();
 ```
-
 </td>
 </tr>
 
@@ -429,11 +443,9 @@ UserInfo.getName();
 <td>UserInfogetProfileId</td>
 
 <td>
-
 ```java
 UserInfo.getProfileId();
 ```
-
 </td>
 </tr>
 
@@ -441,11 +453,9 @@ UserInfo.getProfileId();
 <td>UserInfogetUserEmail</td>
 
 <td>
-
 ```java
 UserInfo.getUserEmail();
 ```
-
 </td>
 </tr>
 
@@ -453,11 +463,9 @@ UserInfo.getUserEmail();
 <td>UserInfogetUserId</td>
 
 <td>
-
 ```java
 UserInfo.getUserId();
 ```
-
 </td>
 </tr>
 
@@ -465,11 +473,9 @@ UserInfo.getUserId();
 <td>UserInfogetUserType</td>
 
 <td>
-
 ```java
 UserInfo.getUserType();
 ```
-
 </td>
 </tr>
 </table>
@@ -487,89 +493,76 @@ UserInfo.getUserType();
 <tr>
 <td>forSoql, foro</td>
 <td>
-
 ```java
 for (Type variable : [SELECT fieldsList FROM Type) {
     //Your code here
 }
 ```
-
 </td>
 </tr>
 
 <tr>
 <td>fori, itar</td>
 <td>
-
 ```java
 for (Integer i = 0; i < listName.size(); i++) {
     Account acc = listName[i];
     // Your code here
 }
 ```
-
 </td>
 </tr>
 
 <tr>
 <td>forMap, itme</td>
 <td>
-
 ```java
 for (Id accountId : mapName.keySet()) {
     Account acc = mapName.get(accountId);
     //Your code here
 }
 ```
-
 </td>
 </tr>
 
 <tr>
 <td>forReversedOrder, ritar</td>
 <td>
-
 ```java
 for (Integer i = listName.size()-1; i >= 0; i--) {
     Account acc = listName[i];
     //Your code here
 }
 ```
-
 </td>
 </tr>
 
 <tr>
 <td>future</td>
 <td>
-
 ```java
 @future
 public static void methodName() {
     //Your code here
 }
 ```
-
 </td>
 </tr>
 
 <tr>
 <td>if</td>
 <td>
-
 ```java
 if (true) {
     //Your code here
 }
 ```
-
 </td>
 </tr>
 
 <tr>
 <td>ifElse, ife</td>
 <td>
-
 ```java
 if(true) {
     //Your code here
@@ -577,343 +570,283 @@ if(true) {
 
 }
 ```
-
 </td>
 </tr>
 
 <tr>
 <td>instanceOf, inst</td>
 <td>
-
 ```java
 if (objects[0] instanceof Account) {
     Account acc = (Account) objects[0];
 }
 ```
-
 </td>
 </tr>
 
 <tr>
 <td>invocableMethod</td>
 <td>
-
 ```java
 @InvocableMethod(label='YourLabeL' description='Description' category='Category')
 public static List<Account> exampleMethod() {
     //Your code here
 }
 ```
-
 </td>
 </tr>
 
 <tr>
 <td>isAssignableFrom</td>
 <td>
-
 ```java
 ChildType.class.isAssignableFrom(SourceType.class);
 ```
-
 </td>
 </tr>
 
 <tr>
 <td>lastListElement, lst</td>
 <td>
-
 ```java
 myList[myList.size() - 1]
 ```
-
 </td>
 </tr>
 
 <tr>
 <td>lazy</td>
 <td>
-
 ```java
 if (myAccount == null) {
     myAccount = new Account();
 }
 ```
-
 </td>
 </tr>
 
 <tr>
 <td>list, nl</td>
 <td>
-
 ```java
 List<Account> testAccounts = new List<Account>();
 ```
-
 </td>
 </tr>
 
 <tr>
 <td>map, nm</td>
 <td>
-
 ```java
 Map<Id, Account> testAccounts = new Map<Id, Account>();
 ```
-
 </td>
 </tr>
 
 <tr>
 <td>set, ns</td>
 <td>
-
 ```java
 Set<Id> accountIds = new Set<Id>();
 ```
-
 </td>
 </tr>
 
 <tr>
 <td>setOfIds, nsfl</td>
 <td>
-
 ```java
 Set<Id> accountIds = new Map<Id, Account>([SELECT Id FROM Account LIMIT 10]).keySet();
 ```
-
 </td>
 </tr>
 
 <tr>
 <td>mapFromList, nmfl</td>
 <td>
-
 ```java
 Map<Id, Account> myAccounts = new Map<Id, Account>(accountsList);
 ```
-
 </td>
 </tr>
 
 <tr>
 <td>pro</td>
 <td>
-
 ```java
 {get; private set;}
 ```
-
 </td>
 </tr>
 
 <tr>
 <td>prw</td>
 <td>
-
 ```java
 {get; set;}
 ```
-
 </td>
 </tr>
 
 <tr>
 <td>final, psf</td>
 <td>
-
 ```java
 public static final
 ```
-
 </td>
 </tr>
 
 <tr>
 <td>finalInteger, psfi</td>
 <td>
-
 ```java
 public static final Integer
 ```
-
 </td>
 </tr>
 
 <tr>
 <td>finalString, psfs</td>
 <td>
-
 ```java
 public static final String
 ```
-
 </td>
 </tr>
 
 <tr>
 <td>select, SEL</td>
 <td>
-
 ```java
 SELECT Id FROM Account
 ```
-
 </td>
 </tr>
 
 <tr>
 <td>selectAll, SELALL</td>
 <td>
-
 ```java
 SELECT FIELDS(ALL) FROM Account LIMIT 200
 ```
-
 </td>
 </tr>
 
 <tr>
 <td>selectToMap, sqm</td>
 <td>
-
 ```java
 Map<Id, Account> myAccounts = new Map<Id, Account>([SELECT Id FROM Account LIMIT 10]);
 ```
-
 </td>
 </tr>
 
 <tr>
 <td>selectToList, sql</td>
 <td>
-
 ```java
 List<Account> myAccounts = [SELECT Id, Name FROM Account];
 ```
-
 </td>
 </tr>
 
 <tr>
 <td>selectToObject, sql1</td>
 <td>
-
 ```java
 List<Account> myAccounts = [SELECT Id FROM Account LIMIT 1];
 Account myAcc = myAccounts.size() == 1 ? myAccounts.get(0) : null;
 ```
-
 </td>
 </tr>
 
 <tr>
 <td>systemAssert, sa</td>
 <td>
-
 ```java
 System.assert(condition, 'Your message here');
 ```
-
 </td>
 </tr>
 
 <tr>
 <td>systemAssertEquals, sae</td>
 <td>
-
 ```java
 System.assertEquals(expected, actual, 'Your message here');
 ```
-
 </td>
 </tr>
 
 <tr>
 <td>systemAssertEquals, san</td>
 <td>
-
 ```java
 System.assertEquals(null, actual, 'Your message here');
 ```
-
 </td>
 </tr>
 
 <tr>
 <td>systemAssertFail, saf</td>
 <td>
-
 ```java
 System.assert(false, 'Your message here');
 ```
-
 </td>
 </tr>
 
 <tr>
 <td>systemAssertNotEquals, sane</td>
 <td>
-
 ```java
 System.assertNotEquals(expected, actual, 'Your message here');
 ```
-
 </td>
 </tr>
 
 <tr>
 <td>systemAssertNotEquals, sann</td>
 <td>
-
 ```java
 System.assertNotEquals(null, 'Your message here');
 ```
-
 </td>
 </tr>
 
 <tr>
 <td>systemDebug, sd</td>
 <td>
-
 ```java
 System.debug(LoggingLevel.DEBUG, 'your message here: ' + variableHere);
 ```
-
 </td>
 </tr>
 
 <tr>
 <td>systemDebugPretty, sdp</td>
 <td>
-
 ```java
 System.debug(LoggingLevel.DEBUG, 'your message here: ' + JSON.SerializePretty(objectVariable));
 ```
-
 </td>
 </tr>
 
 <tr>
 <td>systemRunAs, sra</td>
 <td>
-
 ```java
 System.runAs(user) {
     //your code here
 }
 ```
-
 </td>
 </tr>
 
 <tr>
 <td>isTest, tstm</td>
 <td>
-
 ```java
 @IsTest
 static void exampleName() {
@@ -923,39 +856,33 @@ static void exampleName() {
     Test.stopTest();
 }
 ```
-
 </td>
 </tr>
 
 <tr>
 <td>testSetup, tsts</td>
 <td>
-
 ```java
 @TestSetup
 static void setup() {
     //Your code here
 }
 ```
-
 </td>
 </tr>
 
 <tr>
 <td>throw, thr</td>
 <td>
-
 ```java
 throw new CustomException();
 ```
-
 </td>
 </tr>
 
 <tr>
 <td>tryCatch, tc</td>
 <td>
-
 ```java
 try {
     //Your code here
@@ -963,14 +890,12 @@ try {
 
 }
 ```
-
 </td>
 </tr>
 
 <tr>
 <td>tryCatchFinally, tcf</td>
 <td>
-
 ```java
 try {
     //Your code here
@@ -980,20 +905,17 @@ try {
 
 }
 ```
-
 </td>
 </tr>
 
 <tr>
 <td>while, wh</td>
 <td>
-
 ```java
 while (condition) {
     //Your code here
 }
 ```
-
 </td>
 </tr>
 
@@ -1016,7 +938,6 @@ while (condition) {
 <lightning-button variant='base' label='label' title='title' onclick={handleOnClick} class='cssClass'>
 </lightning-button>
 ```
-
 </td>
 </tr>
 <tr>
@@ -1033,7 +954,6 @@ while (condition) {
     onchange={handleChange}
 ></lightning-combobox>
 ```
-
 </td>
 </tr>
 <tr>
@@ -1048,7 +968,6 @@ while (condition) {
     hide-checkbox-column
 ></lightning-datatable>
 ```
-
 </td>
 </tr>
 <tr>
@@ -1059,7 +978,6 @@ while (condition) {
 <lightning-icon icon-name='iconName' alternative-text='alternativeText' title='title'>
 </lightning-icon>
 ```
-
 </td>
 </tr>
 <tr>
@@ -1070,7 +988,6 @@ while (condition) {
 <lightning-input type='type' label='label' onchange='handleOnChange'>
 </lightning-input>
 ```
-
 </td>
 </tr>
 <tr>
@@ -1081,7 +998,6 @@ while (condition) {
 <lightning-input-field field-name='fieldName' disabled read-only required>
 </lightning-input-field>
 ```
-
 </td>
 </tr>
 <tr>
@@ -1098,7 +1014,6 @@ while (condition) {
     </lightning-layout-item>
 </lightning-layout>
 ```
-
 </td>
 </tr>
 <tr>
@@ -1109,7 +1024,6 @@ while (condition) {
 <lightning-layout-item size='size' small-device-size='smallDeviceSize' medium-device-size='mediumDeviceSize' large-device-size='largeDeviceSize' padding='around-small'>
 </lightning-layout-item>
 ```
-
 </td>
 </tr>
 <tr>
@@ -1129,7 +1043,6 @@ while (condition) {
     </lightning-tab>
 </lightning-tabset>
 ```
-
 </td>
 </tr>
 <tr>
@@ -1141,7 +1054,6 @@ while (condition) {
 <lightning-spinner alternative-text='alternativeText' size='size'>
 </lightning-spinner>
 ```
-
 </td>
 </tr>
 <tr>
@@ -1152,7 +1064,6 @@ while (condition) {
 <slot name='name'>
 </slot>
 ```
-
 </td>
 </tr>
 <tr>
@@ -1163,7 +1074,6 @@ while (condition) {
 <template for:each={array} for:item='item'>
 </template>
 ```
-
 </td>
 </tr>
 <tr>
@@ -1174,7 +1084,6 @@ while (condition) {
 <template if:false={property}>
 </template>
 ```
-
 </td>
 </tr>
 <tr>
@@ -1185,7 +1094,6 @@ while (condition) {
 <template if:true={property}>
 </template>
 ```
-
 </td>
 </tr>
 <tr>
@@ -1201,7 +1109,6 @@ while (condition) {
     </div>
 </template>
 ```
-
 </td>
 </tr>
 </table>
@@ -1224,7 +1131,6 @@ try {
     console.error(error)
 }
 ```
-
 </td>
 </tr>
 <tr>
@@ -1236,7 +1142,6 @@ constructor() {
 
 }
 ```
-
 </td>
 </tr>
 <tr>
@@ -1248,7 +1153,6 @@ import { CurrentPageReference } from 'lightning/navigation';
 @wire(CurrentPageReference)
 pageRef;
 ```
-
 </td>
 </tr>
 <tr>
@@ -1262,7 +1166,6 @@ new CustomEvent('eventName', {
     composed: false
 });
 ```
-
 </td>
 </tr>
 <tr>
@@ -1274,7 +1177,6 @@ disconnectedCallback() {
 
 }
 ```
-
 </td>
 </tr>
 <tr>
@@ -1284,7 +1186,6 @@ disconnectedCallback() {
 ```js
 this.dispatchEvent(customEvent);
 ```
-
 </td>
 </tr>
 <tr>
@@ -1296,7 +1197,6 @@ errorCallback(error, stack) {
 
 }
 ```
-
 </td>
 </tr>
 <tr>
@@ -1321,7 +1221,6 @@ import objectName from '@salesforce/schema/objectApiName';
 @wire(getObjectInfo, { objectApiName: objectName })
 propertyOrFunction;
 ```
-
 </td>
 </tr>
 <tr>
@@ -1335,7 +1234,6 @@ import fieldName from '@salesforce/schema/objectApiName.fieldApiName';
 @wire(getPicklistValues, { recordTypeId: '012000000000000AAA', fieldApiName: fieldName })
 propertyOrFunction;
 ```
-
 </td>
 </tr>
 <tr>
@@ -1348,7 +1246,6 @@ import { getRecord } from 'lightning/uiRecordApi';
 @wire(getRecord, { recordId: 'recordId', fields: fields })
 propertyOrFunction;
 ```
-
 </td>
 </tr>
 <tr>
@@ -1361,7 +1258,6 @@ import { getRecords } from 'lightning/uiRecordApi';
 @wire(getRecords, { records: [ { recordIds: 'recordIds', fields: fields } ] })
 propertyOrFunction;
 ```
-
 </td>
 </tr>
 <tr>
@@ -1371,7 +1267,6 @@ propertyOrFunction;
 ```js
 import apexMethodName from '@salesforce/apex/Namespace.ClassName.apexMethodReference';
 ```
-
 </td>
 </tr>
 <tr>
@@ -1381,7 +1276,6 @@ import apexMethodName from '@salesforce/apex/Namespace.ClassName.apexMethodRefer
 ```js
 import fieldName from '@salesforce/schema/objectApiName.fieldApiName';
 ```
-
 </td>
 </tr>
 <tr>
@@ -1391,7 +1285,6 @@ import fieldName from '@salesforce/schema/objectApiName.fieldApiName';
 ```js
 import hasPermissionName from '@salesforce/userPermission/PermissionName';
 ```
-
 </td>
 </tr>
 <tr>
@@ -1401,7 +1294,6 @@ import hasPermissionName from '@salesforce/userPermission/PermissionName';
 ```js
 import { NavigationMixin } from 'lightning/navigation';
 ```
-
 </td>
 </tr>
 <tr>
@@ -1411,7 +1303,6 @@ import { NavigationMixin } from 'lightning/navigation';
 ```js
 import objectName from '@salesforce/schema/objectApiName';
 ```
-
 </td>
 </tr>
 <tr>
@@ -1421,7 +1312,6 @@ import objectName from '@salesforce/schema/objectApiName';
 ```js
 import userId from '@salesforce/user/Id';
 ```
-
 </td>
 </tr>
 <tr>
@@ -1435,7 +1325,6 @@ array.map((item, index) => {
     }
 });
 ```
-
 </td>
 </tr>
 <tr>
@@ -1445,7 +1334,6 @@ array.map((item, index) => {
 ```js
 import channelName from '@salesforce/messageChannel/channelReference';
 ```
-
 </td>
 </tr>
 <tr>
@@ -1464,7 +1352,6 @@ this[NavigationMixin.Navigate]({
     }
 });
 ```
-
 </td>
 </tr>
 <tr>
@@ -1474,7 +1361,6 @@ this[NavigationMixin.Navigate]({
 ```js
 this.template.querySelector('element');
 ```
-
 </td>
 </tr>
 <tr>
@@ -1484,7 +1370,6 @@ this.template.querySelector('element');
 ```js
 this.template.querySelectorAll('element');
 ```
-
 </td>
 </tr>
 <tr>
@@ -1494,7 +1379,6 @@ this.template.querySelectorAll('element');
 ```js
 import { refreshApex } from '@salesforce/apex';
 ```
-
 </td>
 </tr>
 <tr>
@@ -1506,7 +1390,6 @@ render() {
 
 }
 ```
-
 </td>
 </tr>
 <tr>
@@ -1523,7 +1406,6 @@ renderedCallback() {
     this.initialRender = false;
 }
 ```
-
 </td>
 </tr>
 <tr>
@@ -1534,7 +1416,6 @@ renderedCallback() {
 import { ShowToastEvent } from 'lightning/platformShowToastEvent';
 new ShowToastEvent({ 'title', 'message', 'variant' });
 ```
-
 </td>
 </tr>
 <tr>
@@ -1559,7 +1440,6 @@ apexMethodName({ apexMethodParams })
     console.error(error)
 });
 ```
-
 </td>
 </tr>
 <tr>
@@ -1576,7 +1456,6 @@ wiredName({ error, data }) {
     }
 }
 ```
-
 </td>
 </tr>
 <tr>
@@ -1587,7 +1466,6 @@ wiredName({ error, data }) {
 @wire(apexMethodName, { apexMethodParams })
 property;
 ```
-
 </td>
 </tr>
 </table>
@@ -1607,7 +1485,6 @@ property;
 <capability>lightningCommunity__RelaxedCSP</capability>
 <capability>lightning__ServiceCloudVoiceToolkitApi</capability>
 ```
-
 </td>
 </tr>
 <tr>
@@ -1617,7 +1494,6 @@ property;
 ```xml
 <isExposed>true</isExposed>
 ```
-
 </td>
 </tr>
 <tr>
@@ -1627,7 +1503,6 @@ property;
 ```xml
 <masterLabel>titleOfTheComponent</masterLabel>
 ```
-
 </td>
 </tr>
 <tr>
@@ -1670,7 +1545,6 @@ property;
     description="description"
 />
 ```
-
 </td>
 </tr>
 </table>

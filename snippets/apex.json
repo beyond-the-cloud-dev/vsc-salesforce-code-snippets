@@ -1,4 +1,64 @@
 {
+    "AccessLevel.SYSTEM_MODE": {
+        "body": [
+            "AccessLevel.SYSTEM_MODE"
+        ],
+        "description": "AccessLevel.SYSTEM_MODE",
+        "prefix": [
+            "AccessLevelSystemMode"
+        ],
+        "scope": "apex,apex-anon"
+    },
+    "AccessLevel.USER_MODE": {
+        "body": [
+            "AccessLevel.USER_MODE"
+        ],
+        "description": "AccessLevel.USER_MODE",
+        "prefix": [
+            "AccessLevelUserMode"
+        ],
+        "scope": "apex,apex-anon"
+    },
+    "AccessType.CREATABLE": {
+        "body": [
+            "AccessType.CREATABLE"
+        ],
+        "description": "AccessType.CREATABLE",
+        "prefix": [
+            "AccessTypeCreatable"
+        ],
+        "scope": "apex,apex-anon"
+    },
+    "AccessType.READABLE": {
+        "body": [
+            "AccessType.READABLE"
+        ],
+        "description": "AccessType.READABLE",
+        "prefix": [
+            "AccessTypeReadable"
+        ],
+        "scope": "apex,apex-anon"
+    },
+    "AccessType.UPDATABLE": {
+        "body": [
+            "AccessType.UPDATABLE"
+        ],
+        "description": "AccessType.UPDATABLE",
+        "prefix": [
+            "AccessTypeUpdatable"
+        ],
+        "scope": "apex,apex-anon"
+    },
+    "AccessType.UPSERTABLE": {
+        "body": [
+            "AccessType.UPSERTABLE"
+        ],
+        "description": "AccessType.UPSERTABLE",
+        "prefix": [
+            "AccessTypeUpsertable"
+        ],
+        "scope": "apex,apex-anon"
+    },
     "Assert Are Equals": {
         "body": [
             "Assert.areEqual(${1:expected}, ${2:actual}, ${3:message});",
