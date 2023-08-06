@@ -290,7 +290,10 @@
             "}"
         ],
         "description": "Future method.",
-        "prefix": "future",
+        "prefix": [
+            "@future",
+            "future"
+        ],
         "scope": "apex,apex-anon"
     },
     "If": {
@@ -340,7 +343,10 @@
             "}"
         ],
         "description": "Invocable method.",
-        "prefix": "invocableMethod",
+        "prefix": [
+            "@InvocableMethod",
+            "invocableMethod"
+        ],
         "scope": "apex,apex-anon"
     },
     "Is Assignable": {
@@ -472,7 +478,10 @@
             "{get; private set;}"
         ],
         "description": "Create read-only property getter and setter",
-        "prefix": "pro",
+        "prefix": [
+            "{get; private set;}",
+            "pro"
+        ],
         "scope": "apex,apex-anon"
     },
     "Property Read Write": {
@@ -480,7 +489,10 @@
             "{get; set;}"
         ],
         "description": "Create read/write property getter and setter",
-        "prefix": "prw",
+        "prefix": [
+            "{get; set;}",
+            "prw"
+        ],
         "scope": "apex,apex-anon"
     },
     "Public Static Final": {
@@ -757,6 +769,7 @@
         ],
         "description": "Test setup for creating data before test methods run.",
         "prefix": [
+            "@IsTest",
             "isTest",
             "tstm"
         ],
@@ -771,6 +784,7 @@
         ],
         "description": "Test setup for creating data before test methods run.",
         "prefix": [
+            "@TestSetup",
             "testSetup",
             "tsts"
         ],
