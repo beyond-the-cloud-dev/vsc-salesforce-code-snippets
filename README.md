@@ -479,7 +479,7 @@ Test.calculatePermissionSetGroup(permissionSetGroupId);
 <td>
 
 ```java
-Test.calculatePermissionSetGroup(listOfpermissionSetGroupsIds);
+Test.calculatePermissionSetGroup(listOfPermissionSetGroupsIds);
 ```
 
 </td>

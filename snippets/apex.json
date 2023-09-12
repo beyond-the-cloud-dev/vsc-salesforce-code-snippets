@@ -787,7 +787,7 @@
     },
     "Test.calculatePermissionSetGroups": {
         "body": [
-            "Test.calculatePermissionSetGroup(${1:listOfpermissionSetGroupsIds});"
+            "Test.calculatePermissionSetGroup(${1:listOfPermissionSetGroupsIds});"
         ],
         "description": "Test.calculatePermissionSetGroups",
         "prefix": [
