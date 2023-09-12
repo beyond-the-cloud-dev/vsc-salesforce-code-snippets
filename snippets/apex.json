@@ -775,6 +775,126 @@
         ],
         "scope": "apex,apex-anon"
     },
+    "Test.calculatePermissionSetGroup": {
+        "body": [
+            "Test.calculatePermissionSetGroup(${1:permissionSetGroupId});"
+        ],
+        "description": "Test.calculatePermissionSetGroup",
+        "prefix": [
+            "Test.calculatePermissionSetGroup"
+        ],
+        "scope": "apex,apex-anon"
+    },
+    "Test.calculatePermissionSetGroups": {
+        "body": [
+            "Test.calculatePermissionSetGroup(${1:listOfPermissionSetGroupsIds});"
+        ],
+        "description": "Test.calculatePermissionSetGroups",
+        "prefix": [
+            "Test.calculatePermissionSetGroups"
+        ],
+        "scope": "apex,apex-anon"
+    },
+    "Test.clearApexPageMessages": {
+        "body": [
+            "Test.clearApexPageMessages();"
+        ],
+        "description": "Test.clearApexPageMessages",
+        "prefix": [
+            "Test.clearApexPageMessages"
+        ],
+        "scope": "apex,apex-anon"
+    },
+    "Test.enableChangeDataCapture": {
+        "body": [
+            "Test.enableChangeDataCapture();"
+        ],
+        "description": "Test.enableChangeDataCapture",
+        "prefix": [
+            "Test.enableChangeDataCapture"
+        ],
+        "scope": "apex,apex-anon"
+    },
+    "Test.getEventBus": {
+        "body": [
+            "Test.getEventBus().deliver();"
+        ],
+        "description": "Test.getEventBus",
+        "prefix": [
+            "Test.getEventBus"
+        ],
+        "scope": "apex,apex-anon"
+    },
+    "Test.getStandardPricebookId": {
+        "body": [
+            "Id pricebookId = Test.getStandardPricebookId();"
+        ],
+        "description": "Test.getStandardPricebookId",
+        "prefix": [
+            "Test.getStandardPricebookId"
+        ],
+        "scope": "apex,apex-anon"
+    },
+    "Test.isRunningTest": {
+        "body": [
+            "Test.isRunningTest()"
+        ],
+        "description": "Test.isRunningTest",
+        "prefix": [
+            "Test.isRunningTest"
+        ],
+        "scope": "apex,apex-anon"
+    },
+    "Test.loadData": {
+        "body": [
+            "List<SObject> records = Test.loadData(${1:ObjectApiName}.SObjectType, '${2:staticResourceName}');"
+        ],
+        "description": "Test.loadData",
+        "prefix": [
+            "Test.loadData"
+        ],
+        "scope": "apex,apex-anon"
+    },
+    "Test.setCurrentPage": {
+        "body": [
+            "Test.setCurrentPage(${1:pageReference});"
+        ],
+        "description": "Test.setCurrentPage",
+        "prefix": [
+            "Test.setCurrentPage"
+        ],
+        "scope": "apex,apex-anon"
+    },
+    "Test.setMock": {
+        "body": [
+            "Test.setMock(HttpCalloutMock.class, new ${1:YourHttpCalloutMockImplementation}());"
+        ],
+        "description": "Test.setMock",
+        "prefix": [
+            "Test.setMock"
+        ],
+        "scope": "apex,apex-anon"
+    },
+    "Test.startTest": {
+        "body": [
+            "Test.startTest();"
+        ],
+        "description": "Test.startTest",
+        "prefix": [
+            "Test.startTest"
+        ],
+        "scope": "apex,apex-anon"
+    },
+    "Test.stopTest": {
+        "body": [
+            "Test.stopTest();"
+        ],
+        "description": "Test.stopTest",
+        "prefix": [
+            "Test.stopTest"
+        ],
+        "scope": "apex,apex-anon"
+    },
     "TestSetup": {
         "body": [
             "@TestSetup",

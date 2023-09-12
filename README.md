@@ -9,20 +9,30 @@ A [VS Code Extension](https://marketplace.visualstudio.com/items?itemName=Beyond
 
 ## List of Snippets
 
-**Extension contains 134 code snippets.**
+**Extension contains 146 code snippets.**
 
-[![Apex](https://img.shields.io/badge/Apex-81-green?style=flat-square)](#apex)
+[![Apex](https://img.shields.io/badge/Apex-93-green?style=flat-square)](#apex)
 [![LWC-HTML](https://img.shields.io/badge/LWC_HTML-13-yellow?style=flat-square)](#html)
 [![LWC-JS](https://img.shields.io/badge/LWC_JavaScript-33-blue?style=flat-square)](#js)
 [![LWC-XML](https://img.shields.io/badge/LWC_XML-6-red?style=flat-square)](#xml)
 
 [Apex](#apex)
 
-[AccessLevel](#accesslevel) | [AccessType](#accesstype) | [Assert](#assert-class) | [Database](#database-class) | [JSON](#json-class) | [String](#string-class) | [UserInfo](#userinfo-class) | [Other](#others)
+- [AccessLevel](#accesslevel)
+- [AccessType](#accesstype)
+- [Assert](#assert-class)
+- [Database](#database-class)
+- [JSON](#json-class)
+- [String](#string-class)
+- [Test](#test-class)
+- [UserInfo](#userinfo-class)
+- [Other](#others)
 
 [LWC](#lwc)
 
-[HTML](#html) | [JS](#js) | [XML](#xml)
+- [HTML](#html)
+- [JS](#js)
+- [XML](#xml)
 
 ### Apex example
 
@@ -437,6 +447,149 @@ String result = String.join(iterableObj, 'separator');
 
 ```java
 String result = String.valueOf(valueToConvert);
+```
+
+</td>
+</tr>
+
+</table>
+
+
+## [Test Class](https://developer.salesforce.com/docs/atlas.en-us.apexref.meta/apexref/apex_methods_system_test.htm)
+
+<table>
+<tr>
+<td> Prefix </td>
+<td> Example </td>
+</tr>
+
+<tr>
+<td>Test.calculatePermissionSetGroup</td>
+<td>
+
+```java
+Test.calculatePermissionSetGroup(permissionSetGroupId);
+```
+
+</td>
+</tr>
+
+<tr>
+<td>Test.calculatePermissionSetGroups</td>
+<td>
+
+```java
+Test.calculatePermissionSetGroup(listOfPermissionSetGroupsIds);
+```
+
+</td>
+</tr>
+
+<tr>
+<td>Test.clearApexPageMessages</td>
+<td>
+
+```java
+Test.clearApexPageMessages();
+```
+
+</td>
+</tr>
+
+<tr>
+<td>Test.enableChangeDataCapture</td>
+<td>
+
+```java
+Test.enableChangeDataCapture();
+```
+
+</td>
+</tr>
+
+<tr>
+<td>Test.getEventBus</td>
+<td>
+
+```java
+Test.getEventBus().deliver();
+```
+
+</td>
+</tr>
+
+<tr>
+<td>Test.getStandardPricebookId</td>
+<td>
+
+```java
+Id pricebookId = Test.getStandardPricebookId();
+```
+
+</td>
+</tr>
+
+<tr>
+<td>Test.isRunningTest</td>
+<td>
+
+```java
+Test.isRunningTest()
+```
+
+</td>
+</tr>
+
+<tr>
+<td>Test.loadData</td>
+<td>
+
+```java
+List<SObject> records = Test.loadData(ObjectApiName.SObjectType, 'staticResourceName');
+```
+
+</td>
+</tr>
+
+<tr>
+<td>Test.setCurrentPage</td>
+<td>
+
+```java
+Test.setCurrentPage(pageReference);
+```
+
+</td>
+</tr>
+
+<tr>
+<td>Test.setMock</td>
+<td>
+
+```java
+Test.setMock(HttpCalloutMock.class, new YourHttpCalloutMockImplementation());
+```
+
+</td>
+</tr>
+
+<tr>
+<td>Test.startTest</td>
+<td>
+
+```java
+Test.startTest();
+```
+
+</td>
+</tr>
+
+<tr>
+<td>Test.stopTest</td>
+<td>
+
+```java
+Test.stopTest();
 ```
 
 </td>
